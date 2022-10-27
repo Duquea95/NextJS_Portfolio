@@ -1,0 +1,486 @@
+  @import url('https://fonts.googleapis.com/css2?family=Raleway+&display=swap');
+
+/**********************************
+Keyframe Animations
+**********************************/
+@keyframes dissolveAnimation {
+  0% {
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@keyframes gradient{
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+@keyframes titleSlideUpOut{
+  0% {transform: translate3d(0px, 0%, 0px)}
+  50% {transform: translate3d(0px, -50%, 0px)}
+  100% {transform: translate3d(0px, -100%, 0px)}
+}
+@keyframes titleSlideUpIn {
+  0% {transform: translate3d(0px, 100%, 0px)}
+  50% {transform: translate3d(0px, 50%, 0px)}
+  100% {transform: translate3d(0px, 0%, 0px)}
+}
+/*********************************
+Universal Styling
+*********************************/
+*{
+  margin:0;
+  padding:0;
+  font-family: Raleway, sans-serif;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  text-decoration: none;
+}
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.section{
+  width: 100%;
+  height: 100vh;
+  min-height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.section, main{
+  background-color: #F9F9F9;
+}
+h1{
+  font-size: 52px;
+  font-weight: bold;
+}
+.flex{
+  display: flex;
+  overflow: hidden;
+}
+.flex-center{
+  align-items: center;
+  justify-content: center;
+}
+.flex-between{
+  justify-content: space-between;
+}
+.padding{
+  padding: 7rem 5rem;
+}
+
+/*********************************
+Component Styling - Navigation
+*********************************/
+.navigation{
+  width: 100%;
+  height: 5px;
+  display: flex;
+  max-height: 12rem;
+  justify-content: space-between;
+  align-items: center;  
+  font-size: 1rem;
+  height: 11.2em;
+  position: fixed;
+  padding-left: 6em;
+  z-index: 1000;
+  padding-right: 6em;
+}
+.navigation ul{
+  flex-wrap: wrap;
+  float: right;
+  margin: 20px 0;
+  padding: 0 25px;
+}
+.navigation ul li{
+  list-style-type:none;
+  padding-right: 10px;
+}
+
+/*********************************
+Component Styling - Banner
+*********************************/
+
+.title-slider{
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-height: 5em;
+}
+.banner .padding.content {
+  padding-top: 0;
+}
+
+.banner .content > .flex {
+  align-items: center;
+}
+.banner .flex > div:first-child {
+  margin-right: 3rem;
+}
+.banner .flex > div {
+    padding: 0 0 0 3rem;
+}
+
+.banner h1{
+  color: #F9F9F9 !important;
+  font-size: 5em;
+}
+.banner p{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.banner .banner-image{
+  text-align: center;
+  width: 50%;
+}
+
+figure{
+  margin: 0;
+  z-index: 1;
+  width: 23.334em;
+  height: 24.67em;
+  position: relative;
+  border: 0.115rem solid #fff;
+}
+
+.main-lg{
+  font-size: 5em;
+  text-transform: uppercase;
+  line-height: 100%;
+}
+
+.grad{
+  background: linear-gradient(-45deg, #47C5CF, #94DABC, #FFCF54, #FAD1E2);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+.main-lg{
+  margin-bottom:0;
+}
+.main-lg.hide-slide{
+  position:absolute;
+  left: 0;top: 0;
+  right: auto;
+  bottom: auto;
+  transform: translate3d(0px, 100%, 0px);
+}
+
+.main-lg.start{
+  transform: translate3d(0px, 0%, 0px);
+}
+.main-lg.slideIn-start.start.active{
+  animation: titleSlideUpIn 1.5s forwards;
+}
+.main-lg.hide-slide.active{
+  animation: titleSlideUpIn 1.5s forwards;
+}
+.main-lg.hide-slide.inactive.hide-slideUp{
+  animation: titleSlideUpOut 1.5s forwards;
+}
+.main-lg.start.inactive{
+  animation: titleSlideUpOut 1.5s forwards;
+}
+
+/*********************************
+Component Styling - Columns
+*********************************/
+
+.column-items,.__cards, .__copyImage, .__copy{
+  height: inherit;
+}
+
+.card h1,form input, form input:focus, .mainColor,.mailer h1, .section h1{
+  color: #77A68B;
+}
+.card h1, .mailer h1,.text-with-image h1{
+  font-size: 3.5rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.05em;
+}
+.card p, .section-mailer p,form input::placeholder, form label, .footer-section a:hover, textarea::placeholder, .mailer p, .section p{
+  color: #40594B;
+}
+.copy{
+  margin-right: 5rem;
+}
+
+.text-with-image h1{
+  margin-bottom: 2.5rem;
+}
+
+.text-with-image .content > .flex, .banner .content > .flex  {
+  align-items: center;
+}
+
+#cf4a{
+  position:relative;
+  height: 350px;
+  width: 500px;
+}
+
+#cf4a img {
+  position:absolute;
+  left:0;
+
+  animation-name: dissolveAnimation;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+}
+
+#cf4a img:nth-of-type(1) {
+  animation-delay: 6s;
+}
+
+#cf4a img:nth-of-type(2) {
+  animation-delay: 4s;
+}
+  
+#cf4a img:nth-of-type(3) {
+  animation-delay: 2s;
+}
+  
+#cf4a img:nth-of-type(4) {
+  animation-delay: 0;
+}
+
+/*********************************
+Component Styling - Cards
+*********************************/
+@media (min-width: 701px){
+  .card:first-child{
+    border-right: 0.2rem solid #94DABC;
+  }
+}
+
+.card {
+  background: white;
+  padding: 7rem 5rem;
+  width: 35%;
+}
+
+.card:first-child{
+  border-right: 0.2rem solid #94DABC;
+}
+
+.card p{
+  font-size: 1.45em;
+  letter-spacing: 0.05em;
+  font-weight: lighter;
+  margin-bottom: 1em;
+}
+/*********************************
+Component Styling - Mailer Form
+/*********************************/
+
+@media (min-width: 701px){
+  form, .form-copy{
+  width: 50%;
+  min-width: 500px;
+  margin: 0 auto;
+}
+}
+.section.mailer > div{
+  width: 95%;
+}
+.mailer p{
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+form input, form textarea,form label{
+  font-size: 1rem;
+  font-weight: lighter;
+}
+form label{
+  display: block;
+  opacity: .8;
+}
+form input, form textarea{
+  border: none;
+  background: inherit;
+  margin: 0;
+  border-bottom: 1px solid #40594B;
+  width: 100%;
+  padding: 1rem 0 0.3rem 0;
+  line-height: 1rem;
+}
+form textarea{
+  height: 18px;
+}
+form input::placeholder, form textarea::placeholder{
+  transition: opacity .5s linear;
+}
+form input:focus, form textarea:focus{
+  outline: none;
+}
+form input:focus::placeholder, form textarea:focus::placeholder{
+  opacity:0;
+}
+form .row{
+  padding-right: 0.3em;
+  padding-left: 0;
+  width: 45%;
+}
+
+form .justify-center:nth-child(2){
+  margin: 3em auto;
+}
+  
+form .justify-center, .column-items .card{
+  justify-content: center;
+}
+  
+form .justify-center:last-child{
+  padding: 0;
+  text-align: center;
+}
+  
+form .justify-center:nth-child(2) .row{
+  width: 100%;
+}
+
+textarea{
+  width: 100%;
+  overflow: auto;
+}
+
+
+
+/*********************************
+Component Styling - Button
+*********************************/
+button{
+  position:relative;
+  border: none;
+  letter-spacing: 0.15em;
+  font-size: 0.7em;
+  font-weight: bold;
+  user-select:none;
+  min-width: 23.222em;
+  display: inline-flex;
+  overflow: hidden;
+  background: transparent;
+  white-space: nowrap;
+  padding-top: 3.5em;
+  text-transform: uppercase;
+}
+
+form button{
+  padding-top: 1.5em;
+}
+
+button > a{
+  z-index: 1;
+  display: flex;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5em;
+  width: 100%;
+  border: 2px solid #77A68B;
+  color:#77A68B;
+}
+
+button > a:before{
+  content: '';
+  width: 101%;
+  height: 108%;
+  pointer-events: none;
+  z-index: -1;
+  position: absolute;
+  top: -0.1em;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  transition: transform 0.3s linear;
+  transform: translateX(-100%);
+}
+
+button:hover > a{
+  color: #fff;
+}
+
+button:hover > a:before{
+  transition: transform 0.3s linear;
+  transform: translateX(0);
+  background: #77A68B;
+}
+
+/*********************************
+Component Styling - Footer
+*********************************/
+footer .section{
+  background: #77A68B;
+  justify-content: initial; 
+}
+
+div.padding.content{
+  width: 100%;
+}
+
+footer div.padding.content > div.flex:first-child{
+  border-bottom: 1px solid #40594B;
+}
+footer div.padding.content div.flex.flex-between{
+  padding-top: 4rem;
+}
+
+footer div.padding.content .flex:first-child div{
+  margin-top: 3rem;
+  margin-right: 13.5rem;
+  margin-bottom: 14rem;
+}
+
+footer .section li, footer .section a, footer span{
+  font-size: 1.2rem;
+  font-weight: lighter;
+  color: rgb(249,249,249);
+  position: relative;
+}
+
+.footer-menu{
+  margin-top: 5.8rem;
+  list-style: none;
+}
+
+.footer-menu li{
+  margin-bottom: 20px;
+}
+.footer-menu li::after, footer a::after{
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s ease;
+}
+.footer-menu li:hover::after, footer a:hover::after{
+  transform: scaleX(1);
+}
