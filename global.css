@@ -53,6 +53,14 @@ html, body{
   margin: 0;
   padding: 0;
 }
+
+h1{
+  font-size: 52px;
+  font-weight: bold;
+}
+ul{
+  list-style: none;
+}
 .section{
   width: 100%;
   height: 100vh;
@@ -62,12 +70,12 @@ html, body{
   overflow-y: hidden;
 }
 
+.section.cards,.section.text-with-image{
+  height: auto;
+}
+
 .section, main{
   background-color: #F9F9F9;
-}
-h1{
-  font-size: 52px;
-  font-weight: bold;
 }
 .flex{
   display: flex;
@@ -80,9 +88,17 @@ h1{
 .flex-between{
   justify-content: space-between;
 }
-.padding{
-  padding: 7rem 8rem;
+.section.cards, form .flex, .section.text-with-image .content > .flex, form label, .banner .flex{
+  display: block;
 }
+
+.text-with-image .padding.content .copy{
+  padding: 3rem;
+}
+.padding{
+  padding: 0 3rem;
+}
+
 
 /*********************************
 Component Styling - Navigation
@@ -125,22 +141,11 @@ Component Styling - Banner
   max-height: 5em;
 }
 .banner .padding.content {
-  padding-top: 0;
+  padding-top: 3rem;
 }
 
 .banner .content > .flex {
   align-items: center;
-}
-.banner .flex > div:first-child {
-  margin-right: 3rem;
-}
-/* .banner .flex > div {
-    padding: 0 0 0 3rem;
-} */
-
-.banner h1{
-  color: #F9F9F9 !important;
-  font-size: 5em;
 }
 .banner p{
   font-size: 1.2rem;
@@ -148,8 +153,8 @@ Component Styling - Banner
   font-weight: bold;
 }
 .banner .banner-image{
-  text-align: center;
-  width: 50%;
+  margin: 0 auto;
+  margin-top: 3rem;
 }
 
 figure{
@@ -162,9 +167,9 @@ figure{
 }
 
 .main-lg{
-  font-size: 5em;
   text-transform: uppercase;
   line-height: 100%;
+  color: #F9F9F9 !important;
 }
 
 .grad{
@@ -172,18 +177,18 @@ figure{
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
 }
-
-.main-lg{
-  margin-bottom:0;
-}
 .main-lg.hide-slide{
   position:absolute;
-  left: 0;top: 0;
+  left: 0;
+  top: 0;
   right: auto;
   bottom: auto;
   transform: translate3d(0px, 100%, 0px);
 }
 
+.main-lg.active, .main-lg.inactive{
+  right: 0;
+}
 .main-lg.start{
   transform: translate3d(0px, 0%, 0px);
 }
@@ -212,19 +217,21 @@ Component Styling - Columns
   color: #77A68B;
 }
 .card h1, .mailer h1,.text-with-image h1{
-  font-size: 3.5rem;
   margin-bottom: 1.2rem;
+}
+.card h1, .mailer h1,.text-with-image h1, .main-lg{
+  font-size: 2.5rem;
   line-height: 1.05em;
 }
 .card p, .section-mailer p,form input::placeholder, form label, .footer-section a:hover, textarea::placeholder, .mailer p, .section p{
   color: #40594B;
 }
-.copy{
-  margin-right: 5rem;
-}
 
 .text-with-image h1{
   margin-bottom: 2.5rem;
+}
+.text-with-image .padding.content{
+padding: 0;
 }
 
 .text-with-image .content > .flex, .banner .content > .flex  {
@@ -233,14 +240,16 @@ Component Styling - Columns
 
 #cf4a{
   position:relative;
-  height: 350px;
-  width: 500px;
+  height: calc(100vh/2);
+  width: 100%;
 }
 
 #cf4a img {
   position:absolute;
   left:0;
-
+  height: 100%;
+  max-width: 100%;
+  
   animation-name: dissolveAnimation;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -266,24 +275,14 @@ Component Styling - Columns
 /*********************************
 Component Styling - Cards
 *********************************/
-@media (min-width: 701px){
-  .card:first-child{
-    border-right: 0.2rem solid #94DABC;
-  }
-}
 
 .card {
   background: white;
-  padding: 7rem 5rem;
-  width: 35%;
-}
-
-.card:first-child{
-  border-right: 0.2rem solid #94DABC;
+  padding: 3rem 1.5rem;
+  margin: 3rem 1.5rem;
 }
 
 .card p{
-  font-size: 1.45em;
   letter-spacing: 0.05em;
   font-weight: lighter;
   margin-bottom: 1em;
@@ -292,28 +291,31 @@ Component Styling - Cards
 Component Styling - Mailer Form
 /*********************************/
 
-@media (min-width: 701px){
-  form, .form-copy{
-  width: 50%;
-  min-width: 500px;
-  margin: 0 auto;
-}
+form div .row{
+  width: 100%;
+  margin-top: 1.5rem;
 }
 .section.mailer > div{
   width: 95%;
+  padding: 0 3rem;
 }
-.mailer p{
-  font-size: 1.4rem;
+.mailer p, .card p{
   letter-spacing: 1px;
   font-weight: 400;
 }
-form input, form textarea,form label{
+.form-copy{
+  margin-bottom: 1.5rem;
+}
+.mailer p, .card p, form input, form textarea,form label{
   font-size: 1rem;
+}
+
+form input, form textarea,form label{
   font-weight: lighter;
 }
 form label{
-  display: block;
   opacity: .8;
+  margin-bottom: 1rem;
 }
 form input, form textarea{
   border: none;
@@ -321,11 +323,10 @@ form input, form textarea{
   margin: 0;
   border-bottom: 1px solid #40594B;
   width: 100%;
-  padding: 1rem 0 0.3rem 0;
-  line-height: 1rem;
+  padding: 0 0 1rem 0;
 }
 form textarea{
-  height: 18px;
+  line-height: 18.5px;
 }
 form input::placeholder, form textarea::placeholder{
   transition: opacity .5s linear;
@@ -336,15 +337,6 @@ form input:focus, form textarea:focus{
 form input:focus::placeholder, form textarea:focus::placeholder{
   opacity:0;
 }
-form .row{
-  padding-right: 0.3em;
-  padding-left: 0;
-  width: 45%;
-}
-
-form .justify-center:nth-child(2){
-  margin: 3em auto;
-}
   
 form .justify-center, .column-items .card{
   justify-content: center;
@@ -352,7 +344,6 @@ form .justify-center, .column-items .card{
   
 form .justify-center:last-child{
   padding: 0;
-  text-align: center;
 }
   
 form .justify-center:nth-child(2) .row{
@@ -376,24 +367,24 @@ button{
   font-size: 0.7em;
   font-weight: bold;
   user-select:none;
-  min-width: 23.222em;
+  width: 100%;
   display: inline-flex;
   overflow: hidden;
   background: transparent;
   white-space: nowrap;
-  padding-top: 3.5em;
+  padding-top: 2rem;
   text-transform: uppercase;
 }
 
 form button{
-  padding-top: 1.5em;
+  padding: 2rem;
+  padding-top: 3rem;
 }
 
 button > a{
   z-index: 1;
   display: flex;
   position: relative;
-  text-align: center;
   align-items: center;
   justify-content: center;
   padding: 1.5em;
@@ -431,13 +422,35 @@ button:hover > a:before{
 /*********************************
 Component Styling - Footer
 *********************************/
+
+footer, footer .flex-between,.cards, .banner .banner-image, button > a, form .justify-center:last-child,.form-copy, .banner .flex{
+  text-align: center;
+}
+
 footer .section{
   background: #77A68B;
-  justify-content: initial; 
+  justify-content: initial;
+  height: 80vh;
+}
+
+footer .flex-between{
+  flex-direction: row-reverse;
+} 
+footer .socials-menu{
+  justify-content: center;
+}
+
+.socials-menu li{
+  justify-content: space-evenly;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
 }
 
 div.padding.content{
   width: 100%;
+}
+div.padding.content > div:first-child{
+  padding-bottom: 1.5rem;
 }
 
 footer div.padding.content > div.flex:first-child{
@@ -445,12 +458,6 @@ footer div.padding.content > div.flex:first-child{
 }
 footer div.padding.content div.flex.flex-between{
   padding-top: 4rem;
-}
-
-footer div.padding.content .flex:first-child div{
-  margin-top: 3rem;
-  margin-right: 13.5rem;
-  margin-bottom: 14rem;
 }
 
 footer .section li, footer .section a, footer span{
@@ -461,7 +468,7 @@ footer .section li, footer .section a, footer span{
 }
 
 .footer-menu{
-  margin-top: 5.8rem;
+  margin-top: 3rem;
   list-style: none;
 }
 
@@ -483,4 +490,115 @@ footer .section li, footer .section a, footer span{
 }
 .footer-menu li:hover::after, footer a:hover::after{
   transform: scaleX(1);
+}
+
+@media (min-width: 720px){
+  br{
+    display: block;
+  }
+  .section.flex,.banner .flex, footer .section .content > div, form .flex, .section.text-with-image,.section.text-with-image .content > .flex{
+    display: flex;
+  }
+  .section.cards{
+    height: 100vh;
+  }
+
+  .banner .flex > div:first-child {
+    margin-right: 7rem;
+  }
+  .banner .banner-image, .card{
+    margin: 0;
+  }
+
+  .banner .padding.content {
+    padding-top: 0;
+  }
+  
+  .padding, .text-with-image .padding.content{
+    padding: 7rem 8rem;
+  }
+
+  .main-lg{
+    font-size: 5em;
+  }
+
+  .card:first-child{
+    border-right: 0.2rem solid #94DABC;
+  }
+  .copy{
+    margin-right: 5rem;
+  }
+  .copy{
+    width: 55%;
+  }
+  .image{
+    width: 45%;
+  }
+  #cf4a{
+    height: 350px;
+    width: 100%;
+  }
+  .card {
+    padding: 7rem 5rem;
+    width: 35%;
+  }
+
+  .card h1, .mailer h1,.text-with-image h1{
+    font-size: 3.5rem;
+  }
+  .mailer p, .card p{
+    font-size: 1.4rem;
+  }
+
+  button{
+    width: auto;
+    padding-top: 3.5em;
+    min-width: 23.222em;
+  }
+  
+  form, .form-copy{
+    width: 50%;
+    min-width: 500px;
+  }
+  
+  form{
+    margin: 0 auto;
+  }
+  .form-copy{
+    margin: 0 auto 2rem;
+  }
+
+  form .flex .row{
+    padding-right: 0.3em;
+    padding-left: 0;
+    margin-top: 0;
+    width: 45%;
+  }
+
+  form .justify-center:nth-child(2) {
+    margin: 3rem auto;
+  }
+
+  form button, .text-with-image .padding.content .copy{
+    padding: 0;
+  }
+
+  footer, footer .flex-between,.cards, .banner .banner-image, button > a, .section.text-with-image, .copy,.banner .flex{
+    text-align: unset;
+  }
+  footer .section{
+    height: 100vh;
+  }
+  footer .section .content > div:first-child > div{
+    margin-top: 3rem;
+    margin-right: 13.5rem;
+    margin-bottom: 14rem;
+  }
+  .footer-menu{
+    margin-top: 5.8rem;
+  }
+}
+
+header{
+  display: none;
 }

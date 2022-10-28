@@ -85,7 +85,7 @@ const Mailer = () =>{
   return(
     <div className='section mailer flex flex-center'>
       <div>
-        <div className='form-copy' style={{textAlign: 'center',marginBottom: 5+'rem'}}>
+        <div className='form-copy'>
           <h1>Send me a message!</h1>
           <p>Got a question or proposal, or just want <br/> to say hello? Go ahead.</p>
         </div>

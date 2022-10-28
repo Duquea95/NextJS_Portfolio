@@ -16,7 +16,7 @@ const Cards = (props) => {
   ]
 
   return(
-    <div className="section flex flex-center">
+    <div className="section flex flex-center cards">
        {cardElements.map(card =>{
         return(
         <div className='card'>

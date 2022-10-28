@@ -24,13 +24,13 @@ const TextWithImage = (props) => {
         <div className='copy'>
           <h1>Over the<br/>past 5 years</h1>
           <p>
-            I've built online solutions for large companies and<br/>small businesses ranging from marketing websites<br/>to complex solutions. My focus is always on fast,<br/>elegant and accessible user experiences.
-            <br/><br/>
-            My last role was Director Of E-Commerce at Oscar<br/>Stone NYC.I led a team of graphic designers,<br/>copywriter, and social media assistant in developing<br/>monthly marketing strategies to boost sales through<br/>their Shopify storefront.
-            <br/><br/>
-            Prior to that, I was a Front-End Engineer at Jonathan<br/>Adler building JavaScript applications and interfaces<br/>that improved functionality, automated processes,<br/>and supported marketing campaigns.
-            <br/><br/>
-            I am currently looking for new opportunities as a<br/>Front-End Engineer. I loved my experience in a<br/>marketing-based role, but my passion lies in<br/>creating memorable user-experiences.
+            I've built online solutions for large companies and small businesses ranging from marketing websites to complex solutions. My focus is always on fast, elegant and accessible user experiences.
+            <br className='show-br'/> <br className='show-br'/>
+            My last role was Director Of E-Commerce at Oscar Stone NYC.I led a team of graphic designers, copywriter, and social media assistant in developing monthly marketing strategies to boost sales through their Shopify storefront.
+            <br className='show-br'/> <br className='show-br'/>
+            Prior to that, I was a Front-End Engineer at Jonathan Adler building JavaScript applications and interfaces that improved functionality, automated processes, and supported marketing campaigns.
+             <br className='show-br'/> <br className='show-br'/>
+            I am currently looking for new opportunities as a Front-End Engineer. I loved my experience in a marketing-based role, but my passion lies in creating memorable user-experiences.
           </p>
         </div>
         <div className='image' id="cf4a">
