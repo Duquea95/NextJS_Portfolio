@@ -2,7 +2,7 @@ export default function Footer(){
   let footerLinks = [
     {text: 'My Works', url: '/Works'},
     {text: 'My Articles', url: '/Blog'},
-    {text: 'My Résumé', url: 'https://docs.google.com/document/d/13FSTyQ1smTcB7zBYIfjpRJ8qC8jU0jqsBgDgvlXDGc4/edit?usp=sharing'}
+    {text: 'My Résumé', url: '/myResume.pdf' }
   ]
 
   let socialLinks = [
@@ -23,6 +23,12 @@ export default function Footer(){
               {footerLinks.map(link => {
                 return <li><a href={link.url}>{link.text}</a></li>
               })}
+                <a
+    href="/files/file_name.pdf"
+    alt="alt text"
+    target="_blank"
+    rel="noopener noreferrer"
+  >Download FIle</a>
             </ul>
           </div>
           <div className='flex-between'>
