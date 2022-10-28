@@ -532,6 +532,9 @@ footer div.padding.content > div:first-child a:hover::after{
         background-color;
     transition-duration: .25s;
 }
+.icon::after{
+  border-radius: 0.4rem;
+}
 
 .icon:hover {
     outline-offset: 4px;
@@ -708,6 +711,6 @@ footer div.padding.content > div:first-child a:hover::after{
   }
   .card {
     padding: 7rem 5rem;
-    width: 35%;
+    width: 33%;
   }
 }
