@@ -404,6 +404,7 @@ button > a{
   width: 100%;
   border: 2px solid #77A68B;
   color:#77A68B;
+  border-radius: 0.4rem;
 }
 
 button > a:before{
@@ -523,7 +524,7 @@ footer div.padding.content > div:first-child a:hover::after{
     text-decoration: none;
     font-size: 1.3rem;
     color: #fff;
-    border-radius: 50%;
+    border-radius: 25px;
     outline: 2px solid #fff;
     transition-property:
         outline-offset, outline-color,
