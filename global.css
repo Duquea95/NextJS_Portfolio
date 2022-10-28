@@ -4,21 +4,20 @@
 Keyframe Animations
 **********************************/
 @keyframes dissolveAnimation {
-  0% {
-    opacity:1;
-  }
-  17% {
-    opacity:1;
-  }
-  25% {
-    opacity:0;
-  }
-  92% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
+  0% { opacity:1; }
+  17% { opacity:1; }
+  25% { opacity:0; }
+  92% { opacity:0; }
+  100% { opacity:1; }
+}
+@keyframes shake {
+    10% { transform: rotate(15deg); }
+
+    20% { transform: rotate(-15deg); }
+
+    30% { transform: rotate(15deg); }
+
+    40% { transform: rotate(-15deg); }
 }
 
 @keyframes gradient{
@@ -47,6 +46,11 @@ Universal Styling
   margin-block-end: 0;
   text-decoration: none;
 }
+html::-webkit-scrollbar,body::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 html, body{
   height: 100%;
   width: 100%;
@@ -66,8 +70,6 @@ ul{
   height: 100vh;
   min-height: 100%;
   box-sizing: border-box;
-  overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 .section.cards,.section.text-with-image{
@@ -79,7 +81,6 @@ ul{
 }
 .flex{
   display: flex;
-  overflow: hidden;
 }
 .flex-center{
   align-items: center;
@@ -97,6 +98,10 @@ ul{
 }
 .padding{
   padding: 0 3rem;
+}
+
+.dsktp-only{
+  display: none;
 }
 
 
@@ -223,8 +228,12 @@ Component Styling - Columns
   font-size: 2.5rem;
   line-height: 1.05em;
 }
-.card p, .section-mailer p,form input::placeholder, form label, .footer-section a:hover, textarea::placeholder, .mailer p, .section p{
+.card p, .section-mailer p,form input::placeholder, form label, .footer-section a:hover, textarea::placeholder, .mailer p, .text-with-image p, .banner p, .error-page p{
   color: #40594B;
+}
+
+footer p{
+  color: #94DABC
 }
 
 .text-with-image h1{
@@ -249,6 +258,7 @@ padding: 0;
   left:0;
   height: 100%;
   max-width: 100%;
+  width: 100%;
   
   animation-name: dissolveAnimation;
   animation-timing-function: ease-in-out;
@@ -304,7 +314,7 @@ form div .row{
   font-weight: 400;
 }
 .form-copy{
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 .mailer p, .card p, form input, form textarea,form label{
   font-size: 1rem;
@@ -367,7 +377,7 @@ button{
   font-size: 0.7em;
   font-weight: bold;
   user-select:none;
-  width: 100%;
+  width: 200px;
   display: inline-flex;
   overflow: hidden;
   background: transparent;
@@ -423,21 +433,24 @@ button:hover > a:before{
 Component Styling - Footer
 *********************************/
 
-footer, footer .flex-between,.cards, .banner .banner-image, button > a, form .justify-center:last-child,.form-copy, .banner .flex{
+footer, footer .flex-between,.cards, .banner .banner-image, button > a, form .justify-center:last-child,.form-copy, .banner, .error-page{
   text-align: center;
 }
 
 footer .section{
-  background: #77A68B;
+  background: #0c0c0c;
   justify-content: initial;
   height: 80vh;
 }
 
 footer .flex-between{
   flex-direction: row-reverse;
+  padding-top: 3rem;
 } 
 footer .socials-menu{
   justify-content: center;
+  column-gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .socials-menu li{
@@ -452,6 +465,9 @@ div.padding.content{
 div.padding.content > div:first-child{
   padding-bottom: 1.5rem;
 }
+footer div.padding.content > div:first-child{
+  border-bottom: 1px solid white;
+}
 
 footer div.padding.content > div.flex:first-child{
   border-bottom: 1px solid #40594B;
@@ -460,11 +476,13 @@ footer div.padding.content div.flex.flex-between{
   padding-top: 4rem;
 }
 
-footer .section li, footer .section a, footer span{
+footer div.padding.content > div:first-child a, footer span{
   font-size: 1.2rem;
   font-weight: lighter;
-  color: rgb(249,249,249);
   position: relative;
+}
+footer div.padding.content > div:first-child, footer .section div.padding.content > div:first-child a, footer span{
+  color: #f8f8f8;
 }
 
 .footer-menu{
@@ -473,9 +491,10 @@ footer .section li, footer .section a, footer span{
 }
 
 .footer-menu li{
-  margin-bottom: 20px;
+  margin: 1rem auto;
+  width: max-content;
 }
-.footer-menu li::after, footer a::after{
+footer div.padding.content > div:first-child a::after{
   content: '';
   width: 100%;
   height: 1px;
@@ -488,13 +507,64 @@ footer .section li, footer .section a, footer span{
   transform-origin: left;
   transition: transform .25s ease;
 }
-.footer-menu li:hover::after, footer a:hover::after{
+footer div.padding.content > div:first-child a:hover::after{
   transform: scaleX(1);
 }
 
-@media (min-width: 720px){
-  br{
-    display: block;
+.icon {
+    width: 3rem;
+    height: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #fff;
+    border-radius: 50%;
+    outline: 2px solid #fff;
+    transition-property:
+        outline-offset, outline-color,
+        background-color;
+    transition-duration: .25s;
+}
+
+.icon:hover {
+    outline-offset: 4px;
+}
+
+.icon:hover i {
+    animation: shake .25s;
+}
+
+.icon--instagram:hover {
+    background-image: radial-gradient(circle at 30% 107%,
+            #fdf497 0%, #fdf497 5%,
+            #fd5949 45%, #d6249f 60%,
+            #285AEB 90%);
+    outline-color: #a02d76;
+}
+
+.icon--twitter:hover {
+    background-color: #1da1f2;
+    outline-color: #1da1f2;
+}
+
+.icon--linkedin:hover {
+    background-color: #0077b5;
+    outline-color: #0077b5;
+}
+
+.icon--github:hover {
+    background-color: #2ea44f;
+    outline-color: #2ea44f;
+}
+.error-page{
+  background: #000;
+}
+
+@media (min-width: 780px){
+  .dsktp-only{
+    display: unset;
   }
   .section.flex,.banner .flex, footer .section .content > div, form .flex, .section.text-with-image,.section.text-with-image .content > .flex{
     display: flex;
@@ -504,22 +574,23 @@ footer .section li, footer .section a, footer span{
   }
 
   .banner .flex > div:first-child {
-    margin-right: 7rem;
+    margin-right: 15%;
   }
   .banner .banner-image, .card{
     margin: 0;
   }
 
-  .banner .padding.content {
-    padding-top: 0;
+  .padding, .text-with-image .padding.content{
+    padding: 5rem;
   }
   
-  .padding, .text-with-image .padding.content{
-    padding: 7rem 8rem;
+  .banner .padding.content
+  .banner .padding.content{
+    padding: 5rem 0;
   }
 
   .main-lg{
-    font-size: 5em;
+    font-size: 3.8rem;
   }
 
   .card:first-child{
@@ -538,13 +609,16 @@ footer .section li, footer .section a, footer span{
     height: 350px;
     width: 100%;
   }
+  #cf4a img{
+    width: unset;
+  }
   .card {
     padding: 7rem 5rem;
-    width: 35%;
+    width: 27%;
   }
 
   .card h1, .mailer h1,.text-with-image h1{
-    font-size: 3.5rem;
+    font-size: 2.7rem;
   }
   .mailer p, .card p{
     font-size: 1.4rem;
@@ -583,12 +657,18 @@ footer .section li, footer .section a, footer span{
     padding: 0;
   }
 
-  footer, footer .flex-between,.cards, .banner .banner-image, button > a, .section.text-with-image, .copy,.banner .flex{
+  footer, footer .flex-between,.cards, .banner .banner-image, button > a, .section.text-with-image, .copy,.banner{
     text-align: unset;
   }
   footer .section{
     height: 100vh;
   }
+
+  footer .flex-between{
+    align-items: center;
+    padding-top: 5rem;
+  }
+
   footer .section .content > div:first-child > div{
     margin-top: 3rem;
     margin-right: 13.5rem;
@@ -597,8 +677,32 @@ footer .section li, footer .section a, footer span{
   .footer-menu{
     margin-top: 5.8rem;
   }
+  .footer-menu li{
+    margin: 1rem 0;
+  }
+  footer .socials-menu{
+    margin-bottom: 0;
+  }
 }
-
-header{
-  display: none;
+@media (min-width: 1200px){
+  .main-lg{
+    font-size: 5rem;
+  }
+  .banner .flex > div:first-child {
+    margin-right: 13rem;
+  }
+  .card h1, .mailer h1,.text-with-image h1{
+    font-size: 3.5rem;
+  }
+  .padding, .text-with-image .padding.content{
+    padding: 7rem 8rem;
+  }
+  .banner img{
+    width: 350px;
+    height: 400px;
+  }
+  .card {
+    padding: 7rem 5rem;
+    width: 35%;
+  }
 }

@@ -1,9 +1,18 @@
+import Layout from '../../components/layout';
+import ErrorPage from "../../components/404"
+
 const Blog = () => {
   return(
-    <div>
-      <h1>Welcome to my Blog!</h1>
-    </div>
+    <ErrorPage/>
   )
 }
 
 export default Blog;
+
+Blog.getLayout = function getLayout(page) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  )
+}

@@ -27,7 +27,7 @@ const Banner = () => {
       <div className='padding content'>
         <div className='flex'>
           <div>
-            <p>Anthony Duque - Frontend Engineer</p>
+            <p>Anthony Duque<span className='dsktp-only'> - Frontend Engineer</span></p>
             <h1 className='main-lg'>Creating<br/>For<br/></h1>
             <div className='title-slider'>
               {texts.map((text,idx) => {return (

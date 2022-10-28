@@ -6,12 +6,8 @@ export default function Footer(){
   ]
 
   let socialLinks = [
-    {alt: 'LI'},
-    {alt: 'GH'},
-    {alt: 'TW'}
-    // {alt: 'LinkedIn'},
-    // {alt: 'Github'},
-    // {alt: 'Twitter'}
+    {url: 'https://www.linkedin.com/in/anthony-duque/', linkClasses: 'icon icon--linkedin', iconClasses: 'ri-linkedin-line'}, 
+    {url: 'https://github.com/Duquea95', linkClasses: 'icon icon--github', iconClasses: 'ri-github-line'}
   ]
 
   return(
@@ -30,12 +26,12 @@ export default function Footer(){
             </ul>
           </div>
           <div className='flex-between'>
-            <ul className='socials-menu flex'>
+            <div className='socials-menu flex'>
               {socialLinks.map(link => {
-                return <li>{link.alt}</li>
+                return <a className={link.linkClasses} href={link.url}><i className={link.iconClasses}></i></a>
               })}
-            </ul>
-            <div><span>© Anthony Duque 2022</span></div>
+            </div>
+            <div><span className="copyright">© Anthony Duque 2022</span></div>
           </div>
         </div>
       </div>

@@ -4,12 +4,12 @@ const Cards = (props) => {
 
   let cardElements = [
     {
-      titleText: <h1>I build &<br/>design stuff</h1>,
+      titleText: <h1>I build & <br/>design</h1>,
       subText: <p>Open source<br/>projects, web apps,<br/>and experimentals.</p>,
       buttonText: <Button link ='/Works' text='View My Work'/>,
     },
     {
-      titleText: <h1>I write<br/>sometimes</h1>,
+      titleText: <h1>I write <br/>sometimes</h1>,
       subText: <p>About design,<br/>frontend dev,<br/>learning and life.</p>,
       buttonText: <Button link='/Blog' text='Read My Blog'/>,
     }
