@@ -29,8 +29,8 @@ const TextWithImage = (props) => {
             My last role was Director Of E-Commerce at Oscar Stone NYC.I led a team of graphic designers, copywriter, and social media assistant in developing monthly marketing strategies to boost sales through their Shopify storefront.
             <br className='show-br'/> <br className='show-br'/>
             Prior to that, I was a Front-End Engineer at Jonathan Adler building JavaScript applications and interfaces that improved functionality, automated processes, and supported marketing campaigns.
-             <br className='show-br'/> <br className='show-br'/>
-            I am currently looking for new opportunities as a Front-End Engineer. I loved my experience in a marketing-based role, but my passion lies in creating memorable user-experiences.
+             {/* <br className='show-br'/> <br className='show-br'/>
+            I am currently looking for new opportunities as a Front-End Engineer. I loved my experience in a marketing-based role, but my passion lies in creating memorable user-experiences. */}
           </p>
         </div>
         <div className='image' id="cf4a">

@@ -287,9 +287,10 @@ Component Styling - Cards
 *********************************/
 
 .card {
+  width: 300px;
   background: white;
   padding: 3rem 1.5rem;
-  margin: 3rem 1.5rem;
+  margin: 3rem auto;
 }
 
 .card p{
@@ -365,7 +366,9 @@ textarea{
   overflow: auto;
 }
 
-
+.copyright{
+  font-size: 0.8rem;
+}
 
 /*********************************
 Component Styling - Button
