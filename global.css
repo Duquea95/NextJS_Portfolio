@@ -491,7 +491,7 @@ footer div.padding.content > div:first-child, footer .section div.padding.conten
 }
 
 .footer-menu{
-  margin-top: 3rem;
+  margin-top: 2rem 0 1rem;
   list-style: none;
 }
 

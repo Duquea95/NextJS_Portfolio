@@ -33,8 +33,7 @@ const Banner = () => {
               {texts.map((text,idx) => {return (
                 <h1
                   key={idx} 
-                  className={`main-lg ${(idx == 0 && count == 0) ? 'slideIn-start' : ''} ${idx == 0 ? 'start' : 'hide-slide'} ${idx==activeIndex ? 'active': 'inactive'} ${idx <= activeIndex ? 'hide-slideUp' : ''} ${idx == text.length-1 ? 'last' : ''}`}
-                  $transform={idx*100}>{text}
+                  className={`main-lg ${(idx == 0 && count == 0) ? 'slideIn-start' : ''} ${idx == 0 ? 'start' : 'hide-slide'} ${idx==activeIndex ? 'active': 'inactive'} ${idx <= activeIndex ? 'hide-slideUp' : ''} ${idx == text.length-1 ? 'last' : ''}`}>{text}
                 </h1>
                 )
               })}
