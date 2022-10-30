@@ -4,16 +4,70 @@ import billysImage from'../../public/images/billys-bakery.jpeg';
 import oscarStoneImage from'../../public/images/oscar-stone.jpeg';
 import bmccImage from'../../public/images/bmcc.jpeg';
 
-const imageArray = [oscarStoneImage, jaImage,bmccImage,billysImage];
+import { useState, useEffect } from 'react';
+
+const imageArray = [
+  {
+    src: oscarStoneImage.src,
+    name: 'Oscar Stone'
+  },
+  {
+    src: jaImage.src,
+    name: 'Johnathan Adler'
+  },
+  {
+    src: bmccImage.src,
+    name: 'Borough Of Manhattan\nCommunity College'
+  },
+  {
+    src: billysImage.src,
+    name: 'Billy\'s Bakery NYC'
+  },
+];
 
 const TextWithImage = (props) => {
   const imageCollection = () => {
+    const [count, setCount] = useState(null);
+    const [pause, setPause] = useState(false);
+
+    
+    useEffect(() => {
+      
+      if(count === null ) return setCount(0);
+      
+      const interval = setInterval(() => {
+        if(!pause){
+          if(count == imageArray.length-1){
+            return setCount(0);
+          }else{
+            return setCount(count+1);
+          }
+        }else{
+          clearInterval(interval);
+        }
+      }, 3000);
+      
+      return () => clearInterval(interval);
+    }, [count, pause])
+    
+    const triggerPause = () =>{
+      setPause(true);
+    }
+    const resumeCycle = () =>{
+      setPause(false);
+    }
+
     return(
-      <>
+      <div className='image' id="cf4a">
       {imageArray.map((image, idx) =>{
-        return <Image key={'imageArray_' + idx} src={image.src} width={500} height={350}/>
+        return (
+            <Image key={'imageArray_' + idx} src={image.src} width={500} height={350} alt={image.name}
+            onMouseOver={triggerPause}
+            onMouseLeave={resumeCycle}
+            />
+        )
       })}
-      </>
+      </div>
     )
   }
 
@@ -33,9 +87,7 @@ const TextWithImage = (props) => {
             I am currently looking for new opportunities as a Front-End Engineer. I loved my experience in a marketing-based role, but my passion lies in creating memorable user-experiences. */}
           </p>
         </div>
-        <div className='image' id="cf4a">
-          {imageCollection()}
-        </div>
+        {imageCollection()}
       </div>
       </div>
     </div>

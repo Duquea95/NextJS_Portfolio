@@ -9,7 +9,6 @@ const Banner = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log(activeIndex);
       if(activeIndex == texts.length-1){
         setCount(count+1);
         return setActiveIndex(0);
@@ -39,7 +38,7 @@ const Banner = () => {
               })}
             </div>
           </div>
-          <div className='banner-image'><Image src={anthony.src} width={300} height={350}/></div>
+          <div className='banner-image'><Image alt='Anthony Duque - Front-End Engineer' src={anthony.src} width={300} height={350}/></div>
         </div>
       </div>
     </div>

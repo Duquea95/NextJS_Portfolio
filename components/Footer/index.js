@@ -20,21 +20,15 @@ export default function Footer(){
               <a href='mailto:duquea95@gmail.com'>Duquea95@gmail.com</a>
             </div>
             <ul className='footer-menu'>
-              {footerLinks.map(link => {
-                return <li><a href={link.url}>{link.text}</a></li>
+              {footerLinks.map((link,idx) => {
+                return <li key={'footer_link__'+idx}><a href={link.url}>{link.text}</a></li>
               })}
-                <a
-    href="/files/file_name.pdf"
-    alt="alt text"
-    target="_blank"
-    rel="noopener noreferrer"
-  >Download FIle</a>
             </ul>
           </div>
           <div className='flex-between'>
             <div className='socials-menu flex'>
-              {socialLinks.map(link => {
-                return <a className={link.linkClasses} href={link.url}><i className={link.iconClasses}></i></a>
+              {socialLinks.map((link,idx) => {
+                return <a key={'social_link__'+idx} className={link.linkClasses} href={link.url}><i className={link.iconClasses}></i></a>
               })}
             </div>
             <div><span className="copyright">© Anthony Duque 2022</span></div>
