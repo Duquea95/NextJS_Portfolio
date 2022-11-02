@@ -392,6 +392,7 @@ button{
   border-radius: 0.4rem;
   padding: 1.5rem 1rem;
   transition: all 0.5s linear;
+  cursor: pointer;
 }
 
 button a{
