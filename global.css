@@ -221,7 +221,7 @@ Component Styling - Columns
 .card h1,form input, form input:focus, .mainColor,.mailer h1, .section h1{
   color: #77A68B;
 }
-.card h1, .mailer h1,.text-with-image h1, .user-learning h1{
+.mailer h1,.text-with-image h1, .user-learning h1{
   margin-bottom: 1.2rem;
 }
 .card h1, .mailer h1,.text-with-image h1, .main-lg, .user-learning h1{
@@ -304,6 +304,9 @@ Component Styling - Cards
   letter-spacing: 0.05em;
   font-weight: lighter;
   margin-bottom: 3rem;
+}
+.card h1 {
+  margin-bottom: 1.2rem;
 }
 /*********************************
 Component Styling - Mailer Form
@@ -608,7 +611,7 @@ footer div.padding.content > div:first-child a:hover::after{
 }
 .user-learning button{
   border: 2px solid #f8f8f8;
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 .user-learning button a{
   color: #f8f8f8;
@@ -698,6 +701,9 @@ footer div.padding.content > div:first-child a:hover::after{
   .card {
     padding: 7rem 5rem;
     width: 27%;
+  }
+  .card h1, .user-learning h1{
+    margin-bottom: 1.5rem;
   }
   .card p{
     margin-bottom: 5rem;
