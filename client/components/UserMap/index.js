@@ -7,7 +7,7 @@ const UserMap = ({setMapObject, userPermission}) =>{
 
   useEffect(() => {
     const loader = new Loader({
-      apiKey: 'AIzaSyDYByUhcY2JwYB3C2EL8SdaWYZ8XsJk5X8',
+      apiKey: process.env.GOOGLE_API_KEY,
       version: 'weekly',
     });
 
@@ -20,10 +20,10 @@ const UserMap = ({setMapObject, userPermission}) =>{
         center: userCoordinates,
         clickableIcons: true,
         zoom: 8,
-        fullscreenControl: false, // remove the top-right button
-        mapTypeControl: false, // remove the top-left buttons
-        streetViewControl: false, // remove the pegman
-        zoomControl: false, // remove the bottom-right buttons
+        fullscreenControl: false,
+        mapTypeControl: false,
+        streetViewControl: false,
+        zoomControl: false,
       });
 
       setMapObject(map)
