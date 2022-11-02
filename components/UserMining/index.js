@@ -23,7 +23,7 @@ const UserMining = () =>{
               <h1>Was I able to find you?</h1>
               <p>Longitude: {userLongitude}</p>
               <p>Latitude: {userLatitude}</p>
-              <p>Range of Error: {accuracy}meters</p>
+              <p>Range of Error: {accuracy} meters</p>
               <span className='disclaimer'>Don't be alarmed, I am not storing any of this data. I respect your privacy, and am merely showing a glimpse of what to expect in future projects. Check back later to see what else I can extract ^__^</span>
             </div>
             <UserMap userPermission={userPermission} setMapObject={setMapObject}/> 
