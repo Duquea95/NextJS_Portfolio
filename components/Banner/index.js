@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import Image from 'next/future/image'
+import Image from 'next/image'
 import anthony from'../../public/images/anthony.jpg' 
 
 const Banner = () => {

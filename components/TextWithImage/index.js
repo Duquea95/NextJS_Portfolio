@@ -1,4 +1,4 @@
-import Image from 'next/future/image';
+import Image from 'next/image';
 import jaImage from'../../public/images/jonathan-adler.jpeg' ;
 import billysImage from'../../public/images/billys-bakery.jpeg';
 import oscarStoneImage from'../../public/images/oscar-stone.jpeg';
