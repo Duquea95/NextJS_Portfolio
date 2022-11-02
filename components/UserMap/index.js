@@ -1,7 +1,7 @@
 import { useEffect, useRef} from 'react';
 import {Loader} from '@googlemaps/js-api-loader';
 
-const UserMap = ({setMapObject, userPermission}) =>{
+const UserMap = ({setMapObject}) =>{
 
   const googlemap = useRef(null);
 
