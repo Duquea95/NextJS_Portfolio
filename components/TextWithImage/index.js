@@ -4,8 +4,6 @@ import billysImage from'../../public/images/billys-bakery.jpeg';
 import oscarStoneImage from'../../public/images/oscar-stone.jpeg';
 import bmccImage from'../../public/images/bmcc.jpeg';
 
-import { useState } from 'react';
-
 const imageArray = [
   {
     src: oscarStoneImage.src,
