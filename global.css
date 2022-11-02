@@ -215,7 +215,7 @@ Component Styling - Columns
 .card h1, .mailer h1,.text-with-image h1, .user-learning h1{
   margin-bottom: 1.2rem;
 }
-.card h1, .mailer h1,.text-with-image h1, .main-lg{
+.card h1, .mailer h1,.text-with-image h1, .main-lg, .user-learning h1{
   font-size: 2.5rem;
   line-height: 1.05em;
 }
