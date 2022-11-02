@@ -3,7 +3,7 @@ import {useRef} from 'react';
 import { setCookie } from 'cookies-next';
 // import PropTypes from 'prop-types';
 
-const LocatorButton = ({mapObject, setUserPermission}) =>{
+const LocatorButton = ({mapObject, trackerClicked}) =>{
   const marker = useRef(null); 
   const accuracyCircle = useRef(null)
 
@@ -20,15 +20,13 @@ const LocatorButton = ({mapObject, setUserPermission}) =>{
   
   const locatorButtonClicked = () => {
 
-    setUserPermission(true);
-
     if (navigator.geolocation) {
       
       navigator.geolocation.getCurrentPosition(position => {
         const userLocation = {           
           lat: position.coords.latitude, 
           lng: position.coords.longitude,
-        };                               
+        };          
         
         setCookie('latitude', position.coords.latitude);
         setCookie('longitude', position.coords.longitude);
@@ -63,6 +61,8 @@ const LocatorButton = ({mapObject, setUserPermission}) =>{
         });
       
         accuracyCircle.current.setMap(mapObject)
+
+        trackerClicked(userLocation.lat, userLocation.lng, errorRange);
       },error => { handleGeolocationError(error, setStatus)}, {maximumAge: 1000, timeout: 10000})}
     else {
       setStatus('geolocationDenied');

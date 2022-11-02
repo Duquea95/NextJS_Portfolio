@@ -6,8 +6,12 @@ import getUserGeolocation from '../../hooks/getUserGeolocation';
 const UserMining = () =>{
   const [mapObject, setMapObject] = useState(null);
   const [userPermission, setUserPermission] = useState(false);
-  
-  const [userLongitude, userLatitude, accuracy] = getUserGeolocation();
+  const [userGeolocation, setUserGeolocation] = useState([])
+
+  const trackerClicked = (latitude, longitude, accuracy) =>{
+    setUserGeolocation({longitude: longitude, latitude: latitude, accuracy: accuracy})
+    setUserPermission(true)
+  }
 
   return(
     <div className='section flex flex-center user-learning'>
@@ -16,14 +20,14 @@ const UserMining = () =>{
           <div style={{textAlign: 'center'}} className={userPermission ? 'hide': ''}>
             <h1>Want to see something cool?</h1>
             <p>I'm currently working on various personal projects. One of them involving user data exctraction for visual analsis. If you don't mind, I'd love to learn a little about you.</p>
-            <LocatorButton mapObject={mapObject} setUserPermission={setUserPermission}/>
+            <LocatorButton mapObject={mapObject} trackerClicked={trackerClicked}/>
           </div>
           <div className={userPermission ? 'flex user-data': 'hide'}>
             <div className='data-copy'>
               <h1>Was I able to find you?</h1>
-              <p>Longitude: {userLongitude}</p>
-              <p>Latitude: {userLatitude}</p>
-              <p>Range of Error: {accuracy} meters</p>
+              <p>Longitude: {userGeolocation.longitude}</p>
+              <p>Longitude: {userGeolocation.latitude}</p>
+              <p>Range of Error: {userGeolocation.accuracy} meters</p>
               <span className='disclaimer'>Don't be alarmed, I am not storing any of this data. I respect your privacy, and am merely showing a glimpse of what to expect in future projects. Check back later to see what else I can extract ^__^</span>
             </div>
             <UserMap setMapObject={setMapObject}/> 
