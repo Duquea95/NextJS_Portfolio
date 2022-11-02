@@ -94,10 +94,7 @@ ul{
 }
 
 .text-with-image .padding.content .copy{
-  padding: 3rem;
-}
-.padding{
-  padding: 5rem 2rem;
+  padding: 5rem 3rem;
 }
 
 .dsktp-only, .hide{
@@ -149,9 +146,6 @@ Component Styling - Banner
   padding: 3rem 2rem;
 }
 
-.banner .content > .flex {
-  /* justify-content: space-around; */
-}
 .banner p{
   font-size: 1.2rem;
   margin-bottom: 1rem;
@@ -292,12 +286,7 @@ Component Styling - Cards
   padding: 3rem 1.5rem;
   margin: 3rem auto;
   border-radius: 0.4rem;
-  /* box-shadow: none; */
-  /* box-shadow: #a8a8a8 -5px 10px 25px 3px; */
   transition: box-shadow 0.5s linear;
-}
-.card:last-child{
-  /* box-shadow: #a8a8a8 5px 10px 25px 3px; */
 }
 
 .card p{
@@ -421,50 +410,6 @@ button:hover,
 button:focus {
   background-color: #77A68B;
 }
-
-form button{
-  /* padding: 2rem;
-  padding-top: 3rem; */
-}
-
-/* button > a{
-  z-index: 1;
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5em;
-  width: 100%;
-  border: 2px solid #77A68B;
-  color:#77A68B;
-  border-radius: 0.4rem;
-}
-
-button > a:before{
-  content: '';
-  width: 100%;
-  height: 101%;
-  pointer-events: none;
-  z-index: -1;
-  position: absolute;
-  top: -1;
-  border-radius: 0.4em;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: transparent;
-  transition: transform 0.3s linear;
-  transform: translateX(-100%);
-}
-
-button:hover > a{
-  color: #f8f8f8;
-}
-
-button:hover > a:before{
-  transform: translateX(0);
-  background: #77A68B;
-} */
 
 /*********************************
 Component Styling - Footer
@@ -607,7 +552,7 @@ footer div.padding.content > div:first-child a:hover::after{
   background: #77A68B;
 }
 .user-learning .padding.content{
-  padding: 5rem 3rem;
+  padding: 5rem 0;
 }
 .user-learning button{
   border: 2px solid #f8f8f8;
@@ -625,6 +570,10 @@ footer div.padding.content > div:first-child a:hover::after{
 .user-data{
   align-items: center;
   justify-content: center;
+}
+.data-copy{
+  text-align: center;
+  padding: 0 3rem;
 }
 .data-copy p{
   margin-bottom: 1rem;
@@ -666,7 +615,7 @@ footer div.padding.content > div:first-child a:hover::after{
     box-shadow: #5c5c5c -10px 15px 25px 5px;
   } */
 
-  .text-with-image .padding.content,.user-learning .padding.content, footer div.padding.content{
+  .text-with-image .padding.content, footer div.padding.content{
     padding: 5rem;
   }
   
@@ -684,6 +633,8 @@ footer div.padding.content > div:first-child a:hover::after{
   }
   .data-copy{
     width: 400px;
+    text-align: unset;
+    padding: 0;
   }
   .card:first-child{
     border-right: 0.2rem solid #94DABC;
@@ -710,10 +661,10 @@ footer div.padding.content > div:first-child a:hover::after{
   }
 
   .card h1, .mailer h1,.text-with-image h1, .user-learning h1{
-    font-size: 2.7rem;
+    font-size: 2.4rem;
   }
   .mailer p, .card p, .user-learning p{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   button{
@@ -776,8 +727,11 @@ footer div.padding.content > div:first-child a:hover::after{
   .main-lg{
     font-size: 5rem;
   }
-  .banner .flex > div:first-child {
+  .banner .flex > div:first-child{
     margin-right: 13rem;
+  }
+  .data-copy {
+    margin-right: 5rem;
   }
   .banner-image:after{
     width: 350px;
@@ -788,6 +742,9 @@ footer div.padding.content > div:first-child a:hover::after{
   }
   .padding, footer div.padding.content, .text-with-image .padding.content{
     padding: 7rem 8rem;
+  }
+  .user-learning .padding.content{
+    padding: 7rem 5rem;
   }
 
   .banner img{
