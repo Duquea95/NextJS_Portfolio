@@ -146,11 +146,11 @@ Component Styling - Banner
   max-height: 5em;
 }
 .banner .padding.content {
-  padding-top: 3rem;
+  padding: 3rem 2rem;
 }
 
 .banner .content > .flex {
-  align-items: center;
+  /* justify-content: space-around; */
 }
 .banner p{
   font-size: 1.2rem;
@@ -160,6 +160,15 @@ Component Styling - Banner
 .banner .banner-image{
   margin: 0 auto;
   margin-top: 3rem;
+}
+.banner-image:after {
+  width: 280px;
+  height: 330px;
+  border: 2px solid #f8f8f8;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transform: translate(-250px, 30px);
 }
 
 .main-lg{
@@ -294,7 +303,7 @@ Component Styling - Cards
 .card p{
   letter-spacing: 0.05em;
   font-weight: lighter;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 /*********************************
 Component Styling - Mailer Form
@@ -484,8 +493,9 @@ footer .socials-menu{
   margin-bottom: 1rem;
 }
 
-div.padding.content{
+footer div.padding.content{
   width: 100%;
+  padding: 5rem 3rem;
 }
 footer div.padding.content > div:first-child{
   padding-bottom: 1.5rem;
@@ -635,12 +645,16 @@ footer div.padding.content > div:first-child a:hover::after{
   }
 
   .banner .flex > div:first-child {
-    margin-right: 15%;
+    margin-right: 6rem;
   }
   .banner .banner-image, .card{
     margin: 0;
   }
-
+  .banner-image:after{
+    width: 300px;
+    height: 350px;
+    transform: translate(-270px, 30px);
+  }
   #cf4a, #cf4a img > div{
     height: 350px;
   }
@@ -649,15 +663,13 @@ footer div.padding.content > div:first-child a:hover::after{
     box-shadow: #5c5c5c -10px 15px 25px 5px;
   } */
 
-  .padding, .text-with-image .padding.content, .user-learning .padding.content{
+  .text-with-image .padding.content,.user-learning .padding.content, footer div.padding.content{
     padding: 5rem;
   }
   
-  .banner .padding.content
-  .banner .padding.content{
-    padding: 5rem 0;
+  .banner .padding.content {
+    padding: 5rem 2rem;
   }
-
   .main-lg{
     font-size: 3.8rem;
   }
@@ -673,10 +685,11 @@ footer div.padding.content > div:first-child a:hover::after{
   .card:first-child{
     border-right: 0.2rem solid #94DABC;
   }
-  .copy{
-    margin-right: 5rem;
+  .text-with-image .padding.content .copy{
+    padding: 0;
   }
   .copy{
+    margin-right: 5rem;
     width: 55%;
   }
   .image{
@@ -685,6 +698,9 @@ footer div.padding.content > div:first-child a:hover::after{
   .card {
     padding: 7rem 5rem;
     width: 27%;
+  }
+  .card p{
+    margin-bottom: 5rem;
   }
 
   .card h1, .mailer h1,.text-with-image h1, .user-learning h1{
@@ -723,10 +739,6 @@ footer div.padding.content > div:first-child a:hover::after{
     margin: 3rem auto;
   }
 
-  form button, .text-with-image .padding.content .copy{
-    /* padding: 0; */
-  }
-
   footer, footer .flex-between,.cards, .banner .banner-image, button > a, .section.text-with-image, .copy,.banner{
     text-align: unset;
   }
@@ -761,12 +773,17 @@ footer div.padding.content > div:first-child a:hover::after{
   .banner .flex > div:first-child {
     margin-right: 13rem;
   }
+  .banner-image:after{
+    width: 350px;
+    height: 400px;
+  }
   .card h1, .mailer h1,.text-with-image h1{
     font-size: 3.5rem;
   }
-  .padding, .text-with-image .padding.content, .user-learning .padding.content{
+  .padding, footer div.padding.content, .text-with-image .padding.content{
     padding: 7rem 8rem;
   }
+
   .banner img{
     width: 350px;
     height: 400px;

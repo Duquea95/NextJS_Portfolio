@@ -17,7 +17,7 @@ const UserMining = () =>{
     <div className='section flex flex-center user-learning'>
       <div className='padding content'>
         <div style={{margin: '0 auto'}}>
-          <div style={{textAlign: 'center'}} className={userPermission ? 'hide': ''}>
+          <div style={{textAlign: 'center', maxWidth: '60vw', margin: '0 auto'}} className={userPermission ? 'hide': ''}>
             <h1>Want to see something cool?</h1>
             <p>I'm currently working on various personal projects. One of them involving user data exctraction for visual analsis. If you don't mind, I'd love to learn a little about you.</p>
             <LocatorButton mapObject={mapObject} trackerClicked={trackerClicked}/>
