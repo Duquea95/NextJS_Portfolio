@@ -1,0 +1,734 @@
+  @import url('https://fonts.googleapis.com/css2?family=Raleway+&display=swap');
+
+/**********************************
+Keyframe Animations
+**********************************/
+@keyframes dissolveAnimation {
+  0% { opacity:1; }
+  17% { opacity:1; }
+  25% { opacity:0; }
+  92% { opacity:0; }
+  100% { opacity:1; }
+}
+@keyframes shake {
+    10% { transform: rotate(15deg); }
+
+    20% { transform: rotate(-15deg); }
+
+    30% { transform: rotate(15deg); }
+
+    40% { transform: rotate(-15deg); }
+}
+
+@keyframes gradient{
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+@keyframes titleSlideUpOut{
+  0% {transform: translate3d(0px, 0%, 0px)}
+  50% {transform: translate3d(0px, -50%, 0px)}
+  100% {transform: translate3d(0px, -100%, 0px)}
+}
+@keyframes titleSlideUpIn {
+  0% {transform: translate3d(0px, 100%, 0px)}
+  50% {transform: translate3d(0px, 50%, 0px)}
+  100% {transform: translate3d(0px, 0%, 0px)}
+}
+/*********************************
+Universal Styling
+*********************************/
+*{
+  margin:0;
+  padding:0;
+  font-family: Raleway, sans-serif;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  text-decoration: none;
+}
+html::-webkit-scrollbar,body::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 52px;
+  font-weight: bold;
+}
+ul{
+  list-style: none;
+}
+.section{
+  width: 100%;
+  height: 100vh;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.section.cards,.section.text-with-image{
+  height: auto;
+}
+
+.section, main{
+  background-color: #f8f8f8;
+}
+.flex{
+  display: flex;
+}
+.flex-center{
+  align-items: center;
+  justify-content: center;
+}
+.flex-between{
+  justify-content: space-between;
+}
+.section.cards, form .flex, .section.text-with-image .content > .flex, form label, .banner .flex{
+  display: block;
+}
+
+.text-with-image .padding.content .copy{
+  padding: 3rem;
+}
+.padding{
+  padding: 0 3rem;
+}
+
+.dsktp-only, .hide{
+  display: none;
+}
+
+
+/*********************************
+Component Styling - Navigation
+*********************************/
+.navigation{
+  width: 100%;
+  height: 5px;
+  display: flex;
+  max-height: 12rem;
+  justify-content: space-between;
+  align-items: center;  
+  font-size: 1rem;
+  height: 11.2em;
+  position: fixed;
+  padding-left: 6em;
+  z-index: 1000;
+  padding-right: 6em;
+}
+.navigation ul{
+  flex-wrap: wrap;
+  float: right;
+  margin: 20px 0;
+  padding: 0 25px;
+}
+.navigation ul li{
+  list-style-type:none;
+  padding-right: 10px;
+}
+
+/*********************************
+Component Styling - Banner
+*********************************/
+
+.title-slider{
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-height: 5em;
+}
+.banner .padding.content {
+  padding-top: 3rem;
+}
+
+.banner .content > .flex {
+  align-items: center;
+}
+.banner p{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.banner .banner-image{
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.main-lg{
+  text-transform: uppercase;
+  line-height: 100%;
+  color: #f8f8f8 !important;
+}
+
+.grad{
+  background: linear-gradient(-45deg, #47C5CF, #94DABC, #FFCF54, #FAD1E2);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+.main-lg.hide-slide{
+  position:absolute;
+  left: 0;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  transform: translate3d(0px, 100%, 0px);
+}
+
+.main-lg.active, .main-lg.inactive{
+  right: 0;
+}
+.main-lg.start{
+  transform: translate3d(0px, 0%, 0px);
+}
+.main-lg.slideIn-start.start.active{
+  animation: titleSlideUpIn 1.5s forwards;
+}
+.main-lg.hide-slide.active{
+  animation: titleSlideUpIn 1.5s forwards;
+}
+.main-lg.hide-slide.inactive.hide-slideUp{
+  animation: titleSlideUpOut 1.5s forwards;
+}
+.main-lg.start.inactive{
+  animation: titleSlideUpOut 1.5s forwards;
+}
+
+/*********************************
+Component Styling - Columns
+*********************************/
+
+.column-items,.__cards, .__copyImage, .__copy{
+  height: inherit;
+}
+
+.card h1,form input, form input:focus, .mainColor,.mailer h1, .section h1{
+  color: #77A68B;
+}
+.card h1, .mailer h1,.text-with-image h1, .user-learning h1{
+  margin-bottom: 1.2rem;
+}
+.card h1, .mailer h1,.text-with-image h1, .main-lg{
+  font-size: 2.5rem;
+  line-height: 1.05em;
+}
+.card p, .section-mailer p,form input::placeholder, form label, .footer-section a:hover, textarea::placeholder, .mailer p, .text-with-image p, .banner p, .error-page p, .user-learning p{
+  color: #40594B;
+}
+
+footer p{
+  color: #94DABC
+}
+
+.text-with-image h1{
+  margin-bottom: 2.5rem;
+}
+.text-with-image .padding.content{
+padding: 0;
+}
+
+.text-with-image .content > .flex, .banner .content > .flex  {
+  align-items: center;
+}
+
+#cf4a{
+  position:relative;
+  height: calc(100vh/2);
+  overflow: hidden;
+}
+
+#cf4a img {
+  position:absolute;
+  left:0;
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+  
+  animation-name: dissolveAnimation;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+}
+
+#cf4a img:nth-of-type(1) {
+  animation-delay: 6s;
+}
+
+#cf4a img:nth-of-type(2) {
+  animation-delay: 4s;
+}
+  
+#cf4a img:nth-of-type(3) {
+  animation-delay: 2s;
+}
+  
+#cf4a img:nth-of-type(4) {
+  animation-delay: 0;
+}
+
+/*********************************
+Component Styling - Cards
+*********************************/
+
+.card {
+  width: 300px;
+  background: white;
+  padding: 3rem 1.5rem;
+  margin: 3rem auto;
+  border-radius: 0.4rem;
+}
+
+.card p{
+  letter-spacing: 0.05em;
+  font-weight: lighter;
+  margin-bottom: 1em;
+}
+/*********************************
+Component Styling - Mailer Form
+/*********************************/
+
+form div .row{
+  width: 100%;
+  margin-top: 1.5rem;
+}
+.section.mailer > div{
+  width: 95%;
+  padding: 0 3rem;
+}
+.mailer p, .card p{
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.form-copy{
+  margin-bottom: 3rem;
+}
+.mailer p, .card p, form input, form textarea,form label{
+  font-size: 1rem;
+}
+
+form input, form textarea,form label{
+  font-weight: lighter;
+}
+form label{
+  opacity: .8;
+  margin-bottom: 1rem;
+}
+form input, form textarea{
+  border: none;
+  background: inherit;
+  margin: 0;
+  border-bottom: 1px solid #40594B;
+  width: 100%;
+  padding: 0 0 1rem 0;
+}
+form textarea{
+  line-height: 18.5px;
+}
+form input::placeholder, form textarea::placeholder{
+  transition: opacity .5s linear;
+}
+form input:focus, form textarea:focus{
+  outline: none;
+}
+form input:focus::placeholder, form textarea:focus::placeholder{
+  opacity:0;
+}
+  
+form .justify-center, .column-items .card{
+  justify-content: center;
+}
+  
+form .justify-center:last-child{
+  padding: 0;
+}
+  
+form .justify-center:nth-child(2) .row{
+  width: 100%;
+}
+
+textarea{
+  width: 100%;
+  overflow: auto;
+}
+
+.copyright{
+  font-size: 0.8rem;
+}
+
+/*********************************
+Component Styling - Button
+*********************************/
+button{
+  position:relative;
+  border: none;
+  letter-spacing: 0.15em;
+  font-size: 0.7em;
+  font-weight: bold;
+  user-select:none;
+  width: 200px;
+  display: inline-flex;
+  overflow: hidden;
+  background: transparent;
+  white-space: nowrap;
+  padding-top: 2rem;
+  text-transform: uppercase;
+}
+
+form button{
+  padding: 2rem;
+  padding-top: 3rem;
+}
+
+button > a{
+  z-index: 1;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5em;
+  width: 100%;
+  border: 2px solid #77A68B;
+  color:#77A68B;
+  border-radius: 0.4rem;
+}
+
+button > a:before{
+  content: '';
+  width: 100%;
+  height: 101%;
+  pointer-events: none;
+  z-index: -1;
+  position: absolute;
+  top: -1;
+  border-radius: 0.4em;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  transition: transform 0.3s linear;
+  transform: translateX(-100%);
+}
+
+button:hover > a{
+  color: #f8f8f8;
+}
+
+button:hover > a:before{
+  transform: translateX(0);
+  background: #77A68B;
+}
+
+/*********************************
+Component Styling - Footer
+*********************************/
+
+footer, footer .flex-between,.cards, .banner .banner-image, button > a, form .justify-center:last-child,.form-copy, .banner, .error-page{
+  text-align: center;
+}
+
+footer .section{
+  background: #0c0c0c;
+  justify-content: initial;
+  height: 80vh;
+}
+
+footer .flex-between{
+  flex-direction: row-reverse;
+  padding-top: 3rem;
+} 
+footer .socials-menu{
+  justify-content: center;
+  column-gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.socials-menu li{
+  justify-content: space-evenly;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+}
+
+div.padding.content{
+  width: 100%;
+}
+div.padding.content > div:first-child{
+  padding-bottom: 1.5rem;
+}
+footer div.padding.content > div:first-child{
+  border-bottom: 1px solid white;
+}
+
+footer div.padding.content > div.flex:first-child{
+  border-bottom: 1px solid #40594B;
+}
+footer div.padding.content div.flex.flex-between{
+  padding-top: 4rem;
+}
+
+footer div.padding.content > div:first-child a, footer span{
+  font-size: 1.2rem;
+  font-weight: lighter;
+  position: relative;
+}
+footer div.padding.content > div:first-child, footer .section div.padding.content > div:first-child a, footer span, .user-learning h1{
+  color: #f8f8f8;
+}
+
+.footer-menu{
+  margin-top: 2rem 0 1rem;
+  list-style: none;
+}
+
+.footer-menu li{
+  margin: 1rem auto;
+  width: max-content;
+}
+footer div.padding.content > div:first-child a::after{
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s ease;
+}
+footer div.padding.content > div:first-child a:hover::after{
+  transform: scaleX(1);
+}
+
+.icon {
+    width: 3rem;
+    height: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #f8f8f8;
+    border-radius: 0.4rem;
+    outline: 2px solid #f8f8f8;
+    transition-property:
+        outline-offset, outline-color,
+        background-color;
+    transition-duration: .25s;
+}
+.icon::after{
+  border-radius: 0.4rem;
+}
+
+.icon:hover {
+    outline-offset: 4px;
+}
+
+.icon:hover i {
+    animation: shake .25s;
+}
+
+.icon--instagram:hover {
+    background-image: radial-gradient(circle at 30% 107%,
+            #fdf497 0%, #fdf497 5%,
+            #fd5949 45%, #d6249f 60%,
+            #285AEB 90%);
+    outline-color: #a02d76;
+}
+
+.icon--twitter:hover {
+    background-color: #1da1f2;
+    outline-color: #1da1f2;
+}
+
+.icon--linkedin:hover {
+    background-color: #0077b5;
+    outline-color: #0077b5;
+}
+
+.icon--github:hover {
+    background-color: #2ea44f;
+    outline-color: #2ea44f;
+}
+.error-page{
+  background: #000;
+}
+
+.user-learning{
+  background: #77A68B;
+}
+.user-learning button a{
+  color: #f8f8f8;
+  border-color: #f8f8f8;
+}
+.user-learning button:hover > a{
+  color: #77A68B;
+}
+
+.user-learning button:hover > a:before{
+  background-color: #f8f8f8;
+}
+.user-data{
+  align-items: center;
+  justify-content: center;
+}
+.data-copy{
+  width: 450px;
+}
+.data-copy p{
+  margin-bottom: 1rem;
+  color: #0c0c0c;
+}
+
+@media (min-width: 780px){
+  .dsktp-only{
+    display: unset;
+  }
+  .section.flex,.banner .flex, footer .section .content > div, form .flex, .section.text-with-image,.section.text-with-image .content > .flex{
+    display: flex;
+  }
+  .section.cards{
+    height: 100vh;
+  }
+
+  .banner .flex > div:first-child {
+    margin-right: 15%;
+  }
+  .banner .banner-image, .card{
+    margin: 0;
+  }
+
+  #cf4a, #cf4a img > div{
+    height: 350px;
+  }
+
+  /* .card:hover {
+    box-shadow: #1c1c1c -10px 15px 25px 5px;
+  } */
+
+  .padding, .text-with-image .padding.content{
+    padding: 5rem;
+  }
+  
+  .banner .padding.content
+  .banner .padding.content{
+    padding: 5rem 0;
+  }
+
+  .main-lg{
+    font-size: 3.8rem;
+  }
+
+  .card:first-child{
+    border-right: 0.2rem solid #94DABC;
+  }
+  .copy{
+    margin-right: 5rem;
+  }
+  .copy{
+    width: 55%;
+  }
+  .image{
+    width: 45%;
+  }
+  .card {
+    padding: 7rem 5rem;
+    width: 27%;
+  }
+
+  .card h1, .mailer h1,.text-with-image h1, .user-learning h1{
+    font-size: 2.7rem;
+  }
+  .mailer p, .card p, .user-learning p{
+    font-size: 1.4rem;
+  }
+
+  button{
+    width: auto;
+    padding-top: 3.5em;
+    min-width: 23.222em;
+  }
+  
+  form, .form-copy{
+    width: 50%;
+    min-width: 500px;
+  }
+  
+  form{
+    margin: 0 auto;
+  }
+  .form-copy{
+    margin: 0 auto 2rem;
+  }
+
+  form .flex .row{
+    padding-right: 0.3em;
+    padding-left: 0;
+    margin-top: 0;
+    width: 45%;
+  }
+
+  form .justify-center:nth-child(2) {
+    margin: 3rem auto;
+  }
+
+  form button, .text-with-image .padding.content .copy{
+    padding: 0;
+  }
+
+  footer, footer .flex-between,.cards, .banner .banner-image, button > a, .section.text-with-image, .copy,.banner{
+    text-align: unset;
+  }
+  footer .section{
+    height: 100vh;
+  }
+
+  footer .flex-between{
+    align-items: center;
+    padding-top: 5rem;
+  }
+
+  footer .section .content > div:first-child > div{
+    margin-top: 3rem;
+    margin-right: 13.5rem;
+    margin-bottom: 14rem;
+  }
+  .footer-menu{
+    margin-top: 5.8rem;
+  }
+  .footer-menu li{
+    margin: 1rem 0;
+  }
+  footer .socials-menu{
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1200px){
+  .main-lg{
+    font-size: 5rem;
+  }
+  .banner .flex > div:first-child {
+    margin-right: 13rem;
+  }
+  .card h1, .mailer h1,.text-with-image h1{
+    font-size: 3.5rem;
+  }
+  .padding, .text-with-image .padding.content{
+    padding: 7rem 8rem;
+  }
+  .banner img{
+    width: 350px;
+    height: 400px;
+  }
+  .card {
+    padding: 7rem 5rem;
+    width: 33%;
+  }
+}
