@@ -283,12 +283,18 @@ Component Styling - Cards
   padding: 3rem 1.5rem;
   margin: 3rem auto;
   border-radius: 0.4rem;
+  /* box-shadow: none; */
+  /* box-shadow: #a8a8a8 -5px 10px 25px 3px; */
+  transition: box-shadow 0.5s linear;
+}
+.card:last-child{
+  /* box-shadow: #a8a8a8 5px 10px 25px 3px; */
 }
 
 .card p{
   letter-spacing: 0.05em;
   font-weight: lighter;
-  margin-bottom: 1em;
+  margin-bottom: 5rem;
 }
 /*********************************
 Component Styling - Mailer Form
@@ -353,6 +359,9 @@ form .justify-center:nth-child(2) .row{
   width: 100%;
 }
 
+form > div:last-child{
+  margin-top: 3rem;
+}
 textarea{
   width: 100%;
   overflow: auto;
@@ -367,7 +376,6 @@ Component Styling - Button
 *********************************/
 button{
   position:relative;
-  border: none;
   letter-spacing: 0.15em;
   font-size: 0.7em;
   font-weight: bold;
@@ -377,16 +385,36 @@ button{
   overflow: hidden;
   background: transparent;
   white-space: nowrap;
-  padding-top: 2rem;
+  /* padding-top: 2rem; */
   text-transform: uppercase;
+  border: 2px solid #77A68B;
+  margin: 0 auto;
+  border-radius: 0.4rem;
+  padding: 1.5rem 1rem;
+  transition: all 0.5s linear;
+}
+
+button a{
+  text-align: center;
+  margin: 0 auto;
+  color: #77A68B;
+}
+
+button:hover a{
+  color: #f8f8f8;
+}
+
+button:hover,
+button:focus {
+  background-color: #77A68B;
 }
 
 form button{
-  padding: 2rem;
-  padding-top: 3rem;
+  /* padding: 2rem;
+  padding-top: 3rem; */
 }
 
-button > a{
+/* button > a{
   z-index: 1;
   display: flex;
   position: relative;
@@ -423,7 +451,7 @@ button:hover > a{
 button:hover > a:before{
   transform: translateX(0);
   background: #77A68B;
-}
+} */
 
 /*********************************
 Component Styling - Footer
@@ -458,7 +486,7 @@ footer .socials-menu{
 div.padding.content{
   width: 100%;
 }
-div.padding.content > div:first-child{
+footer div.padding.content > div:first-child{
   padding-bottom: 1.5rem;
 }
 footer div.padding.content > div:first-child{
@@ -567,16 +595,18 @@ footer div.padding.content > div:first-child a:hover::after{
 .user-learning .padding.content{
   padding: 5rem 3rem;
 }
+.user-learning button{
+  border: 2px solid #f8f8f8;
+  margin-top: 3rem;
+}
 .user-learning button a{
   color: #f8f8f8;
-  border-color: #f8f8f8;
 }
-.user-learning button:hover > a{
-  color: #77A68B;
+.user-learning button:hover{
+  background: #f8f8f8;
 }
-
-.user-learning button:hover > a:before{
-  background-color: #f8f8f8;
+.user-learning button:hover a{
+  color:#77A68B
 }
 .user-data{
   align-items: center;
@@ -615,7 +645,7 @@ footer div.padding.content > div:first-child a:hover::after{
   }
 
   /* .card:hover {
-    box-shadow: #1c1c1c -10px 15px 25px 5px;
+    box-shadow: #5c5c5c -10px 15px 25px 5px;
   } */
 
   .padding, .text-with-image .padding.content, .user-learning .padding.content{
@@ -665,8 +695,8 @@ footer div.padding.content > div:first-child a:hover::after{
 
   button{
     width: auto;
-    padding-top: 3.5em;
-    min-width: 23.222em;
+    /* padding-top: 3.5em; */
+    min-width: 200px;
   }
   
   form, .form-copy{
@@ -693,7 +723,7 @@ footer div.padding.content > div:first-child a:hover::after{
   }
 
   form button, .text-with-image .padding.content .copy{
-    padding: 0;
+    /* padding: 0; */
   }
 
   footer, footer .flex-between,.cards, .banner .banner-image, button > a, .section.text-with-image, .copy,.banner{

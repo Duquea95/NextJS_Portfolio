@@ -21,6 +21,9 @@ const UserMining = () =>{
             <h1>Want to see something cool?</h1>
             <p>I'm currently working on various personal projects. One of them involving user data exctraction for visual analsis. If you don't mind, I'd love to learn a little about you.</p>
             <LocatorButton mapObject={mapObject} trackerClicked={trackerClicked}/>
+            <div style={{marginTop: '2rem'}}>
+              <span className='disclaimer'>*This function will not work if location services are disabled on your device. Data shown is only for user client-side. No user data is being stored or tracked in my database.</span>
+            </div>
           </div>
           <div className={userPermission ? 'flex user-data': 'hide'}>
             <div className='data-copy'>
