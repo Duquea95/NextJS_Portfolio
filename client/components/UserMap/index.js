@@ -32,7 +32,7 @@ const UserMap = ({setMapObject, userPermission}) =>{
   }, [setMapObject]);
 
   return(
-    <div id='map' style={{height: 450, width: 450, margin: '3rem auto'}} ref={googlemap} />
+    <div id='map' ref={googlemap} />
   )
 }
 

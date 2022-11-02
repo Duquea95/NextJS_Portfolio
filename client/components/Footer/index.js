@@ -31,7 +31,7 @@ export default function Footer(){
                 return <a key={'social_link__'+idx} className={link.linkClasses} href={link.url}><i className={link.iconClasses}></i></a>
               })}
             </div>
-            <div><span className="copyright">© Anthony Duque 2022</span></div>
+            <div><span className="disclaimer">© Anthony Duque 2022</span></div>
           </div>
         </div>
       </div>

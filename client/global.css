@@ -72,7 +72,7 @@ ul{
   box-sizing: border-box;
 }
 
-.section.cards,.section.text-with-image{
+.section.cards,.section.text-with-image, .user-learning{
   height: auto;
 }
 
@@ -89,7 +89,7 @@ ul{
 .flex-between{
   justify-content: space-between;
 }
-.section.cards, form .flex, .section.text-with-image .content > .flex, form label, .banner .flex{
+.section.cards, form .flex, .section.text-with-image .content > .flex, form label, .banner .flex, .user-learning .flex{
   display: block;
 }
 
@@ -358,7 +358,7 @@ textarea{
   overflow: auto;
 }
 
-.copyright{
+.disclaimer{
   font-size: 0.8rem;
 }
 
@@ -477,7 +477,7 @@ footer div.padding.content > div:first-child a, footer span{
   font-weight: lighter;
   position: relative;
 }
-footer div.padding.content > div:first-child, footer .section div.padding.content > div:first-child a, footer span, .user-learning h1{
+footer div.padding.content > div:first-child, footer .section div.padding.content > div:first-child a, footer span, .user-learning h1,.data-copy .disclaimer{
   color: #f8f8f8;
 }
 
@@ -564,6 +564,9 @@ footer div.padding.content > div:first-child a:hover::after{
 .user-learning{
   background: #77A68B;
 }
+.user-learning .padding.content{
+  padding: 5rem 3rem;
+}
 .user-learning button a{
   color: #f8f8f8;
   border-color: #f8f8f8;
@@ -579,22 +582,24 @@ footer div.padding.content > div:first-child a:hover::after{
   align-items: center;
   justify-content: center;
 }
-.data-copy{
-  width: 450px;
-}
 .data-copy p{
   margin-bottom: 1rem;
   color: #0c0c0c;
+}
+#map{
+  width: 350px;
+  height: 350px;
+  margin: 3rem auto 0;
 }
 
 @media (min-width: 780px){
   .dsktp-only{
     display: unset;
   }
-  .section.flex,.banner .flex, footer .section .content > div, form .flex, .section.text-with-image,.section.text-with-image .content > .flex{
+  .section.flex,.banner .flex, footer .section .content > div, form .flex, .section.text-with-image,.section.text-with-image .content > .flex, .user-learning .flex{
     display: flex;
   }
-  .section.cards{
+  .section.cards, .user-learning, .section.text-with-image{
     height: 100vh;
   }
 
@@ -613,7 +618,7 @@ footer div.padding.content > div:first-child a:hover::after{
     box-shadow: #1c1c1c -10px 15px 25px 5px;
   } */
 
-  .padding, .text-with-image .padding.content{
+  .padding, .text-with-image .padding.content, .user-learning .padding.content{
     padding: 5rem;
   }
   
@@ -626,6 +631,14 @@ footer div.padding.content > div:first-child a:hover::after{
     font-size: 3.8rem;
   }
 
+  #map{
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+  }
+  .data-copy{
+    width: 400px;
+  }
   .card:first-child{
     border-right: 0.2rem solid #94DABC;
   }
@@ -720,13 +733,22 @@ footer div.padding.content > div:first-child a:hover::after{
   .card h1, .mailer h1,.text-with-image h1{
     font-size: 3.5rem;
   }
-  .padding, .text-with-image .padding.content{
+  .padding, .text-with-image .padding.content, .user-learning .padding.content{
     padding: 7rem 8rem;
   }
   .banner img{
     width: 350px;
     height: 400px;
   }
+
+  #map{
+    height: 450px;
+    width: 450px;
+  }
+  .data-copy{
+    width: 450px;
+  }
+
   .card {
     padding: 7rem 5rem;
     width: 33%;
