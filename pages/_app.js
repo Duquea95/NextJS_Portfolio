@@ -1,4 +1,3 @@
-
 import '../global.css'
 import Layout from '../components/layout'
 

@@ -1,7 +1,7 @@
 export default function Footer(){
   let footerLinks = [
     {text: 'My Works', url: '/Works'},
-    {text: 'My Articles', url: '/Blog'},
+    // {text: 'My Articles', url: '/Blog'},
   ]
 
   let socialLinks = [

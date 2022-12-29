@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import jaImage from'../../public/images/jonathan-adler.jpeg' ;
-import billysImage from'../../public/images/billys-bakery.jpeg';
+// import billysImage from'../../public/images/billys-bakery.jpeg';
 import oscarStoneImage from'../../public/images/oscar-stone.jpeg';
 import bmccImage from'../../public/images/bmcc.jpeg';
 
@@ -17,10 +17,10 @@ const imageArray = [
     src: bmccImage.src,
     name: 'Borough Of Manhattan\nCommunity College'
   },
-  {
-    src: billysImage.src,
-    name: 'Billy\'s Bakery NYC'
-  },
+  // {
+  //   src: billysImage.src,
+  //   name: 'Billy\'s Bakery NYC'
+  // },
 ];
 
 const TextWithImage = (props) => {

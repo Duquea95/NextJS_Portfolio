@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import Image from 'next/image'
-import anthony from'../../public/images/anthony.jpg' 
+import anthony from'../../public/images/anthony.png' 
 
-const Banner = () => {
+const titleSlider = () => {
   const[activeIndex, setActiveIndex] = useState(0); 
   const [count, setCount] = useState(0)
   let texts = ['People', 'Impact', 'Change', 'Action', 'Good', 'People'];
@@ -22,23 +22,28 @@ const Banner = () => {
   }, [activeIndex])
 
   return(
-    <div className='section flex flex-center banner grad' style={{willChange: 'opacity', opacity: 1}}>
+    <div>
+      <p>Anthony Duque<span className='dsktp-only'> - Frontend Engineer</span></p>
+      <h1 className='main-lg'>Creating<br/>For<br/></h1>
+      <div className='title-slider'>
+        {texts.map((text,idx) => {return (
+          <h1 key={idx} className={`main-lg ${(idx == 0 && count == 0) ? 'slideIn-start' : ''} ${idx == 0 ? 'start' : 'hide-slide'} ${idx==activeIndex ? 'active': 'inactive'} ${idx <= activeIndex ? 'hide-slideUp' : ''} ${idx == text.length-1 ? 'last' : ''}`}>{text}</h1>
+        )})}
+      </div>
+    </div>
+  )
+}
+
+const Banner = () => {
+
+  return(
+    <div className='flex flex-center banner grad' style={{willChange: 'opacity', opacity: 1}}>
       <div className='padding content'>
-        <div className='flex'>
-          <div>
-            <p>Anthony Duque<span className='dsktp-only'> - Frontend Engineer</span></p>
-            <h1 className='main-lg'>Creating<br/>For<br/></h1>
-            <div className='title-slider'>
-              {texts.map((text,idx) => {return (
-                <h1
-                  key={idx} 
-                  className={`main-lg ${(idx == 0 && count == 0) ? 'slideIn-start' : ''} ${idx == 0 ? 'start' : 'hide-slide'} ${idx==activeIndex ? 'active': 'inactive'} ${idx <= activeIndex ? 'hide-slideUp' : ''} ${idx == text.length-1 ? 'last' : ''}`}>{text}
-                </h1>
-                )
-              })}
-            </div>
-          </div>
-          <div className='banner-image'><Image alt='Anthony Duque - Front-End Engineer' priority src={anthony.src} width={300} height={350}/></div>
+        <div>
+          {/* <h2>Hi, I'm Anthony!</h2> */}
+          <h1>Web Developer & Designer</h1>
+          <p style={{fontSize: '1rem'}}>Developing user-friendly and memorable experiences with every design.</p>
+          <div className='banner-image'><Image alt='Anthony Duque - Front-End Engineer' priority src={anthony.src} width={240} height={300}/></div>
         </div>
       </div>
     </div>
