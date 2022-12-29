@@ -1,7 +1,7 @@
 import dadaDaily from'../../public/images/dada_daily_logo.png';
 import morganLane from'../../public/images/Morgan_Lane_logo.png';
 import sportsLab from'../../public/images/ssl_logo.png';
-import cocoBreezyLogo from'../../public/images/Coco_and_Breezy_logo.png';
+import cocoBreezyLogo from'../../public/images/coco_and_breezy_logo.png';
 import billysBakeryLogo from'../../public/images/Billys_Bakery_logo.png';
 import jonathanAdlerLogo from'../../public/images/Jonathan_Adler_logo.png';
 import bmccLogo from'../../public/images/BMCC_logo.png';
