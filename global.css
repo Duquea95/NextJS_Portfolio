@@ -116,8 +116,9 @@ ul{
   box-sizing: border-box;
 }
 
-.section.cards,.section.text-with-image, .user-learning, .section.tabs{
+.section.cards, .section.tabs{
   height: auto;
+  overflow: hidden;
 }
 
 .section, main{
@@ -141,13 +142,12 @@ h1, h2, input, .mainColor,.inner-tab p, footer p, .skills-set, .badges p, form l
   color: #77A68B ;
 }
 
-.text-with-image .padding.content .copy{
-  padding: 5rem 3rem;
-}
-
 .mailer h1,.text-with-image h1, .main-lg, .user-learning h1{
   font-size: 2.5rem;
   line-height: 1.5;
+}
+.text-with-image h1{
+  margin-bottom: 3rem;
 }
 /* .footer-section a:hover, .banner p{
   color: #40594B;
@@ -162,9 +162,9 @@ h1, h2, input, .mainColor,.inner-tab p, footer p, .skills-set, .badges p, form l
 Component Styling - Navbar
 *********************************/
 header{
-  position: absolute;
+  position: fixed;
   width: 100%;
-  z-index: 99;
+  z-index: 99999999;
 }
 
 header > div.flex{
@@ -226,7 +226,7 @@ Component Styling - Banner
   width: 100%;
   max-height: 5em;
 } */
-.banner,.badges, footer .section, .cards, .tabs, .tabs .container, .mailer{background: #0c0c0c;}
+.banner,.badges, footer .section, .cards, .tabs, .tabs .container, .mailer, header, .card .overlay, .error-page, .text-with-image{background: #0c0c0c;}
 .banner .padding.content {
   padding: 3rem 2rem;
 }
@@ -238,7 +238,6 @@ Component Styling - Banner
 }
 .banner h1{
   font-size: 3rem;
-  margin-bottom: 6rem;
   font-weight: 500;
   margin-bottom: 1.2rem;
 }
@@ -381,7 +380,6 @@ Component Styling - Cards
 }
 
 .card .overlay{
-  background: #0c0c0c;
   z-index: 5;
 }
 .card:hover figcaption{
@@ -409,17 +407,16 @@ Component Styling - Cards
 .card-link:hover, .nav-cta:hover{
   background: #77A68B;
 }
-.card h2{
+.card h2, .text-with-image p, .card figcaption p{
   letter-spacing: 2px;
 }
 
 .card figcaption p{
   width: 80%;
-  letter-spacing: 2px;
   margin: 0 auto 3rem;
 }
 .cards h2{color: #77A68B;}
-.card p,.card-link, .cards p, header a, .banner h2,.banner p, .mailer p, button a, form input::placeholder, textarea::placeholder, textarea{
+.card p,.card-link, .cards p, header a, .banner h2,.banner p, .mailer p, button a, form input::placeholder, textarea::placeholder, textarea, .text-with-image p{
   color: #f8f8f8;
 }
 
@@ -671,10 +668,6 @@ footer div.padding.content > div:first-child a:hover::after{
     background-color: #2ea44f;
     outline-color: #2ea44f;
 }
-.error-page{
-  background: #0c0c0c;
-}
-
 /* Skills Components */
 .tabs .content{
   margin-left: auto;
@@ -816,7 +809,7 @@ footer div.padding.content > div:first-child a:hover::after{
     width: 50%;
   }
 
-  .text-with-image .padding.content, footer div.padding.content{
+  footer div.padding.content{
     padding: 5rem;
   }
   
@@ -826,19 +819,12 @@ footer div.padding.content > div:first-child a:hover::after{
   .inner-content{
     width: 500px; 
   }
-  .text-with-image .padding.content .copy{
-    padding: 0;
-  }
   .copy{
     margin-right: 5rem;
     width: 55%;
   }
   .image{
     width: 45%;
-  }
-
-  .card h1, .mailer h1,.text-with-image h1, .user-learning h1{
-    font-size: 2.4rem;
   }
 
   button{
@@ -907,7 +893,7 @@ footer div.padding.content > div:first-child a:hover::after{
   .card{
     width: 33.3333%;
   }
-  .padding, footer div.padding.content, .text-with-image .padding.content{
+  .padding, footer div.padding.content{
     padding: 4rem 8rem;
   }
 }

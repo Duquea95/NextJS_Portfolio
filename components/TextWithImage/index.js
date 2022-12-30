@@ -1,37 +1,17 @@
 import Image from 'next/image';
 import jaImage from'../../public/images/jonathan-adler.jpeg' ;
-// import billysImage from'../../public/images/billys-bakery.jpeg';
 import oscarStoneImage from'../../public/images/oscar-stone.jpeg';
 import bmccImage from'../../public/images/bmcc.jpeg';
-
-const imageArray = [
-  {
-    src: oscarStoneImage.src,
-    name: 'Oscar Stone'
-  },
-  {
-    src: jaImage.src,
-    name: 'Johnathan Adler'
-  },
-  {
-    src: bmccImage.src,
-    name: 'Borough Of Manhattan\nCommunity College'
-  },
-  // {
-  //   src: billysImage.src,
-  //   name: 'Billy\'s Bakery NYC'
-  // },
-];
 
 const TextWithImage = (props) => {
   const imageCollection = () => {
     return(
       <div className='image' id="cf4a">
-      {imageArray.map((image, idx) =>{
+      {/* {imageArray.map((image, idx) =>{
         return (
           <Image key={'imageArray_' + idx} src={image.src} width={500} height={350} alt={image.name}/>
         )
-      })}
+      })} */}
       </div>
     )
   }
@@ -52,7 +32,7 @@ const TextWithImage = (props) => {
             I am currently looking for new opportunities as a Front-End Engineer. I loved my experience in a marketing-based role, but my passion lies in creating memorable user-experiences. */}
           </p>
         </div>
-        {imageCollection()}
+        {/* {imageCollection()} */}
       </div>
       </div>
     </div>

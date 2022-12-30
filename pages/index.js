@@ -18,8 +18,8 @@ const HomePage =() => {
       <meta name='author' content='Anthony Duque' key='author'/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
     </Head>
-    <Banner />
-    <CopyBlock />
+    <Banner title="Web Developer & Designer" subtitle="Developing user-friendly and memorable experiences with every design."/>
+    <CopyBlock title="Hi, I'm Anthony." copy="Since beginning my journey as a web developer over 5 years ago, I've done remote work for agencies, consulted for small businesses, and collaborated with talented people to create digital products for both business and consumer use. I'm confident, naturally curious, and always improving my skills."/>
     <Skills/>
     <Cards/>
     <Badges />

@@ -1,9 +1,15 @@
 import Layout from '../../components/layout';
 import ErrorPage from "../../components/404"
+import TextWithImage from "../../components/TextWithImage"
+import CopyBlock from '../../components/CopyBlock';
 
 const About = () => {
   return(
-    <ErrorPage/>
+    <>
+      <TextWithImage/>
+      <CopyBlock/>
+      <ErrorPage/>
+    </>
   )
 }
 

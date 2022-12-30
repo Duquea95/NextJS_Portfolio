@@ -34,15 +34,14 @@ const titleSlider = () => {
   )
 }
 
-const Banner = () => {
+const Banner = (props) => {
 
   return(
     <div className='flex flex-center banner grad' style={{willChange: 'opacity', opacity: 1}}>
       <div className='padding content'>
         <div>
-          {/* <h2>Hi, I'm Anthony!</h2> */}
-          <h1>Web Developer & Designer</h1>
-          <p style={{fontSize: '1rem'}}>Developing user-friendly and memorable experiences with every design.</p>
+          <h1>{props.title}</h1>
+          <p style={{fontSize: '1rem'}}>{props.subtitle}</p>
           <div className='banner-image'><Image alt='Anthony Duque - Front-End Engineer' priority src={anthony.src} width={240} height={300}/></div>
         </div>
       </div>
