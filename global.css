@@ -874,6 +874,11 @@ footer div.padding.content > div:first-child a:hover::after{
 }
 .badges .content .flex{
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.badge{
+  width: 50%;
 }
 
 .badge img{
@@ -911,6 +916,7 @@ footer div.padding.content > div:first-child a:hover::after{
     position: absolute;
     overflow: unset;
     padding: 0;
+    /* height: auto; */
   }
   .slide {
     height: 100%;
@@ -929,7 +935,9 @@ footer div.padding.content > div:first-child a:hover::after{
   }
   .badges .content .flex{
     justify-content: space-between;
-    flex-wrap: wrap;
+  }
+  .badge{
+    width: auto;
   }
   .badge img{
     width: 175px;
