@@ -13,11 +13,16 @@ const Navbar = () => {
           </Link>
         </div>
         <nav>
-          <ul className="flex">
-            <li><Link href='/Work'>Work</Link></li>
-            <li><Link href='/About'>About</Link></li>
-            <li className="nav-cta"><Link href='/Contact'>Say Hello</Link></li>
-          </ul>
+          <div className="menu_cta">
+            <div>X</div>
+          </div>
+          <div className="menu">
+            <ul className="flex">
+              <li><Link href='/Work'>Work</Link></li>
+              <li><Link href='/About'>About</Link></li>
+              <li className="nav-cta"><Link href='/Contact'>Say Hello</Link></li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>

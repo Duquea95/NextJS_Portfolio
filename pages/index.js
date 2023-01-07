@@ -6,6 +6,7 @@ import CopyBlock from '../components/CopyBlock';
 import Cards from '../components/Cards';
 import Badges from '../components/Badges';
 import Skills from '../components/Skills';
+import Carousel from '../components/Carousel';
 
 const HomePage =() => {
 
@@ -20,7 +21,7 @@ const HomePage =() => {
     </Head>
     <Banner title="Web Developer & Designer" subtitle="Developing user-friendly and memorable experiences with every design."/>
     <CopyBlock title="Hi, I'm Anthony." copy="Since beginning my journey as a web developer over 5 years ago, I've done remote work for agencies, consulted for small businesses, and collaborated with talented people to create digital products for both business and consumer use. I'm confident, naturally curious, and always improving my skills."/>
-    <Skills/>
+    <Carousel/>
     <Cards/>
     <Badges />
     <Mailer/>

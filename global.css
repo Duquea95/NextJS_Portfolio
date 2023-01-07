@@ -100,6 +100,7 @@ html, body{
   width: 100%;
   margin: 0;
   padding: 0;
+  background: #0c0c0c;
 }
 
 h1{
@@ -119,10 +120,6 @@ ul{
 .section.cards, .section.tabs{
   height: auto;
   overflow: hidden;
-}
-
-.section, main{
-  background-color: #f8f8f8;
 }
 .flex{
   display: flex;
@@ -172,6 +169,12 @@ header > div.flex{
   align-items: center;
 }
 
+header .menu{
+  display: none;
+}
+header .menu_cta{
+  color: white;
+}
 header ul{
   align-items: center;
 }
@@ -226,7 +229,7 @@ Component Styling - Banner
   width: 100%;
   max-height: 5em;
 } */
-.banner,.badges, footer .section, .cards, .tabs, .tabs .container, .mailer, header, .card .overlay, .error-page, .text-with-image{background: #0c0c0c;}
+.banner,.badges, footer .section, .cards, .tabs, .tabs .container, .mailer, header, .card .overlay, .error-page, .text-with-image, .slider-wrapper {background: #0c0c0c;}
 .banner .padding.content {
   padding: 3rem 2rem;
 }
@@ -303,6 +306,7 @@ Component Styling - CopyBlock
 *********************************/
 
 .CopyBlock{
+  background: #f8f8f8;
   text-align: center;
 }
 .CopyBlock > div{
@@ -336,7 +340,7 @@ Component Styling - Cards
   margin-bottom: 1.5rem;
 }
 .cards .content-copy{
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
   letter-spacing: 1px;
 }
 .card-grid{
@@ -346,8 +350,10 @@ Component Styling - Cards
 .card{
   position: relative;
   min-height: 275px;
+  min-width: 250px;
+  margin: 0 auto 3rem;
 }
-.cards h2{
+.cards h2, .CopyBlock .content p{
   color: #0c0c0c;
 }
 .card img{
@@ -416,7 +422,8 @@ Component Styling - Cards
   margin: 0 auto 3rem;
 }
 .cards h2{color: #77A68B;}
-.card p,.card-link, .cards p, header a, .banner h2,.banner p, .mailer p, button a, form input::placeholder, textarea::placeholder, textarea, .text-with-image p{
+
+p,.card-link, header a, .banner h2, button a, form input::placeholder, textarea::placeholder, textarea{
   color: #f8f8f8;
 }
 
@@ -506,7 +513,7 @@ textarea{
 /*********************************
 Component Styling - Button
 *********************************/
-button{
+.mailer button{
   position:relative;
   letter-spacing: 0.15em;
   font-size: 0.7em;
@@ -527,21 +534,114 @@ button{
   cursor: pointer;
 }
 
-button a{
+.mailer button a{
   text-align: center;
   margin: 0 auto;
 }
 
-button:hover,
-button:focus {
+.mailer button:hover,
+.mailer button:focus {
   background-color: #77A68B;
+}
+
+/*********************************
+Component Styling - Carousel
+*********************************/
+.slider-wrapper {
+  /* margin: 1rem 0; */
+  position: relative;
+  overflow: hidden;
+}
+.slides-container {
+  /* height: calc(100vh - 2rem); */
+  /* width: 100%; */
+  height: 100%;
+  width: calc(100vw - 8rem);
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  list-style: none;
+  margin: 2rem auto;
+  padding: 2rem;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  border-radius: 3rem;
+}
+.slide {
+  width: 300px;
+  height: calc(100vh - 50px);
+  flex: 1 0 100%;
+  margin-right: 2.1rem;
+  border: 1px solid #77A68B;
+  border-radius: 3rem;
+}
+.slide:last-child{
+  margin-right: 0;
+}
+.slide-copy{
+  margin-top: 1.5rem;
+}
+.slide-head, .slide-copy, .slide-list{
+  width: calc(100% - 4rem);
+  margin: 0 auto;
+}
+.slide-head{
+  margin-top: 5rem;
+}
+.slide-copy{
+  margin: 1.5rem auto;
+}
+.slide-list{
+  margin-top: 3rem;
+}
+.slide img, .slide-list-item{
+  margin-bottom: 1rem;
+}
+.slide-skill{
+  align-items: center;
+  height: 40px;
+  width: 350px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.slide-arrow {
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 4rem;
+  background-color: white;
+  border: none;
+  width: 2rem;
+  font-size: 3rem;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 100ms;
+  align-items: center;
+}
+.slide-arrow:hover,
+.slide-arrow:focus {
+  opacity: 1;
+}
+.slide-arrow-back {
+  left: 0;
+  padding-left: 0.25rem;
+  border-radius: 0 2rem 2rem 0;
+}
+.slide-arrow-next {
+  right: 0;
+  padding-left: 0.75rem;
+  border-radius: 2rem 0 0 2rem;
 }
 
 /*********************************
 Component Styling - Footer
 *********************************/
 
-footer, footer .flex-between, .banner .banner-image, button > a, form .justify-center:last-child,.form-copy, .banner, .error-page{
+footer, footer .flex-between, .banner .banner-image, button > a, form .justify-center:last-child,.form-copy, .banner, .error-page, .slide, .badges .content{
   text-align: center;
 }
 
@@ -672,7 +772,7 @@ footer div.padding.content > div:first-child a:hover::after{
 .tabs .content{
   margin-left: auto;
   margin-right: auto;
-  padding: 0 75px;
+  padding: 0 2rem;
 }
 .tabs .container{
   margin: 0 auto;
@@ -757,7 +857,7 @@ footer div.padding.content > div:first-child a:hover::after{
 .inner-content{
   margin: 0 auto;
 }
-/* Blocks */
+/* Badges */
 .badges{
   padding: 5rem 0;
 }
@@ -768,7 +868,6 @@ footer div.padding.content > div:first-child a:hover::after{
 .badges .content{
   width: 75%;
   margin: 0 auto;
-  text-align: center;
 }
 
 .badges .content > div:first-child{
@@ -776,10 +875,17 @@ footer div.padding.content > div:first-child a:hover::after{
 }
 .badges .content .flex{
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
-@media (min-width: 780px){
+.badge img{
+  width: 75px;
+  height: 75px;
+}
+
+@media (min-width: 768px){
+  header .menu{
+    display: block;
+  }
   header > div{
     width: 90%;
     margin: 0 auto;
@@ -787,6 +893,48 @@ footer div.padding.content > div:first-child a:hover::after{
   header ul{
     justify-content: space-between;
     width: 275px;
+  }
+  .slider-wrapper{
+    overflow: visible;
+    height: 100vh ;
+    display: flex;
+    justify-content: center;
+    /* z-index: -1; */
+  }
+  .slider-wrapper button{
+    display: none;
+  }
+  .slides-container{
+    z-index: 999;
+    margin-top: -10rem;
+    box-shadow: 0 5px 5px 0 rgb(119 166 139 / 35%), 0 0 0 1px rgb(119, 166, 139);
+    background: #0c0c0c;
+    position: absolute;
+    overflow: unset;
+    padding: 0;
+  }
+  .slide {
+    height: 100%;
+    width: 100%;
+    flex: unset;
+    border: none;
+    border-radius: 0;
+    border-right: 1px solid #77A68B50;
+    margin-right: 0;
+  }
+  .slide:last-child {
+    border-right: none;
+}
+  .section.tabs{
+    overflow: visible;
+  }
+  .badges .content .flex{
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .badge img{
+    width: 175px;
+    height: 175px;
   }
   .dsktp-only{
     display: unset;
@@ -803,6 +951,12 @@ footer div.padding.content > div:first-child a:hover::after{
   }
   .banner .banner-image{
     margin: 7rem auto 0;
+  }
+  .card{
+    width: 33.3333%;
+  }
+  .cards .content-copy{
+    margin-bottom: 6rem;
   }
   
   .CopyBlock .content{
@@ -890,9 +1044,6 @@ footer div.padding.content > div:first-child a:hover::after{
   }
 }
 @media (min-width: 1024px){
-  .card{
-    width: 33.3333%;
-  }
   .padding, footer div.padding.content{
     padding: 4rem 8rem;
   }
