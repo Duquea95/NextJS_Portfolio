@@ -31,7 +31,7 @@ const Cards = (props) => {
           {cardElements.map((card, idx) =>{
             return(
             <figure className='card' key={'card__'+idx}>
-              <Image alt='Anthony Duque - Front-End Engineer' priority src={card.src} width={400} height={200}/>
+              <Image alt='Anthony Duque - Front-End Engineer' priority src={card.src} width={345} height={290}/>
               <figcaption>
                 <div>
                   <p>{card.subText}</p>
