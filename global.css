@@ -590,7 +590,10 @@ Component Styling - Carousel
 .slide-head{
   margin-top: 5rem;
 }
-.slide-list, .slide-copy{
+.slide-copy{
+  margin-top: 1.5rem;
+}
+.slide-list{
   margin-top: 3rem;
 }
 .slide img, .slide-list-item{
