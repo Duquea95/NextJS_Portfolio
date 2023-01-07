@@ -175,7 +175,7 @@ header > div.flex{
 header .menu{
   display: none;
 }
-header .menu_cta{
+header .dropdown-cta{
   color: white;
 }
 header ul{
@@ -574,7 +574,7 @@ Component Styling - Carousel
 }
 .slide {
   width: 300px;
-  height: calc(100vh - 1rem);
+  height: calc(100vh + 3rem);
   flex: 1 0 100%;
   margin-right: 2.1rem;
   border: 1px solid #77A68B;
@@ -596,8 +596,20 @@ Component Styling - Carousel
 .slide-list{
   margin-top: 3rem;
 }
+.list-header{
+  margin-bottom: 1rem;
+  color: #77A68B;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 .slide img, .slide-list-item{
   margin-bottom: 1rem;
+}
+.slide{
+  letter-spacing: 2px;
+}
+.slide-list-item{
+  font-weight: 200;
 }
 .slide-skill{
   align-items: center;
@@ -885,8 +897,8 @@ footer div.padding.content > div:first-child a:hover::after{
 }
 
 .badge img{
-  width: 75px;
-  height: 75px;
+  /* width: 75px;
+  height: 75px; */
 }
 
 @media (min-width: 768px){
@@ -900,6 +912,13 @@ footer div.padding.content > div:first-child a:hover::after{
   header ul{
     justify-content: space-between;
     width: 275px;
+  }
+  header img{
+    width: 100px;
+    height: 41px;
+  }
+  .dropdown-cta{
+    display: none;
   }
   .slider-wrapper{
     overflow: visible;

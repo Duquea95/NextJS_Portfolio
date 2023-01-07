@@ -9,11 +9,11 @@ const Navbar = () => {
       <div className="flex flex-between">
         <div>
           <Link href='/'>
-        <Image alt='Anthony Duque - Front-End Engineer' priority src={logo.src} width={100} height={41}/>
+          <Image alt='Anthony Duque - Front-End Engineer' priority src={logo.src} width={75} height={31}/>
           </Link>
         </div>
         <nav>
-          <div className="menu_cta">
+          <div className="dropdown-cta">
             <div>X</div>
           </div>
           <div className="menu">

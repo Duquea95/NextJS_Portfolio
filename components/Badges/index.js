@@ -10,21 +10,21 @@ const Badges = () => {
       if (count <= 3){
         row.push(
           <div key={'badgeComponent__'+count} className='badge'>
-            <Image src={image.src} width={175} height={175} alt={image.name}/>
+            <Image src={image.src} width={125} height={125} alt={image.name}/>
           </div>
         )
       }
       else if(count > 3 && count < 8){
         row2.push(
           <div key={'badgeComponent__'+count} className='badge'>
-            <Image src={image.src} width={175} height={175} alt={image.name}/>
+            <Image src={image.src} width={125} height={125} alt={image.name}/>
           </div>
         )
       }
       else{
         row3.push(
           <div key={'badgeComponent__'+count} className='badge'>
-            <Image src={image.src} width={175} height={175} alt={image.name}/>
+            <Image src={image.src} width={125} height={125} alt={image.name}/>
           </div>
         )
       }
