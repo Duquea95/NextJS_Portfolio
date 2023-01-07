@@ -87,7 +87,7 @@ const Mailer = () =>{
       <div>
         <div className='form-copy'>
           <h1>Send me a message!</h1>
-          <p>Got a question or proposal, or just want <br/> to say hello? Go ahead.</p>
+          <p>Got a question, or just want <br/> to say hello? Go ahead.</p>
         </div>
         <form>
           {topInputs}
