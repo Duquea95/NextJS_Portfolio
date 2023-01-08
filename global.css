@@ -168,13 +168,23 @@ header{
 }
 
 header > div.flex{
-  padding: 2rem 3rem;
+  padding: 2rem;
   align-items: center;
+  position: relative;
 }
 
 header .menu{
   display: none;
 }
+.menu.open{
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: #0c0c0c;
+  text-align: center;
+}
+
 header .dropdown-cta{
   color: white;
 }
@@ -186,12 +196,22 @@ header ul li{
   padding: 0.5rem 1rem;
 }
 
-.nav-cta{
-  border: 1px solid #77A68B;
-  border-radius: 100px;
-  transition: background ease-in 200ms;
+.menu.open ul{
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid #f8f8f8;
+  margin-top: 2rem;
 }
 
+.menu.open li{
+  padding: 2rem 0;
+  border-bottom: 1px solid #f8f8f8FA;
+}
+.menu.open li:last-child{
+  border-bottom: none;
+}
+.menu.open .nav-cta a{
+  color: #77A68B;
+}
 /*********************************
 Component Styling - Navigation
 *********************************/
@@ -904,6 +924,7 @@ footer div.padding.content > div:first-child a:hover::after{
 @media (min-width: 768px){
   header .menu{
     display: block;
+    position: relative;
   }
   header > div{
     width: 90%;
@@ -916,6 +937,11 @@ footer div.padding.content > div:first-child a:hover::after{
   header img{
     width: 100px;
     height: 41px;
+  }
+  .nav-cta{
+    border: 1px solid #77A68B;
+    border-radius: 100px;
+    transition: background ease-in 200ms;
   }
   .dropdown-cta{
     display: none;
@@ -968,7 +994,7 @@ footer div.padding.content > div:first-child a:hover::after{
   .dsktp-only{
     display: unset;
   }
-  .section.flex,.banner .flex, footer .section .content > div, form .flex, .section.text-with-image,.section.text-with-image .content > .flex, .user-learning .flex, .tab-content, .tabs .padding.content .flex, .card-grid{
+  header ul, .section.flex, .banner .flex, footer .section .content > div, form .flex, .section.text-with-image,.section.text-with-image .content > .flex, .user-learning .flex, .tab-content, .tabs .padding.content .flex, .card-grid{
     display: flex;
   }
   .flex.tabs{

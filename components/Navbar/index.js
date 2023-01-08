@@ -1,9 +1,16 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import Image from 'next/image'
 import logo from '../../public/images/logo.png'
 import Link from 'next/link'
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleDropdown = () => {
+    console.log('menu open')
+    return setIsMenuOpen(!isMenuOpen);
+  }
+
   return(
     <header>
       <div className="flex flex-between">
@@ -14,13 +21,13 @@ const Navbar = () => {
         </div>
         <nav>
           <div className="dropdown-cta">
-            <div>X</div>
+            <div onClick={handleDropdown}>X</div>
           </div>
-          <div className="menu">
-            <ul className="flex">
-              <li><Link href='/Work'>Work</Link></li>
-              <li><Link href='/About'>About</Link></li>
-              <li className="nav-cta"><Link href='/Contact'>Say Hello</Link></li>
+          <div className={`menu ${isMenuOpen ? ' open' : ''}`}>
+            <ul>
+              <li><Link onClick={isMenuOpen ? handleDropdown : ''} href='/Work'>Work</Link></li>
+              <li><Link onClick={isMenuOpen ? handleDropdown : ''} href='/About'>About</Link></li>
+              <li className="nav-cta"><Link onClick={isMenuOpen ? handleDropdown : ''} href='/Contact'>Say Hello</Link></li>
             </ul>
           </div>
         </nav>

@@ -7,21 +7,21 @@ const tabData = [
     set: 'Front-End Experience',
     name: 'Web Development',
     image: devIcon,
-    description: 'Front-end engineer with full-stack development knowledge. I create memorable experiences through intuitive designs.',
-    skills: [ 'Shopify', 'HTML', 'CSS', 'Javascript', 'React','Node JS', 'MongoDB'],
+    description: 'I create memorable experiences using my knowledge of full-stack development.',
+    skills: [ 'Shopify', 'HTML', 'CSS', 'Javascript / Node', 'React', 'MongoDB'],
     icons: ['https://www.flaticon.com/free-icons/html-5',]
   },
   {
     set: 'UX / UI Design', 
     name: 'UX / UI Design',
     image: ux,
-    description: 'Finding the balance between design and functionality is important when designing interfaces. Always sleek, always responsive.', skills: [ 'Adobe Photoshop','Figma', 'Product Retouching', 'Sketch', 'Wireframing', 'Flow Charts'],
+    description: 'User-friendly designs with purpose and functionality. Always sleek, always responsive.', skills: [ 'Adobe Photoshop', 'Figma', , 'Sketch', 'Wireframing', 'Flow Charts'],
   },
   {
     set: 'SEO & Marketing', 
     name: 'SEO & Marketing',
     image: marketing,
-    description: 'I use marketing tools, photography, and social media platforms to create a brand, grow your audience, and scale your business.',
+    description: 'I establish a brand and help grow a business using marketing tools and social media platforms.',
     skills: [ 'Branding', 'Google Ads', 'Google Analytics', 'Photography', 'SEO', 'Social Media Marketing'],
   }
 ]
