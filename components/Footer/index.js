@@ -16,11 +16,11 @@ export default function Footer(){
         <div className='padding content'>
           <div>
             <div>
-              <p style={{marginBottom: 25+'px', letterSpacing: .3+'rem'}}>SAY HELLO</p>
+              <p className='list-header'>SAY HELLO</p>
               <a href='mailto:duquea95@gmail.com'>Duquea95@gmail.com</a>
             </div>
             <ul className='footer-menu'>
-              <p style={{marginBottom: 25+'px', letterSpacing: .3+'rem'}}>My Links</p>
+              <p className='list-header'>My Links</p>
               {footerLinks.map((link,idx) => {
                 return <li key={'footer_link__'+idx}><a href={link.url}>{link.text}</a></li>
               })}

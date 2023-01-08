@@ -8,7 +8,7 @@ const tabData = [
     name: 'Web Development',
     image: devIcon,
     description: 'I create memorable experiences using my knowledge of full-stack development.',
-    skills: [ 'Shopify', 'HTML', 'CSS', 'Javascript / Node', 'React', 'MongoDB'],
+    skills: [ 'Shopify', 'HTML', 'CSS', 'Javascript / Node', 'React', 'Mongo DB'],
     icons: ['https://www.flaticon.com/free-icons/html-5',]
   },
   {

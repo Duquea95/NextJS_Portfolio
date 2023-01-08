@@ -8,7 +8,6 @@ const About = () => {
     <>
       <TextWithImage/>
       <CopyBlock/>
-      <ErrorPage/>
     </>
   )
 }

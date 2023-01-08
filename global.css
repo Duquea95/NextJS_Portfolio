@@ -106,6 +106,9 @@ html, body{
   background: transparent;
   width: 0;
 }
+main > div:first-child{
+  margin-top: 85px;
+}
 h1{
   font-size: 2rem;
   font-weight: 400;
@@ -165,10 +168,11 @@ header{
   position: fixed;
   width: 100%;
   z-index: 99999999;
+  top: 0;
 }
 
 header > div.flex{
-  padding: 2rem;
+  padding: 1.5rem 2rem;
   align-items: center;
   position: relative;
 }
@@ -208,6 +212,10 @@ header ul li{
 }
 .menu.open li:last-child{
   border-bottom: none;
+}
+.menu.open li a{
+  width: 100%;
+  display: block;
 }
 .menu.open .nav-cta a{
   color: #77A68B;
@@ -254,7 +262,7 @@ Component Styling - Banner
 } */
 .banner,.badges, footer .section, .cards, .tabs, .tabs .container, .mailer, header, .card .overlay, .error-page, .text-with-image, .slider-wrapper {background: #0c0c0c;}
 .banner .padding.content {
-  padding: 3rem 2rem;
+  padding: 0rem 2rem 6rem;
 }
 .banner .content{
   text-align: center;
@@ -337,7 +345,6 @@ Component Styling - CopyBlock
 }
 .CopyBlock .content{
   padding: 10rem 0;
-  margin: 0 auto;
 }
 .CopyBlock .content h2{
   margin-bottom: 1.5rem;
@@ -428,14 +435,13 @@ Component Styling - Cards
   padding: 1rem 1.5rem;
   border-radius: 50px;
   font-weight: 300;
-  letter-spacing: 2px;
   font-size: .9rem;
   transition: background ease-in 200ms;
 }
-.card-link:hover, .nav-cta:hover{
+.card-link:hover{
   background: #77A68B;
 }
-.card h2, .text-with-image p, .card figcaption p{
+.card-link, .card h2, .text-with-image p, .card figcaption p, footer div.padding.content > div:first-child a, footer span, .list-header, .slide{
   letter-spacing: 2px;
 }
 
@@ -456,6 +462,10 @@ p,.card-link, header a, .banner h2, button a, form input::placeholder, textarea:
 /*********************************
 Component Styling - Mailer Form
 /*********************************/
+
+.mailer{
+  height: auto;
+}
 
 form div .row{
   width: 100%;
@@ -574,7 +584,7 @@ Component Styling - Carousel
   position: relative;
   overflow: hidden;
 }
-.slides-container, .CopyBlock > div, .cards > div {
+.slides-container, .CopyBlock > div, .cards > div, .text-with-image {
   width: calc(100vw - 4rem);
   margin: 0 auto;
 }
@@ -613,10 +623,10 @@ Component Styling - Carousel
 .slide-copy{
   margin-top: 1.5rem;
 }
-.slide-list{
+.slide-list, footer .section, .footer-menu, footer .section .content > div:first-child > div{
   margin-top: 3rem;
 }
-.list-header{
+.list-header, .slide{
   margin-bottom: 1rem;
   color: #77A68B;
   font-weight: bold;
@@ -624,9 +634,6 @@ Component Styling - Carousel
 }
 .slide img, .slide-list-item{
   margin-bottom: 1rem;
-}
-.slide{
-  letter-spacing: 2px;
 }
 .slide-list-item{
   font-weight: 200;
@@ -702,10 +709,10 @@ footer .socials-menu{
 
 footer div.padding.content{
   width: 100%;
-  padding: 5rem 3rem;
+  padding: 5rem 3rem 0;
 }
 footer div.padding.content > div:first-child{
-  padding-bottom: 15rem;
+  padding-bottom: 8rem;
 }
 footer div.padding.content > div:first-child{
   border-bottom: 1px solid white;
@@ -718,13 +725,7 @@ footer div.padding.content div.flex.flex-between{
   padding-top: 4rem;
 }
 
-footer div.padding.content > div:first-child a, footer span{
-  font-size: 1.2rem;
-  position: relative;
-  letter-spacing: 2px;
-}
-
-footer div.padding.content > div:first-child, footer .section div.padding.content > div:first-child a, footer span,button:hover a, .icon, .tab-content, .tab p, form input, .menu.open .nav-cta:hover a{
+footer div.padding.content > div:first-child, footer .section div.padding.content > div:first-child a, footer span,button:hover a, .icon, .tab-content, .tab p, form input{
   color: #f8f8f8;
 }
 
@@ -943,6 +944,9 @@ footer div.padding.content > div:first-child a:hover::after{
     border-radius: 100px;
     transition: background ease-in 200ms;
   }
+  .nav-cta:hover{
+    background: #77A68B;
+  }
   .dropdown-cta{
     display: none;
   }
@@ -1020,13 +1024,9 @@ footer div.padding.content > div:first-child a:hover::after{
   .CopyBlock .content{
     width: 700px;
   }
-
-  footer div.padding.content{
-    padding: 5rem;
-  }
   
   .banner .padding.content {
-    padding: 8rem 2rem;
+    padding: 2rem 2rem 6rem;
   }
   .inner-content{
     width: 500px; 
@@ -1070,12 +1070,17 @@ footer div.padding.content > div:first-child a:hover::after{
   footer, footer .flex-between, button > a, .section.text-with-image, .copy{
     text-align: unset;
   }
-  footer .section{
+  footer .section, .mailer{
     height: 100vh;
+  }
+
+  footer div.padding.content {
+    padding: 5rem 4rem 0;
   }
   
   footer div.padding.content > div:first-child {
     padding-bottom: 1.5rem;
+    justify-content: space-between;
   }
   
   footer .flex-between{
@@ -1083,16 +1088,12 @@ footer div.padding.content > div:first-child a:hover::after{
     padding-top: 5rem;
   }
 
-  footer .section .content > div:first-child > div{
-    margin-right: 13.5rem;
-  }
-
   footer .section .content > div:first-child > div, footer .section .content > div:first-child > ul{
-    margin-top: 3rem;
     margin-bottom: 14rem;
+    flex: 1 1 100%;
   }
   .footer-menu li{
-    margin: 0.3rem auto;
+    margin: 1rem 0;
   }
   footer .socials-menu{
     margin-bottom: 0;
@@ -1101,8 +1102,8 @@ footer div.padding.content > div:first-child a:hover::after{
     display: unset;
   }
 }
-@media (min-width: 1024px){
+/* @media (min-width: 1024px){
   .padding, footer div.padding.content{
     padding: 4rem 8rem;
   }
-}
+} */
