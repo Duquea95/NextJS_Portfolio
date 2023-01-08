@@ -1,6 +1,7 @@
 export default function Footer(){
   let footerLinks = [
-    {text: 'My Works', url: '/Works'},
+    {text: 'Work', url: '/Work'},
+    {text: 'About', url: '/About'},
     // {text: 'My Articles', url: '/Blog'},
   ]
 
@@ -19,6 +20,7 @@ export default function Footer(){
               <a href='mailto:duquea95@gmail.com'>Duquea95@gmail.com</a>
             </div>
             <ul className='footer-menu'>
+              <p style={{marginBottom: 25+'px', letterSpacing: .3+'rem'}}>My Links</p>
               {footerLinks.map((link,idx) => {
                 return <li key={'footer_link__'+idx}><a href={link.url}>{link.text}</a></li>
               })}

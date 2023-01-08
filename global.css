@@ -197,14 +197,14 @@ header ul li{
 }
 
 .menu.open ul{
-  border-top: 1px solid #f8f8f8;
+  /* border-top: 1px solid #f8f8f8; */
   border-bottom: 1px solid #f8f8f8;
   margin-top: 2rem;
 }
 
 .menu.open li{
   padding: 2rem 0;
-  border-bottom: 1px solid #f8f8f8FA;
+  /* border-bottom: 1px solid #f8f8f8FA; */
 }
 .menu.open li:last-child{
   border-bottom: none;
@@ -724,7 +724,7 @@ footer div.padding.content > div:first-child a, footer span{
   letter-spacing: 2px;
 }
 
-footer div.padding.content > div:first-child, footer .section div.padding.content > div:first-child a, footer span,button:hover a, .icon, .tab-content, .tab p, form input{
+footer div.padding.content > div:first-child, footer .section div.padding.content > div:first-child a, footer span,button:hover a, .icon, .tab-content, .tab p, form input, .menu.open .nav-cta:hover a{
   color: #f8f8f8;
 }
 
@@ -1008,9 +1008,11 @@ footer div.padding.content > div:first-child a:hover::after{
     margin: 7rem auto 0;
   }
   .card{
-    width: 33.3333%;
+    width: inherit;
   }
-  
+  .card img{
+    position: relative;
+  }
   .cards .content-copy{
     margin-bottom: 6rem;
   }
@@ -1082,12 +1084,12 @@ footer div.padding.content > div:first-child a:hover::after{
   }
 
   footer .section .content > div:first-child > div{
-    margin-top: 3rem;
     margin-right: 13.5rem;
-    margin-bottom: 14rem;
   }
-  .footer-menu{
-    margin-top: 5.8rem;
+
+  footer .section .content > div:first-child > div, footer .section .content > div:first-child > ul{
+    margin-top: 3rem;
+    margin-bottom: 14rem;
   }
   .footer-menu li{
     margin: 0.3rem auto;
