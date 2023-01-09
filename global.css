@@ -331,7 +331,7 @@ Component Styling - Banner
 } */
 .banner,.badges, footer .section, .cards, .tabs, .tabs .container, .mailer, header, .card .overlay, .error-page, .text-with-image, .slider-wrapper {background: #0c0c0c;}
 .banner .padding.content {
-  padding: 0rem 2rem 6rem;
+  padding: 2rem 2rem 6rem;
 }
 .banner .content{
   text-align: center;
@@ -1097,10 +1097,7 @@ footer div.padding.content > div:first-child a:hover::after{
   .CopyBlock .content{
     width: 700px;
   }
-  
-  .banner .padding.content {
-    padding: 2rem 2rem 6rem;
-  }
+
   .inner-content{
     width: 500px; 
   }
