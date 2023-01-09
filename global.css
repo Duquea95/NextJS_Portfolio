@@ -366,8 +366,9 @@ Component Styling - Cards
   margin-bottom: 1.5rem;
 }
 .cards .content-copy{
-  margin-bottom: 3rem;
   letter-spacing: 1px;
+  width: calc(100% - 4rem);
+  margin: 0 auto 3rem;
 }
 .card-grid{
   flex-wrap: wrap;
@@ -584,7 +585,7 @@ Component Styling - Carousel
   position: relative;
   overflow: hidden;
 }
-.slides-container, .CopyBlock > div, .cards > div, .text-with-image {
+.slides-container, .CopyBlock > div, .text-with-image {
   width: calc(100vw - 4rem);
   margin: 0 auto;
 }
