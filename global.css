@@ -247,6 +247,75 @@ Component Styling - Navigation
   list-style-type:none;
   padding-right: 10px;
 }
+.hamburger{
+  font: inherit;
+  display: inline-block;
+  overflow: visible;
+  margin: 0;
+  padding: 15px;
+  cursor: pointer;
+  transition-timing-function: linear;
+  transition-duration: .15s;
+  transition-property: opacity,filter;
+  text-transform: none;
+  color: inherit;
+  border: 0;
+  background-color: transparent;
+  opacity: 1;
+}
+.hamburger.is-active{
+    opacity: .7;
+}
+.hamburger-box{
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+.hamburger .hamburger-inner{
+  top: 2px
+}
+.hamburger .hamburger-inner:after {
+    top: 20px;
+    bottom: -10px;
+}
+
+.hamburger-inner{
+  display: block;
+  margin-top: -2px;
+}
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before{
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  transition-timing-function: ease;
+  transition-duration: .15s;
+  transition-property: transform;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.hamburger-inner:after, .hamburger-inner:before {
+  display: block;
+  content: "";
+}
+.hamburger .hamburger-inner:before {
+  top: 10px;
+  transition-timing-function: ease;
+  transition-duration: .15s;
+  transition-property: transform,opacity;
+}
+.hamburger.is-active .hamburger-inner {
+  transform: translate3d(0,10px,0) rotate(45deg);
+}
+
+.hamburger.is-active .hamburger-inner:before {
+  transform: rotate(-45deg) translate3d(-5.71429px,-6px,0);
+  opacity: 0;
+}
+.hamburger.is-active .hamburger-inner:after {
+    transform: translate3d(0,-20px,0) rotate(-90deg);
+}
+
 
 /*********************************
 Component Styling - Banner
@@ -267,13 +336,11 @@ Component Styling - Banner
 .banner .content{
   text-align: center;
 }
-.banner h1, .banner h2{
-  letter-spacing: 0.15rem;
-}
 .banner h1{
   font-size: 3rem;
   font-weight: 500;
   margin-bottom: 1.2rem;
+  line-height: 3.5rem;
 }
 .banner h2{
   font-size: 2.5rem;
@@ -442,7 +509,7 @@ Component Styling - Cards
 .card-link:hover{
   background: #77A68B;
 }
-.card-link, .card h2, .text-with-image p, .card figcaption p, footer div.padding.content > div:first-child a, footer span, .list-header, .slide{
+.card-link, .card h2, .text-with-image p, .card figcaption p, footer div.padding.content > div:first-child a, footer span, .list-header, .slide, .banner{
   letter-spacing: 2px;
 }
 
@@ -951,6 +1018,11 @@ footer div.padding.content > div:first-child a:hover::after{
   .dropdown-cta{
     display: none;
   }
+
+  .banner h1{
+    line-height: auto;
+  }
+
   .slider-wrapper{
     overflow: visible;
     height: 100vh ;

@@ -20,8 +20,10 @@ const Navbar = () => {
           </Link>
         </div>
         <nav>
-          <div className="dropdown-cta">
-            <div onClick={handleDropdown}>X</div>
+          <div className={`dropdown-cta hamburger${isMenuOpen ? ' is-active' : ''}`}>
+            <div className="hamburger-box">
+              <div className="hamburger-inner" onClick={handleDropdown}></div>
+            </div>
           </div>
           <div className={`menu ${isMenuOpen ? ' open' : ''}`}>
             <ul>
