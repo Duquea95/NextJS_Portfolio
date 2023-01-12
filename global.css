@@ -772,6 +772,9 @@ Component Styling - gallery
   justify-content: center;
   align-items: center;
 }
+.gallery-title{
+    margin-bottom: 1rem;
+}
 .gallery-thumbnails img{
   width: 100%;
   /* max-width: 100%;
@@ -1228,8 +1231,8 @@ footer div.padding.content > div:first-child a:hover::after{
     margin-top: 0;
     width: 45%;
   }
-  .inner-container{
-    /* display: flex; */
+  .gallery-title{
+    margin-bottom: 3rem;
   }
   .gallery-wrapper .active-image{
     height: unset;

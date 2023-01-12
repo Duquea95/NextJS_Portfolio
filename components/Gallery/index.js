@@ -66,7 +66,7 @@ const Gallery = ({galleryData}) => {
     <>
       <section className='gallery-wrapper'>
         <div className='gallery-container'>
-          <div style={{marginBottom: '3rem'}}><h2 style={{textAlign: 'center', textTransform: 'uppercase'}}>Photography Gallery</h2></div>
+          <div className='gallery-title'><h2 style={{textAlign: 'center', textTransform: 'uppercase'}}>My Photography</h2></div>
           {galleryData && createGallery()}
         </div>
       </section>
