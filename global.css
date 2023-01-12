@@ -172,9 +172,11 @@ header{
 }
 
 header > div.flex{
-  padding: 1.5rem 2rem;
+  padding: 1em 2rem;
+  /* margin-top: 1rem; */
   align-items: center;
   position: relative;
+  height: 75px;
 }
 
 header .menu{
@@ -509,7 +511,7 @@ Component Styling - Cards
 .card-link:hover{
   background: #77A68B;
 }
-.card-link, .card h2, .text-with-image p, .card figcaption p, footer div.padding.content > div:first-child a, footer span, .list-header, .slide, .banner{
+.card-link, .card h2, .text-with-image p, .card figcaption p, footer div.padding.content > div:first-child a, footer span, .list-header, .slide, .banner, .gallery-wrapper h2{
   letter-spacing: 2px;
 }
 
@@ -543,8 +545,8 @@ form div .row{
   width: 95%;
   padding: 0 3rem;
 }
-.mailer p {
-  letter-spacing: 0.1rem;
+.mailer p{
+  letter-spacing: 2px;
   font-weight: 400;
 }
 .mailer br{
@@ -763,7 +765,9 @@ Component Styling - gallery
 }
 .gallery-wrapper .active-image{
   height: 250px;
-  padding-bottom: 1rem;
+  margin: 0 auto 1rem;
+  /* padding-bottom: 1rem; */
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -772,6 +776,17 @@ Component Styling - gallery
   width: 100%;
   /* max-width: 100%;
   max-height: 100%; */
+}
+.gallery-overlay{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #0c0c0cAA;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
 }
 .gallery-thumbnails{
   /* position: absolute; */
@@ -791,10 +806,28 @@ Component Styling - gallery
   flex: 1 0 125px;
   max-height: 84px;
   margin-right: 1rem;
+  position: relative;
 }
-.thumbnail img{
+.thumbnail:last-child{
+  margin-right: 0;
 }
-
+.thumbnail-overlay{
+  position: absolute;
+  display: flex;
+  padding: 0 2rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background: #0c0c0cAA;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.thumbnail-overlay span, .gallery-overlay span{
+  letter-spacing: 1px;
+  font-size: .8rem;
+}
 /*********************************
 Component Styling - Footer
 *********************************/
@@ -842,7 +875,7 @@ footer div.padding.content div.flex.flex-between{
   padding-top: 4rem;
 }
 
-footer div.padding.content > div:first-child, footer .section div.padding.content > div:first-child a, footer span,button:hover a, .icon, .tab-content, .tab p, form input{
+footer div.padding.content > div:first-child, footer .section div.padding.content > div:first-child a, footer span,button:hover a, .icon, .tab-content, .tab p, form input, .thumbnail-overlay span, .gallery-overlay span{
   color: #f8f8f8;
 }
 
@@ -1196,25 +1229,32 @@ footer div.padding.content > div:first-child a:hover::after{
     width: 45%;
   }
   .inner-container{
-    display: flex;
+    /* display: flex; */
   }
   .gallery-wrapper .active-image{
     height: unset;
-    flex: 1 0 650px;
+    max-width: 700px;
+    margin: 0 auto 2rem;
   }
   .active-image img{
-    width: 600px;
+    max-width: 700px;
+    max-height: 467px;
   } 
   .gallery-thumbnails{
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    /* width: 300px; */
   }
   .thumbnail-container{
-    padding: 2rem 4rem;
-    max-width: 1080px;
+    /* padding: 2rem 4rem; */
+    /* max-width: 1080px; */
+    max-width: 700px;
     margin: 0 auto;
   }
   .thumbnail{
-    max-height: 140px;
+    max-height: 80px;
+    max-width: 125px;
+    /* margin: 0 auto 1rem; */
+    /* margin-bottom: 1rem; */
   }
   form .justify-center:nth-child(2) {
     margin: 3rem auto;

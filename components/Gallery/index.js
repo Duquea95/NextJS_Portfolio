@@ -4,6 +4,7 @@ import Image from 'next/image';
 const Gallery = ({galleryData}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeImage, setActiveImage] = useState(null);
+  // const [activeInfo, setActiveInfo] = useState(null);
 
   const carouselInfiniteScroll = () => {
     // if(currentIndex === data.length-1){
@@ -26,8 +27,9 @@ const Gallery = ({galleryData}) => {
     slidesContainer.scrollLeft -= slideWidth;
   };
 
-  const handleThumbnailClick = (event) => {
-    console.log(event.target.src)
+  const handleThumbnailClick = (event, index) => {
+    setCurrentIndex(index);
+    // setCurrentTitle
     return setActiveImage(event.target.src)
   }
   
@@ -37,15 +39,19 @@ const Gallery = ({galleryData}) => {
       if(index === currentIndex){
         activeGallery = gallery
       }
-      thumbnails.push(<div key={'gallery_image_'+index} className="thumbnail" onClick={handleThumbnailClick}>
-        <img src={gallery.image} alt={gallery.name} />
-      </div>)
+      thumbnails.push(
+        <div key={'gallery_image_'+index} className={`thumbnail ${index === currentIndex ? 'active-thumbnail' : ''}`} onClick={event => handleThumbnailClick(event, index)}>
+          <img src={gallery.image} alt={gallery.name} />
+          {index === currentIndex && <div className='thumbnail-overlay'><span>Now Viewing</span></div>}
+        </div>
+      )
     })
 
     return(
       <div className='inner-container'>
         <div className='active-image'>
           <img className='' src={activeImage ? activeImage : activeGallery.image}/>
+          <div className='gallery-overlay'><span>{activeGallery.name}</span></div>
         </div>
         <div className='thumbnail-container'>  
           <div className='gallery-thumbnails'>
@@ -58,8 +64,9 @@ const Gallery = ({galleryData}) => {
 
   return(
     <>
-      <section className='gallery-wrapper'>      
+      <section className='gallery-wrapper'>
         <div className='gallery-container'>
+          <div style={{marginBottom: '3rem'}}><h2 style={{textAlign: 'center', textTransform: 'uppercase'}}>Photography Gallery</h2></div>
           {galleryData && createGallery()}
         </div>
       </section>
