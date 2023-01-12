@@ -7,7 +7,7 @@ export default function Footer(){
 
   let socialLinks = [
     {url: 'https://www.linkedin.com/in/anthony-duque/', linkClasses: 'icon icon--linkedin', iconClasses: 'ri-linkedin-line'}, 
-    {url: 'https://github.com/Duquea95', linkClasses: 'icon icon--github', iconClasses: 'ri-github-line'}
+    // {url: 'https://github.com/Duquea95', linkClasses: 'icon icon--github', iconClasses: 'ri-github-line'}
   ]
 
   return(
