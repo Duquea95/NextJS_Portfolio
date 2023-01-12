@@ -10,13 +10,17 @@ const Navbar = () => {
     console.log('menu open')
     return setIsMenuOpen(!isMenuOpen);
   }
+  
+  const handleLogoClick = () => {
+    return setIsMenuOpen(false);
+  }
 
   return(
     <header>
       <div className="flex flex-between">
         <div>
-          <Link href='/'>
-          <Image alt='Anthony Duque - Front-End Engineer' priority src={logo.src} width={75} height={31}/>
+          <Link href='/' onClick={handleLogoClick}>
+            <Image alt='Anthony Duque - Front-End Engineer' priority src={logo.src} width={75} height={31}/>
           </Link>
         </div>
         <nav>
