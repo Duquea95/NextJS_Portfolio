@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import anthony from'../public/images/anthony.jpg' 
-import Header from "./Header"
 import Navbar from './Navbar';
 import Footer from "./Footer"
 

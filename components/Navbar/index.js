@@ -29,7 +29,7 @@ const Navbar = () => {
             <ul>
               <li><Link onClick={isMenuOpen ? handleDropdown : ''} href='/Work'>Work</Link></li>
               <li><Link onClick={isMenuOpen ? handleDropdown : ''} href='/About'>About</Link></li>
-              <li className="nav-cta"><Link onClick={isMenuOpen ? handleDropdown : ''} href='/Contact'>Say Hello</Link></li>
+              <li className={isMenuOpen ? '' : "nav-cta"}><Link onClick={isMenuOpen ? handleDropdown : ''} href='/Contact'>Contact</Link></li>
             </ul>
           </div>
         </nav>

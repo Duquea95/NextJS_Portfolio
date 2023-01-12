@@ -106,8 +106,8 @@ html, body{
   background: transparent;
   width: 0;
 }
-main > div:first-child{
-  margin-top: 85px;
+main > div:first-child, main > section:first-child{
+  margin-top: 100px;
 }
 h1{
   font-size: 2rem;
@@ -145,12 +145,12 @@ h1, h2, input, .mainColor,.inner-tab p, footer p, .skills-set, .badges p, form l
   color: #77A68B ;
 }
 
-.mailer h1,.text-with-image h1, .main-lg, .user-learning h1{
+.mailer h1, .main-lg{
   font-size: 2.5rem;
   line-height: 1.5;
 }
 .text-with-image h1{
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 /* .footer-section a:hover, .banner p{
   color: #40594B;
@@ -647,12 +647,12 @@ Component Styling - Button
 /*********************************
 Component Styling - Carousel
 *********************************/
-.slider-wrapper {
+.slider-wrapper, .gallery-wrapper {
   /* margin: 1rem 0; */
   position: relative;
   overflow: hidden;
 }
-.slides-container, .CopyBlock > div, .text-with-image {
+.slides-container, .CopyBlock > div, .gallery-container, header > div, .badges .content{
   width: calc(100vw - 4rem);
   margin: 0 auto;
 }
@@ -681,9 +681,16 @@ Component Styling - Carousel
 .slide:last-child{
   margin-right: 0;
 }
-.slide-head, .slide-copy, .slide-list{
+.slide-head, .slide-copy, .slide-list, .text-with-image .padding.content{
   width: calc(100% - 4rem);
   margin: 0 auto;
+}
+.text-with-image .padding.content{
+  padding: 2rem;
+}
+.text-with-image img{
+  margin-top: 2rem;
+  width: 100%;
 }
 .slide-head{
   margin-top: 5rem;
@@ -691,7 +698,7 @@ Component Styling - Carousel
 .slide-copy{
   margin-top: 1.5rem;
 }
-.slide-list, footer .section, .footer-menu, footer .section .content > div:first-child > div{
+.slide-list, .footer-menu, footer .section .content > div:first-child > div{
   margin-top: 3rem;
 }
 .list-header, .slide{
@@ -744,6 +751,48 @@ Component Styling - Carousel
   right: 0;
   padding-left: 0.75rem;
   border-radius: 2rem 0 0 2rem;
+}
+
+/*********************************
+Component Styling - gallery
+*********************************/
+
+.gallery-wrapper img{
+  max-width: 100%;
+  max-height: 100%
+}
+.gallery-wrapper .active-image{
+  height: 250px;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gallery-thumbnails img{
+  width: 100%;
+  /* max-width: 100%;
+  max-height: 100%; */
+}
+.gallery-thumbnails{
+  /* position: absolute; */
+  height: inherit;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  display: flex;
+}
+.thumbnail-container{
+  /* background: rgba(255,255,255,0.4); */
+}
+.thumbnail{
+  /* display: flex;
+  align-items: center; */
+  /* display: inline-block; */
+  flex: 1 0 125px;
+  max-height: 84px;
+  margin-right: 1rem;
+}
+.thumbnail img{
 }
 
 /*********************************
@@ -962,14 +1011,14 @@ footer div.padding.content > div:first-child a:hover::after{
 }
 /* Badges */
 .badges{
-  padding: 5rem 0;
+  padding: 5rem 0 0;
 }
 .badges > div.flex.flex-center{
   width: 100%;
 }
 
 .badges .content{
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -977,7 +1026,6 @@ footer div.padding.content > div:first-child a:hover::after{
   margin-bottom: 2rem;
 }
 .badges .content .flex{
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -985,19 +1033,11 @@ footer div.padding.content > div:first-child a:hover::after{
   width: 50%;
 }
 
-.badge img{
-  /* width: 75px;
-  height: 75px; */
-}
 
 @media (min-width: 768px){
   header .menu{
     display: block;
     position: relative;
-  }
-  header > div{
-    width: 90%;
-    margin: 0 auto;
   }
   header ul{
     justify-content: space-between;
@@ -1055,14 +1095,12 @@ footer div.padding.content > div:first-child a:hover::after{
   .slide:last-child {
     border-right: none;
 }
+
   .section.tabs{
     overflow: visible;
   }
-  .badges .content .flex{
-    justify-content: space-between;
-  }
   .badge{
-    width: auto;
+    flex: 1 0 250px;
   }
   .badge img{
     width: 175px;
@@ -1101,9 +1139,34 @@ footer div.padding.content > div:first-child a:hover::after{
   .inner-content{
     width: 500px; 
   }
-  .copy{
-    margin-right: 5rem;
-    width: 55%;
+  .text-with-image .blocks-container{
+    display: flex;
+    height: 450px;
+    align-items: center;
+    overflow: hidden;
+  }
+  .reverse-block{flex-direction: row-reverse;}
+  .blocks-container .container-content{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .text-with-image .image-container{
+    max-height: inherit;
+  }
+  .text-with-image .image-container,  .text-with-image .text-container{
+    width: calc(100% - 4rem);
+  }
+  .text-with-image .text-container{
+    max-width: 700px;
+  }
+  .text-with-image .image-container img{
+    height: 100%;
+    max-width: 400px;
+    margin-top: 0;
+  }
+  .text-with-image .copy{
+    /* width: 100%; */
   }
   .image{
     width: 45%;
@@ -1132,7 +1195,27 @@ footer div.padding.content > div:first-child a:hover::after{
     margin-top: 0;
     width: 45%;
   }
-
+  .inner-container{
+    display: flex;
+  }
+  .gallery-wrapper .active-image{
+    height: unset;
+    flex: 1 0 650px;
+  }
+  .active-image img{
+    width: 600px;
+  } 
+  .gallery-thumbnails{
+    flex-wrap: wrap;
+  }
+  .thumbnail-container{
+    padding: 2rem 4rem;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .thumbnail{
+    max-height: 140px;
+  }
   form .justify-center:nth-child(2) {
     margin: 3rem auto;
   }
@@ -1150,7 +1233,7 @@ footer div.padding.content > div:first-child a:hover::after{
   
   footer div.padding.content > div:first-child {
     padding-bottom: 1.5rem;
-    justify-content: space-between;
+    /* justify-content: space-between; */
   }
   
   footer .flex-between{
@@ -1160,7 +1243,9 @@ footer div.padding.content > div:first-child a:hover::after{
 
   footer .section .content > div:first-child > div, footer .section .content > div:first-child > ul{
     margin-bottom: 14rem;
-    flex: 1 1 100%;
+    /* flex: 1 1 100%; */
+    width: 45%;
+    /* padding-left: 2rem; */
   }
   .footer-menu li{
     margin: 1rem 0;
