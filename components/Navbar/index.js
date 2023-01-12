@@ -7,7 +7,6 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleDropdown = () => {
-    console.log('menu open')
     return setIsMenuOpen(!isMenuOpen);
   }
   
@@ -31,8 +30,9 @@ const Navbar = () => {
           </div>
           <div className={`menu ${isMenuOpen ? ' open' : ''}`}>
             <ul>
-              <li><Link onClick={isMenuOpen ? handleDropdown : ''} href='/Work'>Work</Link></li>
               <li><Link onClick={isMenuOpen ? handleDropdown : ''} href='/About'>About</Link></li>
+              <li><p className="inactive">Work</p></li>
+              {/* <li><p onClick={isMenuOpen ? handleDropdown : ''}>Work</p></li> */}
               <li className={isMenuOpen ? '' : "nav-cta"}><Link onClick={isMenuOpen ? handleDropdown : ''} href='/Contact'>Contact</Link></li>
             </ul>
           </div>

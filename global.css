@@ -160,7 +160,10 @@ h1, h2, input, .mainColor,.inner-tab p, footer p, .skills-set, .badges p, form l
   display: none;
 }
 
-
+.inactive{
+  text-decoration: line-through;
+  color: #f8f8f870;
+}
 /*********************************
 Component Styling - Navbar
 *********************************/
