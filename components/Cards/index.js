@@ -9,13 +9,13 @@ const Cards = (props) => {
 
   let cardElements = [
     {
-      name: <h1>Oscar Stone</h1>,
-      subText:  'A New York jewelry brand specializing in gold and diamond jewelry.',
+      name: <h2>Oscar Stone</h2>,
+      subText:  'Jewelry brand specializing in gold and diamond jewelry.',
       url: 'https://oscarstonenyc.com',
       src: os.src,
     },
     {
-      name: <h1>Jonathan Adler</h1>,
+      name: <h2>Jonathan Adler</h2>,
       subText: 'A high-end, home furnishing and interiors business located in Soho.',
       url: 'https://jonathanadler.com',
       src: ja.src,
@@ -34,6 +34,7 @@ const Cards = (props) => {
               <Image alt='Anthony Duque - Front-End Engineer' priority src={card.src} width={345} height={290}/>
               <figcaption>
                 <div>
+                  {card.name}
                   <p>{card.subText}</p>
                   <div className='link-container'><a className='card-link' href={card.url}>Visit Website</a></div>
                 </div>
