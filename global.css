@@ -339,10 +339,9 @@ Component Styling - Banner
   text-align: center;
 }
 .banner h1{
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: 500;
   margin-bottom: 1.2rem;
-  line-height: 3.5rem;
 }
 .banner h2{
   font-size: 2.5rem;
@@ -511,7 +510,7 @@ Component Styling - Cards
 .card-link:hover{
   background: #77A68B;
 }
-.card-link, .card h2, .text-with-image p, .card figcaption p, footer div.padding.content > div:first-child a, footer span, .list-header, .slide, .banner, .gallery-wrapper h2{
+.card-link, .card h2, .text-with-image p, .card figcaption p, footer div.padding.content > div:first-child a, footer span, .list-header, .slide, .banner, .gallery-wrapper h2, li{
   letter-spacing: 2px;
 }
 
@@ -1230,9 +1229,6 @@ footer div.padding.content > div:first-child a:hover::after{
     padding-left: 0;
     margin-top: 0;
     width: 45%;
-  }
-  .gallery-title{
-    margin-bottom: 3rem;
   }
   .gallery-wrapper .active-image{
     height: unset;
