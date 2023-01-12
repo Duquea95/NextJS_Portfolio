@@ -141,7 +141,7 @@ form .flex, .section.text-with-image .content > .flex, form label, .banner .flex
   display: block;
 }
 
-h1, h2, input, .mainColor,.inner-tab p, footer p, .skills-set, .badges p, form label{
+h1, h2, input, .mainColor,.inner-tab p, footer p, .skills-set, .badges p, form label, .cards .content-copy a{
   color: #77A68B ;
 }
 
@@ -417,10 +417,8 @@ Component Styling - CopyBlock
 .CopyBlock .content h2{
   margin-bottom: 1.5rem;
   font-size: 2rem;
-}
-.CopyBlock .content p{
-  line-height: 1.5;
-  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-weight: 700;
 }
 
 /*********************************
@@ -438,6 +436,23 @@ Component Styling - Cards
   width: calc(100% - 4rem);
   margin: 0 auto 3rem;
 }
+.cards .content-copy a{
+  position: relative;
+}
+.cards .content-copy a::after{
+  /* width: 100%; */
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #f8f8f8;
+  bottom: 0;
+  left: 0;
+  right: unset;
+  width: 0;
+  transition: width 300ms linear;
+}
+.cards .content-copy a:hover::after{
+  width: 100%;
+}
 .card-grid{
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -453,10 +468,6 @@ Component Styling - Cards
   color: #0c0c0c;
 }
 .card img{
-  /* height: 100%; */
-  /* width: 100%; */
-  /* bottom: 0;
-  left: 0; */
   position: absolute;
   right: 0;
   top: 0;
@@ -510,7 +521,7 @@ Component Styling - Cards
 .card-link:hover{
   background: #77A68B;
 }
-.card-link, .card h2, .text-with-image p, .card figcaption p, footer div.padding.content > div:first-child a, footer span, .list-header, .slide, .banner, .gallery-wrapper h2, li{
+.card-link, .card h2, .text-with-image p, .card figcaption p, footer div.padding.content > div:first-child a, footer span, .list-header, .slide, .banner, .gallery-wrapper h2, li, p, h2{
   letter-spacing: 2px;
 }
 
@@ -526,6 +537,9 @@ p,.card-link, header a, .banner h2, button a, form input::placeholder, textarea:
 
 .mailer h1{
   margin-bottom: 1.2rem;
+}
+h2{
+  font-weight: 500;
 }
 
 /*********************************
@@ -626,7 +640,7 @@ Component Styling - Button
   background: transparent;
   white-space: nowrap;
   /* padding-top: 2rem; */
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   border: 2px solid #77A68B;
   margin: 0 auto;
   border-radius: 0.4rem;
@@ -698,6 +712,7 @@ Component Styling - Carousel
 }
 .slide-copy{
   margin-top: 1.5rem;
+  font-weight: 400;
 }
 .slide-list, .footer-menu, footer .section .content > div:first-child > div{
   margin-top: 3rem;
@@ -706,7 +721,7 @@ Component Styling - Carousel
   margin-bottom: 1rem;
   color: #77A68B;
   font-weight: bold;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .slide img, .slide-list-item{
   margin-bottom: 1rem;
