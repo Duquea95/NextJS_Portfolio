@@ -1,6 +1,6 @@
-import oscar from'../../public/images/about/oscar-stone.png' 
-import brandon from'../../public/images/about/brandon.jpg' 
-import brod from'../../public/images/about/brandon-rodriguez-skateboarding.jpg' 
+import oscar from'../public/images/about/oscar-stone.png' 
+import brandon from'../public/images/about/brandon.jpg' 
+import brod from'../public/images/about/brandon-rodriguez-skateboarding.jpg' 
 
 const galleryImages = [
   {
