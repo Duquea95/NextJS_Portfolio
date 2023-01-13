@@ -701,7 +701,7 @@ Component Styling - Carousel
 .slide:last-child{
   margin-right: 0;
 }
-.slide-head, .slide-copy, .slide-list, .text-with-image .padding.content{
+.text-with-image .padding.content{
   width: calc(100% - 4rem);
   margin: 0 auto;
 }
@@ -712,14 +712,36 @@ Component Styling - Carousel
   margin-top: 2rem;
   width: 100%;
 }
+.slide-head, .slide-copy, .slide-list{
+  width: calc(100% - 2rem);
+  margin: 0 auto;
+}
 .slide-head{
   margin-top: 5rem;
 }
 .slide-copy{
-  margin-top: 1.5rem;
+  margin: 1.5rem auto 3rem;
   font-weight: 400;
+  position: relative;
 }
-.slide-list, .footer-menu, footer .section .content > div:first-child > div{
+.slide-head h2{font-size: 22px;font-weight: 400;}
+.slide-head h2, .slide-copy p{letter-spacing: 1px !important;}
+/* .slide-copy::after{
+  width: 150px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: -3rem;
+  height: 1px;
+  content: "";
+  background: #77A68B;
+  position: absolute;
+} */
+.slide-list{
+  margin-top: 1rem;
+  /* margin-bottom: 3rem; */
+}
+.footer-menu, footer .section .content > div:first-child > div{
   margin-top: 3rem;
 }
 .list-header, .slide{
@@ -729,7 +751,7 @@ Component Styling - Carousel
   /* text-transform: uppercase; */
 }
 .slide img, .slide-list-item{
-  margin-bottom: 1rem;
+  margin-bottom: .8rem;
 }
 .slide-list-item{
   font-weight: 200;
@@ -1153,11 +1175,18 @@ footer div.padding.content > div:first-child a:hover::after{
     border-radius: 0;
     border-right: 1px solid #77A68B50;
     margin-right: 0;
+    /* overflow: scroll; */
   }
   .slide:last-child {
     border-right: none;
-}
-
+  }
+  .slide-head{
+    height: auto;
+    max-height: 100px;
+  }
+  .slide-copy{
+    height: 100px;
+  }
   .section.tabs{
     overflow: visible;
   }

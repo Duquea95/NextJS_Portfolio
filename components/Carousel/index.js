@@ -77,14 +77,14 @@ const Carousel = () => {
             return(
               <div className="slide">
                 <div className='slide-head'>
-                    <Image src={tab.image} width={50} height={50} alt={tab.name} />
+                    <Image src={tab.image} width={45} height={45} alt={tab.name} />
                     <h2 className="">{tab.name}</h2>
                 </div>
                 <div className='slide-copy'>
                   <p>{tab.description}</p>
                 </div>
                 <div className='slide-list'>
-                  <div className='list-header'><span>Skills</span></div>
+                  <div className='list-header'><span>Tools</span></div>
                   { tab.skills.map((skill, index) => {
                     return(
                       <div key={index} className='slide-list-item'>
