@@ -692,7 +692,7 @@ Component Styling - Carousel
 }
 .slide {
   width: 300px;
-  height: calc(100vh + 3rem);
+  height: calc(100vh);
   flex: 1 0 100%;
   margin-right: 2.1rem;
   border: 1px solid #77A68B;
@@ -1175,6 +1175,7 @@ footer div.padding.content > div:first-child a:hover::after{
     border-radius: 0;
     border-right: 1px solid #77A68B50;
     margin-right: 0;
+    margin-bottom: 0;
     /* overflow: scroll; */
   }
   .slide:last-child {
