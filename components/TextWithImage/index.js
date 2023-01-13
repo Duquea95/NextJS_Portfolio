@@ -7,7 +7,7 @@ const TextWithImage = (props) => {
   return(
     <section className="text-with-image">
       <div className='padding content'>
-        <div className={`blocks-container ${props.position == 'end' ? 'reverse-block' : 'flex-center'}`}>
+        <div className={`blocks-container ${props?.image ? 'flex-center' : ' flex-center center' }`}>
           <div className='text-container'>
             <div className='container-content'>
               <div>

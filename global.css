@@ -854,6 +854,9 @@ Component Styling - gallery
   letter-spacing: 1px;
   font-size: .8rem;
 }
+.blocks-container.center{
+  text-align: center;
+}
 /*********************************
 Component Styling - Footer
 *********************************/
@@ -1254,6 +1257,9 @@ footer div.padding.content > div:first-child a:hover::after{
     margin-top: 0;
     width: 45%;
   }
+  .gallery-title{
+      margin-bottom: 3rem;
+  }
   .gallery-wrapper .active-image{
     height: unset;
     max-width: 700px;
@@ -1263,10 +1269,6 @@ footer div.padding.content > div:first-child a:hover::after{
     max-width: 700px;
     max-height: 467px;
   } 
-  .gallery-thumbnails{
-    /* flex-wrap: wrap; */
-    /* width: 300px; */
-  }
   .thumbnail-container{
     /* padding: 2rem 4rem; */
     /* max-width: 1080px; */

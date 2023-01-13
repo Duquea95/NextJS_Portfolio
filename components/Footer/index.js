@@ -20,7 +20,7 @@ export default function Footer(){
               <a href='mailto:duquea95@gmail.com'>Duquea95@gmail.com</a>
             </div>
             <ul className='footer-menu'>
-              <p className='list-header'>My Links</p>
+              <p className='list-header'>Links</p>
               {footerLinks.map((link,idx) => {
                 return <li key={'footer_link__'+idx}><a href={link.url}>{link.text}</a></li>
               })}
