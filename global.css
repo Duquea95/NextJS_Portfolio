@@ -422,7 +422,6 @@ Component Styling - CopyBlock
 .CopyBlock .content h2{
   margin-bottom: 1.5rem;
   font-size: 2rem;
-  letter-spacing: 1px;
   font-weight: 700;
 }
 
@@ -526,7 +525,7 @@ Component Styling - Cards
 .card-link:hover{
   background: #77A68B;
 }
-.card-link, .card h2, .text-with-image p, .card figcaption p, footer div.padding.content > div:first-child a, footer span, .list-header, .slide, .banner, .gallery-wrapper h2, li, p, h2{
+.card-link, .card h2, .text-with-image p, .card figcaption p, footer div.padding.content > div:first-child a, footer span, .slide, .banner, .gallery-wrapper h2, li, p, h2{
   letter-spacing: 2px;
 }
 
@@ -725,7 +724,7 @@ Component Styling - Carousel
   position: relative;
 }
 .slide-head h2{font-size: 22px;font-weight: 400;}
-.slide-head h2, .slide-copy p{letter-spacing: 1px !important;}
+.CopyBlock .content h2, .tab h2, .thumbnail-overlay span, .gallery-overlay span, .slide-head h2, .slide-copy p, .card figcaption p, .card h2, .CopyBlock .content p{letter-spacing: 1px;}
 /* .slide-copy::after{
   width: 150px;
   margin: 0 auto;
@@ -747,7 +746,6 @@ Component Styling - Carousel
 .list-header, .slide{
   margin-bottom: 1rem;
   color: #77A68B;
-  font-weight: bold;
   /* text-transform: uppercase; */
 }
 .slide img, .slide-list-item{
@@ -873,7 +871,6 @@ Component Styling - gallery
   bottom: 0;
 }
 .thumbnail-overlay span, .gallery-overlay span{
-  letter-spacing: 1px;
   font-size: .8rem;
 }
 .blocks-container.center{
@@ -1075,7 +1072,6 @@ footer div.padding.content > div:first-child a:hover::after{
 }
 .tab h2{
   font-weight: 400;
-  letter-spacing: 1px;
   margin-top: 1.5rem;
 }
 .tab-cta{

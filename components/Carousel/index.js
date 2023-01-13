@@ -84,7 +84,7 @@ const Carousel = () => {
                   <p>{tab.description}</p>
                 </div>
                 <div className='slide-list'>
-                  <div className='list-header'><span>Tools</span></div>
+                  <div className='list-header'><span>SKILLS</span></div>
                   { tab.skills.map((skill, index) => {
                     return(
                       <div key={index} className='slide-list-item'>
