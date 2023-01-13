@@ -1,6 +1,6 @@
 export default function Footer(){
   let footerLinks = [
-    {text: 'Work', url: '/Work'},
+    // {text: 'Work', url: '/Work'},
     {text: 'About', url: '/About'},
     // {text: 'My Articles', url: '/Blog'},
   ]

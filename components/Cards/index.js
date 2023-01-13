@@ -25,8 +25,8 @@ const Cards = (props) => {
   return(
     <section className='cards'>
       <div className="content">
-        <div className='content-title'><h2>My Recent Work</h2></div>
-        <div className='content-copy'><p>Here are some of my most recent work. Want so see more? <a href='mailto:duquea95@gmail.com'>Email me</a></p></div>
+        <div className='content-title'><h2>{props.title}</h2></div>
+        <div className='content-copy'><p>{props.copy} <a href={`mailto:`+props.email}>Email me</a></p></div>
         <div className='flex card-grid'>
           {cardElements.map((card, idx) =>{
             return(

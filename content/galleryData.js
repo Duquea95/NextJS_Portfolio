@@ -19,14 +19,10 @@ const galleryImages = [
     name: 'Brandon Rodriguez - NYC Blitz Jam',
     image: brod.src,
   },
-  {
-    name: 'A Drug Called Love',
-    image: 'https://live.staticflickr.com/65535/52622782056_25e52cd696_h.jpg',
-  },
-  {
-    name: 'Note To Self',
-    image: 'https://live.staticflickr.com/65535/52623215555_47d82c0764_h.jpg',
-  },
+  // {
+  //   name: 'A Drug Called Love',
+  //   image: 'https://live.staticflickr.com/65535/52622782056_25e52cd696_h.jpg',
+  // },
   {
     name: 'The Steeze - Substance Skatepark, Brooklyn',
     image: 'https://live.staticflickr.com/65535/52622781876_a18b9689a9_h.jpg',
@@ -50,6 +46,10 @@ const galleryImages = [
   {
     name: 'Bug Off - Washington Square',
     image: 'https://live.staticflickr.com/65535/52622268202_bbd3d093eb_h.jpg',
+  },
+  {
+    name: 'Note To Self',
+    image: 'https://live.staticflickr.com/65535/52623215555_47d82c0764_h.jpg',
   },
 ]
 

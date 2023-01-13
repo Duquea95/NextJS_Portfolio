@@ -7,7 +7,7 @@ const tabData = [
     set: 'Front-End Experience',
     name: 'Web Development',
     image: devIcon,
-    description: 'I create memorable experiences using my knowledge of full-stack development.',
+    description: 'Creating memorable experiences using knowledge of full-stack web development.',
     skills: [ 'Shopify', 'HTML', 'CSS', 'Javascript / Node', 'React', 'Mongo DB'],
     icons: ['https://www.flaticon.com/free-icons/html-5',]
   },
@@ -21,7 +21,7 @@ const tabData = [
     set: 'SEO & Marketing', 
     name: 'SEO & Marketing',
     image: marketing,
-    description: 'I establish a brand and help grow a business using marketing tools and social media platforms.',
+    description: 'Establishing a brand and helping your business grow using marketing tools and social media platforms.',
     skills: [ 'Branding', 'Google Ads', 'Google Analytics', 'Photography', 'SEO', 'Social Media Marketing'],
   }
 ]

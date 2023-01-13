@@ -1,73 +1,80 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
+// import useKeypress from '../hooks/useKeypress';
 import Image from 'next/image';
 
 const Gallery = ({galleryData}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeImage, setActiveImage] = useState(null);
-  // const [activeInfo, setActiveInfo] = useState(null);
+  const [imageTitle, setImageTitle] = useState(null);
+  const [key, setKey] = useState();
 
-  const carouselInfiniteScroll = () => {
-    // if(currentIndex === data.length-1){
-    //   return setCurrentIndex(0)
-    // }
-    
-    return setCurrentIndex(currentIndex+1)
-  }
-  useEffect(() =>{
-    // const interval = setInterval(() => {carouselInfiniteScroll()}, 3000)
-    // return () => clearInterval(interval)
-    
-  })
-  const scrollLeft = () => {
-    const slideWidth = slide.clientWidth;
-    slidesContainer.scrollLeft += slideWidth;
-  };
-  const scrollRight = () => {
-    const slideWidth = slide.clientWidth;
-    slidesContainer.scrollLeft -= slideWidth;
-  };
+  const inputDiv = useRef();
+  let thumbnails = [];
 
-  const handleThumbnailClick = (event, index) => {
-    setCurrentIndex(index);
-    // setCurrentTitle
-    return setActiveImage(event.target.src)
-  }
-  
-  const createGallery = () => {
-    let activeGallery, thumbnails = [];
-    galleryData.map((gallery, index) => {
-      if(index === currentIndex){
-        activeGallery = gallery
-      }
-      thumbnails.push(
-        <div key={'gallery_image_'+index} className={`thumbnail ${index === currentIndex ? 'active-thumbnail' : ''}`} onClick={event => handleThumbnailClick(event, index)}>
-          <img src={gallery.image} alt={gallery.name} />
-          {index === currentIndex && <div className='thumbnail-overlay'><span>Now Viewing</span></div>}
-        </div>
-      )
-    })
-
-    return(
-      <div className='inner-container'>
-        <div className='active-image'>
-          <img className='' src={activeImage ? activeImage : activeGallery.image}/>
-          <div className='gallery-overlay'><span>{activeGallery.name}</span></div>
-        </div>
-        <div className='thumbnail-container'>  
-          <div className='gallery-thumbnails'>
-            {thumbnails}
-          </div>
-        </div>
+  galleryData.map((gallery, index) => {
+    thumbnails.push(
+      <div key={'gallery_image_'+index} className={`thumbnail ${index === currentIndex ? 'active-thumbnail' : ''}`} onClick={event => handleThumbnailClick(event, index)}>
+        <img src={gallery.image} alt={gallery.name} />
+        {index === currentIndex && <div className='thumbnail-overlay'><span>Now Viewing</span></div>}
       </div>
     )
+  })
+
+  const mouseEnter = (e) => {
+    inputDiv.current.focus({preventScroll: true});
+  }
+  const mouseLeave = (e) => {
+    inputDiv.current.blur();
+  }
+  const updateIndex = (index) => {
+    return setCurrentIndex(index);
+  }
+  const updateActiveImage = (image) => {
+    return setActiveImage(image);
+  }
+  const updateImageTitle = (title) => {
+    return setImageTitle(title);
+  }
+
+  const keyDown = (event) => {
+    if(event.code == 'ArrowRight'){
+      if(currentIndex == galleryData.length - 1) return
+      updateIndex(currentIndex + 1)
+      updateActiveImage(thumbnails[currentIndex+1].props.children[0].props.src);
+      updateImageTitle(thumbnails[currentIndex+1].props.children[0].props.alt);
+    }
+    if(event.code == 'ArrowLeft'){
+      if(currentIndex == 0) return
+      updateIndex(currentIndex - 1)
+      updateActiveImage(thumbnails[currentIndex-1].props.children[0].props.src);
+      updateImageTitle(thumbnails[currentIndex-1].props.children[0].props.alt)
+    }
+  }
+
+  const handleThumbnailClick = (event, index) => {
+    updateIndex(index);
+    updateImageTitle(event.target.alt)
+    updateActiveImage(event.target.src)
   }
 
   return(
     <>
-      <section className='gallery-wrapper'>
+      <section className='gallery-wrapper' ref={inputDiv} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onKeyDown={keyDown} tabIndex={0}>
         <div className='gallery-container'>
-          <div className='gallery-title'><h1 style={{textAlign: 'center'}}>My Photography</h1></div>
-          {galleryData && createGallery()}
+          <div className='inner-container'>
+            <div className='gallery-title'>
+                <h1 style={{textAlign: 'center'}}>Photography</h1>
+            </div>
+            <div className='active-image'>
+              <img src={activeImage ? activeImage : thumbnails[0].props.children[0].props.src}/>
+              <div className='gallery-overlay'><span>{imageTitle ? imageTitle : thumbnails[0].props.children[0].props.alt}</span></div>
+            </div>
+            <div className='thumbnail-container'>  
+              <div className='gallery-thumbnails'>
+                {thumbnails}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>

@@ -4,18 +4,6 @@ import oscarStoneImage from'../../public/images/oscar-stone.jpeg';
 import bmccImage from'../../public/images/bmcc.jpeg';
 
 const TextWithImage = (props) => {
-  const activeImage = () => {
-    return(
-      <div className='image' id="cf4a">
-      {/* {imageArray.map((image, idx) =>{
-        return (
-          <Image key={'imageArray_' + idx} src={image.src} width={500} height={350} alt={image.name}/>
-        )
-      })} */}
-      </div>
-    )
-  }
-
   return(
     <section className="text-with-image">
       <div className='padding content'>
