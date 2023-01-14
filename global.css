@@ -443,6 +443,9 @@ Component Styling - Cards
 .cards .content-copy a:hover::after, .menu ul li a:hover::after, .footer-menu a:hover::after{
   width: 100%;
 }
+.menu.open ul li a:hover::after{
+  width: 0%;
+}
 .menu ul li.nav-cta a::after{
   border-bottom: none;
 }
@@ -878,7 +881,7 @@ footer .socials-menu{
 
 footer .content{
   width: 100%;
-  padding: 5rem 0;
+  padding: 8rem 0 2rem;
   margin: 0 auto;
 }
 footer .content > div:first-child{
@@ -1297,7 +1300,7 @@ footer .content > div:first-child a:hover::after{
   }
 
   footer .content, .mailer-container{
-    /* width:calc(100% - 4rem); */
+    width:calc(100% - 4rem);
     margin: 0 auto;
   }
   
