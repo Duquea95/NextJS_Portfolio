@@ -83,11 +83,11 @@ const Mailer = () =>{
   }
 
   return(
-    <div className='section mailer flex flex-center'>
-      <div>
+    <div className='section mailer'>
+      <div className='mailer-container'>
         <div className='form-copy'>
-          <h1>Send me a message!</h1>
-          <p>Got a question, or just want <br/> to say hello? Go ahead.</p>
+          <h2>Send me a message!</h2>
+          <p>Got a question, or just want to say hello? Go ahead.</p>
         </div>
         <form>
           {topInputs}

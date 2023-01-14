@@ -12,8 +12,8 @@ export default function Footer(){
 
   return(
     <footer>
-      <div className='section flex flex-center'>
-        <div className='padding content'>
+      <div className='footer-container'>
+        <div className='content'>
           <div>
             <div>
               <p className='list-header'>SAY HELLO</p>
