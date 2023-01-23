@@ -9,7 +9,7 @@ body{
   font-size: 16px;
   font-weight: 300;
   min-width: 320px;
-  background-color: #f8f8f8;
+  background-color: #fff;
   -webkit-font-smoothing: antialiased;
 }
 h1{
@@ -84,7 +84,7 @@ section{
 }
 .section-color__alternative{
   background: #436661;
-  color: #f8f8f8;
+  color: #fff;
 }
 header + main > section:first-child:not(.homepage-hero) {
   padding-top: 76px;
@@ -335,8 +335,8 @@ nav .nav-container a:hover:before, nav .nav-container .current-menu-item:before,
   transition: opacity .6s;
 }
 
-.list-item__head{
-  padding: 45px 10px !important;
+.list ul li.list-item__head{
+  padding: 45px 10px;
 }
 .list>ul>li:first-child p{
   padding-right: 100px;
@@ -391,6 +391,7 @@ article {
   letter-spacing: .4px;
   font-weight: 300;
 }
+.list .article-body h5{font-weight: bold;}
 .list .article-body h6{
   color: #666;
   text-transform: uppercase;
@@ -819,7 +820,7 @@ section.cards .section-head p {
 /* Footer */
 /********************************/
 footer, footer a{
-  color: #f8f8f8;
+  color: #fff;
   text-decoration: none;
 }
 footer{
@@ -869,7 +870,7 @@ footer{
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #f8f8f8;
+  background-color: #fff;
 }
 
 .nav-socials i {
@@ -930,14 +931,14 @@ footer{
 }
 
 /* Section Image */
-.intro-about {
+.section-about {
   height: auto;
   min-height: 1px;
 }
 .section-intro .section-image, .section-intro .container>* {
   opacity: 1;
 }
-.intro-about .section-image {
+.section-about .section-image {
   position: absolute;
   left: 0;
   right: 0;
@@ -948,7 +949,7 @@ footer{
   background-repeat: no-repeat;
   transition: opacity .4s;
 }
-.intro-about .section-image {
+.section-about .section-image {
   min-height: 425px;
   position: relative;
   background-size: cover;
@@ -1059,4 +1060,238 @@ footer{
 .case-study a{
   width: 115px;
   margin: 15px auto 0;
+}
+
+
+
+/* Mobile style */
+
+@media (max-width: 768px){
+  h1, .hero-list h1 {
+    font-size: 52px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  .container{
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  .section-intro, body.home .section-intro {
+    min-height: 285px;
+  }
+  .homepage-hero__copy {
+    height: 494px;
+  }
+  .homepage-hero__copy-holder {
+    font-size: 35px;
+    padding: 22px 36px 0;
+    line-height: 1.15;
+  }
+  
+  .section-list {
+    padding: 40px 0;
+  }
+  .list {
+    margin-top: -28px;
+  }
+  .list>ul {
+    margin: 0;
+  }
+  .list>ul>li {
+    display: block;
+    width: 100%;
+    padding: 0 0 30px;
+  }
+  .list ul li.list-item__head {
+    text-align: center;
+    background-color: #fff;
+    line-height: 1.5;
+    font-weight: 400;
+    padding: 22px 15px;
+    font-size: 14px;
+  }
+  .list-item__head h3{
+    font-size: 24px;
+  }
+  .list ul li:first-child p {
+    padding-right: 0;
+  }
+  .list ul li.list-item__head+* {
+    margin-top: 0;
+  }
+  .list .article-body {
+    padding: 10px 20px 20px;
+  }
+  article .article-body h5 {
+    font-size: 15px;
+  }
+  .list .article-body h6 {
+    font-size: 9px;
+    line-height: 1.11;
+  }
+  article .article-body p {
+    font-size: 16px;
+    line-height: 1.13;
+    margin-bottom: 10px;
+  }
+  .list ul li:last-child {
+    padding-bottom: 0;
+  }
+  .list-action{
+    text-align: center;
+  }
+  .btn-circle{
+    line-height: 1.44;
+    font-size: 10px;
+    border-bottom-width: 5px;
+    padding-bottom: 30px
+  }
+  .btn-circle span.btn-body {
+    width: 120px;
+    height: 120px;
+  }
+  .badges ul li {
+    padding: 0;
+    width: 50%;
+  }
+  footer .footer-head {
+    padding-bottom: 25px;
+  }
+  footer .footer-head blockquote {
+    float: none;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  footer .footer-head blockquote strong {
+    font-size: 24px;
+    line-height: 1;
+  }
+  footer .footer-head blockquote a {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+  }
+  footer .footer-head .nav-socials {
+    float: none;
+    text-align: center;
+  }
+  .footer-body li {
+    display: block;
+    font-size: 14px;
+    line-height: 1.44;
+    padding: 0;
+    padding-top: 25px;
+  } 
+  footer .footer-body, .footer-body li:last-child {
+    text-align: center;
+    float: none;
+  }
+
+  /* Work Page - Mobile */
+  header + main > section:first-child:not(.homepage-hero) {
+    padding-top: 65px;
+  }
+  section.cards {
+    padding: 40px 0;
+  }
+  section.cards .section-head p {
+    font-size: 16px;
+  }
+  .cards-list>ul {
+    margin: 0;
+  }
+  .cards-list>ul>li {
+    padding: 0 0 20px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.57;
+  }
+
+  /* Expertise Mobile Page */
+  .hero-list{
+    padding-bottom: 0;
+  }
+  .hero-list p{
+    line-height: 1.5;
+  }
+  .nav-full>ul>li{
+    display: block;
+    width: 100%;
+    font-size: 11px;
+  }
+  .nav-full>ul>li:nth-child(1) {
+    padding-bottom: 59px;
+  }
+  .nav-full>ul>li~li {
+    position: relative;
+    padding: 55px 17px;
+    width: auto;
+    margin: 0 -17px;
+  }
+
+  .nav-full>ul>li:nth-child(1) .nav-image {
+    opacity: 1;
+    visibility: visible;
+    background-size: auto 880px;
+    background-position: center 0;
+  }
+  .nav-full>ul>li .nav-body {
+    min-height: 0!important;
+  }
+  .nav-full>ul>li~li .nav-image, .nav-full .nav-body ul ul, .nav-full .nav-body>ul>li>.bottom-link {
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-full .nav-body {
+    padding: 30px 28px 80px;
+    background-color: rgba(255,255,255,.2);
+  }
+  .section-about {
+    height: auto;
+    min-height: 1px;
+  }
+  .section-about+.section-grids .section-head {
+    padding: 37px 0;
+    text-align: center;
+  }
+  .section-about+.section-grids .section-head h3{
+    font-size: 20px;
+    line-height: 1.17;
+    padding: 0 15px 18px;
+    color: #000;
+  }
+  .section-about+.section-grids .section-head p{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    padding: 0 10px;
+  }
+  .grids .grid-row {
+    margin-bottom: 15px;
+  }
+  .grids .grid-col-1, .grids .grid-col-2{
+    width: 100%;
+  }
+  .grids .grid-col-2 .grid-images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .grids .grid-col-2 .grid-image{
+    width: 50%;
+  }
+  .grids .grid-image+.grid-image {
+    margin-top: 0px;
+  }
+  .grids .grid-caption {
+    padding: 25px 0;
+  }
+}
+
+@media (max-width: 500px){
+  .homepage-hero__copy-holder {
+      font-size: 32px;
+  }
 }

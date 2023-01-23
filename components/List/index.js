@@ -37,7 +37,7 @@ const List = () => {
                     </article>
                   </li>
                   )})}
-                  <li className="list-item list-articles-actions active">
+                  <li className="list-item list-action active">
                     <Link href='/work' className="btn-circle">
                       <span className="btn-body">
                         <span className="btn-body-holder">See<br/>More Work</span>

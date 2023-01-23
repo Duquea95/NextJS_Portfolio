@@ -10,7 +10,7 @@ const About = () => {
   return(
     <>
       <section className="section-white-header active"></section>
-      <section className="section-image section-intro intro-about">
+      <section className="section-image section-intro section-about">
         <div class="section-image section-image-dsktp" style={{backgroundImage: `url(https://thelabnyc.com/wp-content/uploads/2023/01/AboutUs_425-1900x625-cropped.jpg)`}}></div>
         <div class="section-image section-image-mobile" style={{backgroundImage: `url(https://thelabnyc.com/wp-content/uploads/2023/01/section-intro-about-mobile-1900x625-cropped.jpg)`}}></div>
       </section>
