@@ -55,8 +55,8 @@ const Header = (prop) =>{
 export default Header
 
 const navLinks = [
-  {name: 'work', page: 'work'},
+  {name: 'work', page: 'Work'},
   {name: 'expertise', page: 'expertise'},
-  {name: 'about', page: 'about'},
+  {name: 'about', page: 'About'},
   // {name: 'careers', page: 'careers'},
 ]
