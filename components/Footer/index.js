@@ -14,7 +14,7 @@ const Footer = () => {
             <ul>
               { socialLinks.map((item, index) => { return (
                 <li key={`social-link__${index}`}>
-                  <a href={item.link} target="_blank">
+                  <a href={`https://${item.link}`} target="_blank">
                     <i className={`fa`+item.classNames}>{item.icon}</i>
                   </a>
                 </li>
@@ -41,8 +41,8 @@ const Footer = () => {
 export default Footer
 
 const socialLinks = [
-  {name: 'DigiMedia Creative\'s Facebook', link: 'facebook.com', icon: <FaFacebookF/>, classNames: ' fa-facebook'},
-  {name: 'DigiMedia Creative\'s Twitter', link: 'twitter.com', icon: <FaTwitter/>, classNames: ' fa-twitter'},
-  {name: 'DigiMedia Creative\'s Instagraam Account', link: 'instagram.com', icon: <FaInstagram/>, classNames: ' fa-instagram'},
-  {name: 'DigiMedia Creative\'s LinkedIn Account', link: 'linkedin.com', icon: <FaLinkedinIn/>, classNames: ' fa-linkedin'},
+  // {name: 'DigiMedia Creative\'s Facebook', link: 'facebook.com', icon: <FaFacebookF/>, classNames: ' fa-facebook'},
+  // {name: 'DigiMedia Creative\'s Twitter', link: 'twitter.com', icon: <FaTwitter/>, classNames: ' fa-twitter'},
+  // {name: 'DigiMedia Creative\'s Instagraam Account', link: 'instagram.com', icon: <FaInstagram/>, classNames: ' fa-instagram'},
+  {name: 'Anthony Duque\'s LinkedIn Profile', link: 'linkedin.com/in/anthony-duque', icon: <FaLinkedinIn/>, classNames: ' fa-linkedin'},
 ]

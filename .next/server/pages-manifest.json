@@ -1,12 +1,7 @@
 {
-  "/_error": "pages/_error.js",
   "/_app": "pages/_app.js",
-  "/Work": "pages/Work.html",
-  "/Contact": "pages/Contact.html",
-  "/About": "pages/About.html",
-  "/expertise": "pages/expertise.html",
-  "/case-study": "pages/case-study.html",
-  "/": "pages/index.html",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/_error": "pages/_error.js",
+  "/expertise": "pages/expertise.js",
+  "/": "pages/index.js"
 }

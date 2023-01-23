@@ -1,11 +1,11 @@
 import React, {useState, useEffect, useRef} from 'react'
-// import { useNavigate } from 'react-router-dom'
 import oscar from '../../public/images/expertise/oscar-stone.png'
 import ja from '../../public/images/expertise/jonathan-adler.jpeg'
 import dada from '../../public/images/expertise/dada.png'
 import Copy from '../blocks/Copy'
 
 const HeroList = (prop) => {
+  console.log(prop)
   
   const listRef = useRef()
   const [activeIndex, setActiveIndex] = useState( prop.activeIndex || 0)

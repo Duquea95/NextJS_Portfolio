@@ -43,10 +43,9 @@ const Hero = (prop) => {
     if(event.target.parentElement.getAttribute('data-href') === '/Work'){
       router.push(event.target.parentElement.getAttribute('data-href'));
     }else{
-      router.push(event.target.parentElement.getAttribute('data-href'))
       router.push({
         pathname: event.target.parentElement.getAttribute('data-href'),
-        query: event.target.parentElement.getAttribute('data-index')
+        query: {activeIndex: event.target.parentElement.getAttribute('data-index')}
       })
     }
   }

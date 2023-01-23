@@ -1398,6 +1398,10 @@ footer{
     height: 200px;
     margin-top: 10px;
   }
+  footer nav{
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 @media (max-width: 500px){
