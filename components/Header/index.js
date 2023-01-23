@@ -20,7 +20,7 @@ const Header = (prop) =>{
         <div className="logo-container"><Link 
         href='/' className='logo' 
         style={logo ? {backgroundImage: `url(${logo.src})`} : '' }>DigiMedia Creatives</Link></div>
-        <a onClick={handleClick} class={`btn-menu${(menuState == true) ? ' active' : ''}`}>
+        <a onClick={handleClick} className={`btn-menu${(menuState == true) ? ' active' : ''}`}>
 					<span></span>
 				</a>
         <nav className={`${menuState == true ? 'show' : ''}`}>

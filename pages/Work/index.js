@@ -13,7 +13,6 @@ import bb from '../../public/images/our-work/billys-bakery.jpeg'
 import ssl from '../../public/images/our-work/sports-science-lab.png'
 
 const Work = (prop) => {
-  const router = useRouter()
 
   return(
     <>
@@ -27,7 +26,7 @@ const Work = (prop) => {
                 {listData.map((item, index)=>{ return( 
                   <li key={`card_component__${index}`}>
                     <article>
-                      <a href={`https://`}></a>
+                      <a href={`https://${item.url}`}></a>
                       <div className="article-image">
                         <img width={710} height={662} src={item.src}/>
                         <div className="article-image-holder" style={{backgroundImage: `url(${item.src})`}}></div>
