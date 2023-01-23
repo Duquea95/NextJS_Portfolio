@@ -6,10 +6,10 @@ import ja from '../../public/images/expertise/jonathan-adler.jpeg'
 import dada from '../../public/images/expertise/dada.png'
 
 const heroData = {
-  linkOne: '/work',
+  linkOne: '/Work',
   linkOneCopy: 'We are makers',
   textCopyOne: ' who mean business. We partner directly with clients, solving',
-  linkTwo: '/experise',
+  linkTwo: '/expertise',
   linkTwoCopy: 'creative',
   linkTwo: '/expertise',
   linkCopyTwo: 'production',
@@ -40,7 +40,7 @@ const Hero = (prop) => {
   }
 
   const handleClick = (event) => {
-    if(event.target.parentElement.getAttribute('data-href') === '/work'){
+    if(event.target.parentElement.getAttribute('data-href') === '/Work'){
       router.push(event.target.parentElement.getAttribute('data-href'));
     }else{
       router.push(event.target.parentElement.getAttribute('data-href'))
