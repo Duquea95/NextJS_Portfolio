@@ -1,41 +1,48 @@
-export default function Footer(){
-  let footerLinks = [
-    // {text: 'Work', url: '/Work'},
-    {text: 'About', url: '/About'},
-    // {text: 'My Articles', url: '/Blog'},
-  ]
+import React from "react"
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa"
 
-  let socialLinks = [
-    {url: 'https://www.linkedin.com/in/anthony-duque/', linkClasses: 'icon icon--linkedin', iconClasses: 'ri-linkedin-line'}, 
-    // {url: 'https://github.com/Duquea95', linkClasses: 'icon icon--github', iconClasses: 'ri-github-line'}
-  ]
+const Footer = () => {
 
   return(
     <footer>
-      <div className='footer-container'>
-        <div className='content'>
-          <div>
-            <div>
-              <p className='list-header'>SAY HELLO</p>
-              <a href='mailto:duquea95@gmail.com'>Duquea95@gmail.com</a>
-            </div>
-            <ul className='footer-menu'>
-              <p className='list-header'>Links</p>
-              {footerLinks.map((link,idx) => {
-                return <li key={'footer_link__'+idx}><a href={link.url}>{link.text}</a></li>
-              })}
+      <div className="container">
+        <div className="footer-head">
+          <blockquote>
+            <p><strong>Let’s talk</strong> <a href="mailto:duquea95@gmail.com">duquea95@gmail.com</a></p>
+          </blockquote>
+          <nav className="nav-socials">
+            <ul>
+              { socialLinks.map((item, index) => { return (
+                <li key={`social-link__${index}`}>
+                  <a href={item.link} target="_blank">
+                    <i className={`fa`+item.classNames}>{item.icon}</i>
+                  </a>
+                </li>
+              )})
+              }
             </ul>
-          </div>
-          <div className='flex-between'>
-            <div className='socials-menu flex'>
-              {socialLinks.map((link,idx) => {
-                return <a key={'social_link__'+idx} className={link.linkClasses} href={link.url}><i className={link.iconClasses}></i></a>
-              })}
-            </div>
-            <div><span className="disclaimer">© Anthony Duque 2022</span></div>
-          </div>
+          </nav>
+        </div>
+        <div className="footer-body">
+          <ul>
+            <li>
+              <p>© 2023 - Anthony Duque.</p>
+            </li>
+            <li>
+              <p>All Rights Reserved.</p>
+            </li>
+        </ul>
         </div>
       </div>
     </footer>
   )
 }
+
+export default Footer
+
+const socialLinks = [
+  {name: 'DigiMedia Creative\'s Facebook', link: 'facebook.com', icon: <FaFacebookF/>, classNames: ' fa-facebook'},
+  {name: 'DigiMedia Creative\'s Twitter', link: 'twitter.com', icon: <FaTwitter/>, classNames: ' fa-twitter'},
+  {name: 'DigiMedia Creative\'s Instagraam Account', link: 'instagram.com', icon: <FaInstagram/>, classNames: ' fa-instagram'},
+  {name: 'DigiMedia Creative\'s LinkedIn Account', link: 'linkedin.com', icon: <FaLinkedinIn/>, classNames: ' fa-linkedin'},
+]
