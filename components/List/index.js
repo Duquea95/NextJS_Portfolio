@@ -25,7 +25,7 @@ const List = () => {
                     <article>
                       {/* <Link href={`/case-study/${item.slug}`} /> */}
                       {/* <Link href={`/case-study`} /> */}
-                      <Link href={`/work`} />
+                      <Link href={`/Work`} />
                       <div className="list-item__image" style={{backgroundImage: `url(${item.src})`}}>
                         <img width="1024" height="953" src={item.src} className="attachment-large size-large" alt={'Marketing image of '+item.title}></img>
                       </div>
