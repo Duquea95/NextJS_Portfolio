@@ -58,7 +58,7 @@ const Hero = (prop) => {
       <div className="homepage-hero__copy">
         <div className={`homepage-hero__copy-holder homepage-hero__copy-holder__on`}>
           <p>
-            <span className={`hero-copy-btn copy-btn hero-copy-btn--on ${enableImage == true ? ' inactive' : ''} ${activeButton == 4 ? ' active' : ''}`} data-href="/work" data-index={4} data-src={main.src} onClick={handleClick} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+            <span className={`hero-copy-btn copy-btn hero-copy-btn--on ${enableImage == true ? ' inactive' : ''} ${activeButton == 4 ? ' active' : ''}`} data-href="/Work" data-index={4} data-src={main.src} onClick={handleClick} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
               I'm a developer<span className="hero-copy-btn__underline">&nbsp;</span>
             </span>
 
