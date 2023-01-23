@@ -30,7 +30,7 @@ const Header = (prop) =>{
                   <Link 
                   onClick={handleClick}
                   href={`/${item.page}`}
-                  className={`${router.pathname == `/${item.name}` ? 'current-menu-item' : undefined}`}
+                  className={`${router.pathname == `/${item.page}` ? 'current-menu-item' : undefined}`}
                   >
                     {item.name}
                   </Link >
