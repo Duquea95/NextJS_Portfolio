@@ -71,7 +71,7 @@ const Header = (prop)=>{
                                         children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
                                             onClick: handleClick,
                                             href: `/${item.page}`,
-                                            className: `${router.pathname == `/${item.name}` ? "current-menu-item" : undefined}`,
+                                            className: `${router.pathname == `/${item.page}` ? "current-menu-item" : undefined}`,
                                             children: item.name
                                         })
                                     }, `header-link__${item.name}`);

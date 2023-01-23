@@ -61,8 +61,8 @@ const HeroList = (prop) => {
 export default HeroList
 
 const listData = [
-  {title: 'Creative', linkImage: oscar.src, linkName: '/oscar-stone', name: 'Oscar Stone',list: [ 'UI/UX DESIGN', 'BRAND, CONTENT + SOCIAL STRATEGY', 'BRAND DEVELOPMENT', 'USABILITY RESEARCH AND TESTING', 'INTEGRATED CAMPAIGNS', 'VISUAL DESIGN',]},
-  {title: 'Production', linkImage: ja.src, linkName: '/jonathan-adler', name: 'Jonathan Adler',list: ['STILL AND PHOTO SHOOT PRODUCTION', 'COPYWRITING', 'CREATIVE RETOUCHING', 'DIGITAL ADVERTISING']},
-  {title: 'Technology', linkImage: dada.src, linkName: '/dada-daily', name: 'Dada Daily',list: ['WEB-BASED WORKFLOWS + ASSET MANAGEMENT', 'FULL STACK ENGINEERING', 'ECOMMERCE', 'SITE INFRASTRUCTURE PLANNING/DEVOPS', 'MOBILE APPLICATION DEVELOPMENT', 'CONTENT MANAGEMENT']
+  {title: 'Creative', linkImage: oscar.src, linkName: '/oscar-stone', name: 'Oscar Stone',list: [ 'FRONT-END DEVELOPMENT', 'UI/UX DESIGN', 'BRAND, CONTENT + SOCIAL STRATEGY', 'PRODUCT  PHOTOGRAPHY', 'INTEGRATED CAMPAIGNS',]},
+  {title: 'Production', linkImage: ja.src, linkName: '/jonathan-adler', name: 'Jonathan Adler',list: ['FRONT-END DEVELOPMENT', 'UX / UI DESIGN', 'DIGITAL MARKETING']},
+  {title: 'Technology', linkImage: dada.src, linkName: '/dada-daily', name: 'Dada Daily',list: ['FRONT-END DEVELOPMENT', 'WEB-BASED WORKFLOWS + ASSET MANAGEMENT', 'CONTENT MANAGEMENT']
   },
 ]
