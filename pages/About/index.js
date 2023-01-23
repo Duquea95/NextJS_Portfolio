@@ -63,7 +63,7 @@ const About = () => {
   )
 }
 
-export default About;
+export default About
 
 About.getLayout = function getLayout(page) {
   return (

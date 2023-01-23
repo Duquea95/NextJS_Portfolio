@@ -2,7 +2,7 @@ import React from "react";
 import Layout from '../../components/layout';
 import HeroList from '../../components/HeroList'
 
-const Work = (prop) => {
+const Expertise = (prop) => {
   return(
     <>
       <section class="section-white-header active"></section>
@@ -11,9 +11,9 @@ const Work = (prop) => {
   )
 }
 
-export default Work
+export default Expertise
 
-Work.getLayout = function getLayout(page) {
+Expertise.getLayout = function getLayout(page) {
   return (
     <Layout>
       {page}
