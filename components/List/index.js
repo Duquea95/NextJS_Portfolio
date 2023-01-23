@@ -25,7 +25,8 @@ const List = () => {
                     <article>
                       {/* <Link href={`/case-study/${item.slug}`} /> */}
                       {/* <Link href={`/case-study`} /> */}
-                      <Link href={`/Work`} />
+                      {/* <Link href={`/Work`} /> */}
+                      <a href={`https://${item.url}`}></a>
                       <div className="list-item__image" style={{backgroundImage: `url(${item.src})`}}>
                         <img width="1024" height="953" src={item.src} className="attachment-large size-large" alt={'Marketing image of '+item.title}></img>
                       </div>
@@ -55,12 +56,12 @@ const List = () => {
 export default List
 
 const listData = [
-  {title: "Oscar Stone", slug: 'oscar-stone', description: "King of diamond jewelry.", tags: "Front-end Development, E-commerce Design, Marketing, Photography", src: "https://live.staticflickr.com/65535/52630694325_d6f208e2df_c.jpg"
+  {title: "Oscar Stone", slug: 'oscar-stone', description: "King of diamond jewelry.", tags: "Front-end Development, E-commerce Design, Marketing, Photography", src: "https://live.staticflickr.com/65535/52630694325_d6f208e2df_c.jpg", url: 'oscarstonenyc.com'
   },
-  {title: "Jonathan Adler", slug: 'jonathan-adler', description: "A fabulous lifestyle.", tags: "Full-stack Development, Marketing, Graphic Design", src: ja.src
+  {title: "Jonathan Adler", slug: 'jonathan-adler', description: "A fabulous lifestyle.", tags: "Full-stack Development, Marketing, Graphic Design", src: ja.src, url: 'jonathanadler.com'
   },
-  {title: "BMCC", slug: 'bmcc', description: "Building futures today.", tags: "Front-end Development", src: bmcc.src
+  {title: "BMCC", slug: 'bmcc', description: "Building futures today.", tags: "Front-end Development", src: bmcc.src, url: 'bmcc.cuny.edu'
   },
-  {title: "Dada Daily", slug: 'dada-daily', description: "A healhtier way to snack.", tags: "Front-end Development, E-commerce Design", src: dada.src 
+  {title: "Dada Daily", slug: 'dada-daily', description: "A healhtier way to snack.", tags: "Front-end Development, E-commerce Design", src: dada.src, url: 'dadadaily.com'
   },
 ]

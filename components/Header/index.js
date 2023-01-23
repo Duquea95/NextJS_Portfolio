@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa"
 import { useRouter } from "next/router"
 // import { NavLink } from "react-router-dom";
 import Link from 'next/link';
@@ -42,9 +43,19 @@ const Header = (prop) =>{
             <blockquote>
               <p>
                 <strong>let’s talk</strong> 
-                <a href="mailto:info@thelabnyc.com">info@thelabnyc.com</a>
+                <a href="mailto:Duquea95@gmail.com">Duquea95@gmail.com</a>
               </p>
             </blockquote>
+            <ul className="nav-socials">
+              { socialLinks.map((item, index) => { return (
+                <li key={`social-link__${index}`}>
+                  <a href={`https://${item.link}`} target="_blank">
+                    <i className={`fa`+item.classNames}>{item.icon}</i>
+                  </a>
+                </li>
+              )})
+              }
+            </ul>
           </div>
         </nav>
       </div>
@@ -59,4 +70,11 @@ const navLinks = [
   {name: 'expertise', page: 'expertise'},
   {name: 'about', page: 'About'},
   // {name: 'careers', page: 'careers'},
+]
+
+const socialLinks = [
+  // {name: 'DigiMedia Creative\'s Facebook', link: 'facebook.com', icon: <FaFacebookF/>, classNames: ' fa-facebook'},
+  // {name: 'DigiMedia Creative\'s Twitter', link: 'twitter.com', icon: <FaTwitter/>, classNames: ' fa-twitter'},
+  // {name: 'DigiMedia Creative\'s Instagraam Account', link: 'instagram.com', icon: <FaInstagram/>, classNames: ' fa-instagram'},
+  {name: 'Anthony Duque\'s LinkedIn Profile', link: 'linkedin.com/in/anthony-duque', icon: <FaLinkedinIn/>, classNames: ' fa-linkedin'},
 ]

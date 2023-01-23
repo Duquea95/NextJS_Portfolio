@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router"
 import Layout from '../../components/layout';
 import Copy from '../../components/blocks/Copy'
 import Badges from '../../components/Badges'
@@ -12,6 +13,8 @@ import bb from '../../public/images/our-work/billys-bakery.jpeg'
 import ssl from '../../public/images/our-work/sports-science-lab.png'
 
 const Work = (prop) => {
+  const router = useRouter()
+
   return(
     <>
       <section className="section-white-header active"></section>
@@ -24,7 +27,7 @@ const Work = (prop) => {
                 {listData.map((item, index)=>{ return( 
                   <li key={`card_component__${index}`}>
                     <article>
-                      <a></a>
+                      <a href={`https://`}></a>
                       <div className="article-image">
                         <img width={710} height={662} src={item.src}/>
                         <div className="article-image-holder" style={{backgroundImage: `url(${item.src})`}}></div>
@@ -58,22 +61,20 @@ Work.getLayout = function getLayout(page) {
 }
 
 const listData = [
-  {title: "Oscar Stone", description: "King of diamond jewelry", tag: "Front-end Development, Marketing, Graphic Design Photography", src: os.src
+  {title: "Oscar Stone", description: "King of diamond jewelry", tag: "Front-end Development, Marketing, Graphic Design Photography", src: os.src, url: 'oscarstonenyc.com'
   },
-  {title: "Jonathan Adler", description: "A fabulous lifestyle.", tag: "Full-Stack Development, Graphic Design, Marketing", src: ja.src
+  {title: "Jonathan Adler", description: "A fabulous lifestyle.", tag: "Full-Stack Development, Graphic Design, Marketing", src: ja.src, url: 'jonathanadler.com'
   },
-  {title: "BMCC", description: "Building futures today.", tag: "Front-end Development, Marketing, Graphic Design", src: bmcc.src
+  {title: "BMCC", description: "Building futures today.", tag: "Front-end Development, Marketing, Graphic Design", src: bmcc.src, url: 'bmcc.cuny.edu'
   },
-  {title: "Dada Daily",description: "A healhtier way to snack.", tag: "Front-end Development, UX Design", src: dada.src
+  {title: "Dada Daily",description: "A healhtier way to snack.", tag: "Front-end Development, UX Design", src: dada.src, url: 'dadadaily.com'
   },
-  {title: "Morgan Lane", description: "Be comfortable. Be stylish.", tag: "Front-end Development", src: ml.src
+  {title: "Morgan Lane", description: "Be comfortable. Be stylish.", tag: "Front-end Development", src: ml.src, url: 'morgan-lane.com'
   },
-  {title: "Coco & Breezy", description: "A new look on lenswear.", tag: "Front-end Development", src: coco.src
+  {title: "Coco & Breezy", description: "A new look on lenswear.", tag: "Front-end Development", src: coco.src, url: 'cocoandbreezy.com'
   },
-  {title: "Billy's Bakery NYC", description: "Freshly made for NYC.", tag: "Front-end Development", src: bb.src
+  {title: "Billy's Bakery NYC", description: "Freshly made for NYC.", tag: "Front-end Development", src: bb.src, url: 'billysbakerynyc.com'
   },
-  {title: "Sports Science Lab", description: "Pushing the boundaries.", tag: "Front-end Development", src: ssl.src
-  },
-  {title: "Ross Brand Partners", description: "A boutique Shopify Agency.", tag: "Front-end Development, UX Design", src: null
-  },
+  {title: "Sports Science Lab", description: "Pushing the boundaries.", tag: "Front-end Development", src: ssl.src, url: 'nysportssciencelab.com/'
+  }
 ]
