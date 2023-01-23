@@ -1,12 +1,11 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/Contact": "pages/Contact.html",
-  "/about": "pages/about.html",
-  "/case-study": "pages/case-study.html",
-  "/expertise": "pages/expertise.html",
-  "/": "pages/index.html",
-  "/work": "pages/work.html",
-  "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/about": "pages/about.js",
+  "/case-study": "pages/case-study.js",
+  "/Contact": "pages/Contact.js",
+  "/expertise": "pages/expertise.js",
+  "/": "pages/index.js",
+  "/work": "pages/work.js",
+  "/_document": "pages/_document.js"
 }

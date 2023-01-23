@@ -1,6 +1,6 @@
 "use strict";
-exports.id = 387;
-exports.ids = [387];
+exports.id = 938;
+exports.ids = [938];
 exports.modules = {
 
 /***/ 3425:
@@ -53,7 +53,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 425:
+/***/ 3338:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
@@ -76,8 +76,8 @@ var Copy = __webpack_require__(6583);
 /* harmony default export */ const coco_and_breezy_logo = ({"src":"/_next/static/media/coco_and_breezy_logo.79b01bf9.png","height":1500,"width":1500,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAXVBMVEXprY7orY7orY3orI3nrI3mrI3lrI3jqowAAADorY7nrY7mrI3lrI3mq43kqozjqozorY7orY3nrY7prY3lrI3orY3nrI3jqozmq43nrY7nrI3lq43nrI3jqozmq401NpFQAAAAH3RSTlMAAAAAAAAAAAABAQEBAQEBBwcJCwwNDg8QEhgYGhsfJu0pjwAAAD1JREFUeNpj4IACBmYWRjYWXn5GBiYQg5WdgUFQTEhETEJcgEFURlJaSk5WmIGJCSrFxMnJw8XNx8AA0w4AWxsCmpOwnewAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
 ;// CONCATENATED MODULE: ./public/images/badges/dada_daily_logo.png
 /* harmony default export */ const dada_daily_logo = ({"src":"/_next/static/media/dada_daily_logo.f7c2c3e9.png","height":554,"width":554,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAbElEQVR42mOgA7hsJCx9Ldyz4nZplukVF8O8q0EuObcrck2veloWghVc0mWRACqovFNXYnrFSa/raoBDw93GcpMrHmZNV+y1RcCK7iSHMcFMvB7mzgpjX/W2ZoZbdcXfgRHBdmS8bCLOSJQbAbayIqHma/tQAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8});
-;// CONCATENATED MODULE: ./public/images/badges/jonathan_adler_logo.png
-/* harmony default export */ const jonathan_adler_logo = ({"src":"/_next/static/media/jonathan_adler_logo.b3e40284.png","height":1000,"width":1000,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAWlBMVEUpOWQpOGQoOGQoN2QnN2QmNmMlNmMAAAAoOGQoN2QnN2QmNmMlNmMpOWQpOGQoOGQnN2QmNmMmNmMoOGQnN2QoOGQoOGQoOGQqOWUpOWQpOWQoOGQnN2QnN2TzMUrUAAAAHnRSTlMAAAAAAAAAAAEBAQEBAgICAhMUFxklKS0uLjAwMDOBqkQVAAAAOElEQVR42jXLsRHAMAgEwT8GUKD+mzVCOPB482Xp4+FXpSzytkxjvnfrQBsM4EPMAck8o3mWir+/WScQRv1FV4UAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
+;// CONCATENATED MODULE: ./public/images/badges/Jonathan_Adler_logo.png
+/* harmony default export */ const Jonathan_Adler_logo = ({"src":"/_next/static/media/Jonathan_Adler_logo.b3e40284.png","height":1000,"width":1000,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAWlBMVEUpOWQpOGQoOGQoN2QnN2QmNmMlNmMAAAAoOGQoN2QnN2QmNmMlNmMpOWQpOGQoOGQnN2QmNmMmNmMoOGQnN2QoOGQoOGQoOGQqOWUpOWQpOWQoOGQnN2QnN2TzMUrUAAAAHnRSTlMAAAAAAAAAAAEBAQEBAgICAhMUFxklKS0uLjAwMDOBqkQVAAAAOElEQVR42jXLsRHAMAgEwT8GUKD+mzVCOPB482Xp4+FXpSzytkxjvnfrQBsM4EPMAck8o3mWir+/WScQRv1FV4UAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
 ;// CONCATENATED MODULE: ./public/images/badges/Morgan_Lane_logo.png
 /* harmony default export */ const Morgan_Lane_logo = ({"src":"/_next/static/media/Morgan_Lane_logo.b99cc196.png","height":1000,"width":1000,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAclBMVEXl09Hk09Hk0tHj0dDj0c/i0c/i0M/i0M7h0M7gz83fzszezcvdzMrcy8rcy8nby8nBsbGnmZTi0M7fzszi0M/dzMrezcvdzMrezcvi0c/fzszfzszezcvhz87fzszh0M7fzszh0M7ezcvfzszi0M7i0M9FIiylAAAAJnRSTlMAAAAAAAAAAAAAAAAAAAAAAAABAQICAwQFBgcJCQoKCw0OEBESFbvMg9gAAABHSURBVHjaYxBgZWZhZWTgZ+BlY2FhYWLkZuAW4hORFBQGMtg5FVU5uLkZJFSUFWRklcQZxOTlpKWk5ESBUlwgAFTDAWbwAAB7ygPL2fzqRgAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
 ;// CONCATENATED MODULE: ./public/images/badges/Oscar_Stone_logo.png
@@ -118,7 +118,7 @@ const BadgeData = [
     },
     {
         name: "Jonathan Adler",
-        src: jonathan_adler_logo.src
+        src: Jonathan_Adler_logo.src
     },
     {
         name: "Morgan Lane",

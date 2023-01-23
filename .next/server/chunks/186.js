@@ -1,17 +1,7 @@
 "use strict";
-exports.id = 356;
-exports.ids = [356];
+exports.id = 186;
+exports.ids = [186];
 exports.modules = {
-
-/***/ 605:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/Oscar-stone-marketing-2.a34fcf07.png","height":557,"width":690,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAIAAABxZ0isAAAAl0lEQVR42gUAyQqCQPQVFAgpLjPOpmmaM27YlEJQSYcChTrUMeraD/T/hwCKPMXxyneshRlhu0v5pa0VcYBhpCgqqFvFLGF+J6O+THfCA4G8NgvkkoQUu6als/iu5XXNICP4UMX7JgGYlGlgWPagxKtmsIl4Luhw2g69fozH+cyQAfs0AoqQFtzXMvl9b+/nGWDKGRnz8A9VlRQHI3KyDAAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":6});
-
-/***/ }),
 
 /***/ 4634:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
