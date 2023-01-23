@@ -60,7 +60,7 @@ const listData = [
   },
   {title: "Jonathan Adler", slug: 'jonathan-adler', description: "A fabulous lifestyle.", tags: "Full-stack Development, Marketing, Graphic Design", src: ja.src, url: 'https://jonathanadler.com'
   },
-  {title: "BMCC", slug: 'bmcc', description: "Building futures today.", tags: "Front-end Development", src: bmcc.src, url: 'https://bmcc.cuny.edu'
+  {title: "BMCC", slug: 'bmcc', description: "Building futures today.", tags: "Front-end Development", src: bmcc.src, url: 'https://www.bmcc.cuny.edu'
   },
   {title: "Dada Daily", slug: 'dada-daily', description: "A healhtier way to snack.", tags: "Front-end Development, E-commerce Design", src: dada.src, url: 'https://dadadaily.com'
   },

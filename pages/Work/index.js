@@ -26,7 +26,7 @@ const Work = (prop) => {
                 {listData.map((item, index)=>{ return( 
                   <li key={`card_component__${index}`}>
                     <article>
-                      <a href={`https://${item.url}`}></a>
+                      <a href={`${item.url}`}></a>
                       <div className="article-image">
                         <img width={710} height={662} src={item.src}/>
                         <div className="article-image-holder" style={{backgroundImage: `url(${item.src})`}}></div>
@@ -60,20 +60,20 @@ Work.getLayout = function getLayout(page) {
 }
 
 const listData = [
-  {title: "Oscar Stone", description: "King of diamond jewelry", tag: "Front-end Development, Marketing, Graphic Design Photography", src: os.src, url: 'oscarstonenyc.com'
+  {title: "Oscar Stone", description: "King of diamond jewelry", tag: "Front-end Development, Marketing, Graphic Design Photography", src: os.src, url: 'https://oscarstonenyc.com'
   },
-  {title: "Jonathan Adler", description: "A fabulous lifestyle.", tag: "Full-Stack Development, Graphic Design, Marketing", src: ja.src, url: 'jonathanadler.com'
+  {title: "Jonathan Adler", description: "A fabulous lifestyle.", tag: "Full-Stack Development, Graphic Design, Marketing", src: ja.src, url: 'https://jonathanadler.com'
   },
-  {title: "BMCC", description: "Building futures today.", tag: "Front-end Development, Marketing, Graphic Design", src: bmcc.src, url: 'bmcc.cuny.edu'
+  {title: "BMCC", description: "Building futures today.", tag: "Front-end Development, Marketing, Graphic Design", src: bmcc.src, url: 'https://www.bmcc.cuny.edu'
   },
-  {title: "Dada Daily",description: "A healhtier way to snack.", tag: "Front-end Development, UX Design", src: dada.src, url: 'dadadaily.com'
+  {title: "Dada Daily",description: "A healhtier way to snack.", tag: "Front-end Development, UX Design", src: dada.src, url: 'https://dadadaily.com'
   },
-  {title: "Morgan Lane", description: "Be comfortable. Be stylish.", tag: "Front-end Development", src: ml.src, url: 'morgan-lane.com'
+  {title: "Morgan Lane", description: "Be comfortable. Be stylish.", tag: "Front-end Development", src: ml.src, url: 'https://morgan-lane.com'
   },
-  {title: "Coco & Breezy", description: "A new look on lenswear.", tag: "Front-end Development", src: coco.src, url: 'cocoandbreezy.com'
+  {title: "Coco & Breezy", description: "A new look on lenswear.", tag: "Front-end Development", src: coco.src, url: 'https://cocoandbreezy.com'
   },
-  {title: "Billy's Bakery NYC", description: "Freshly made for NYC.", tag: "Front-end Development", src: bb.src, url: 'billysbakerynyc.com'
+  {title: "Billy's Bakery NYC", description: "Freshly made for NYC.", tag: "Front-end Development", src: bb.src, url: 'https://billysbakerynyc.com'
   },
-  {title: "Sports Science Lab", description: "Pushing the boundaries.", tag: "Front-end Development", src: ssl.src, url: 'nysportssciencelab.com/'
+  {title: "Sports Science Lab", description: "Pushing the boundaries.", tag: "Front-end Development", src: ssl.src, url: 'https://nysportssciencelab.com/'
   }
 ]
