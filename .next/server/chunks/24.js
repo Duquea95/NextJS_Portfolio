@@ -104,7 +104,7 @@ const Header = (prop)=>{
 const navLinks = [
     {
         name: "work",
-        page: "work"
+        page: "Work"
     },
     {
         name: "expertise",
@@ -112,7 +112,7 @@ const navLinks = [
     },
     {
         name: "about",
-        page: "about"
+        page: "About"
     }
 ];
 
