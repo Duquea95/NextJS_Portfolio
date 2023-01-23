@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useRouter } from "next/router"
 // import { NavLink } from "react-router-dom";
 import Link from 'next/link';
@@ -6,7 +6,12 @@ import logo from '../../public/images/anthony-duque-logo.png'
 
 const Header = (prop) =>{
   const router = useRouter();
+  const [ menuState, setMenuState ] = useState(false)
   console.log(router.pathname)
+
+  const handleClick = () =>{
+    return setMenuState(!menuState)
+  }
 
   return(
     <header>
@@ -14,12 +19,16 @@ const Header = (prop) =>{
         <div className="logo-container"><Link 
         href='/' className='logo' 
         style={logo ? {backgroundImage: `url(${logo.src})`} : '' }>DigiMedia Creatives</Link></div>
-        <nav>
+        <a onClick={handleClick} class={`btn-menu${(menuState == true) ? ' active' : ''}`}>
+					<span></span>
+				</a>
+        <nav className={`${menuState == true ? 'show' : ''}`}>
           <div className='nav-container'>
             <ul>
               {navLinks.map( (item,index) => { return(
                 <li key={`header-link__${item.name}`}>
                   <Link 
+                  onClick={handleClick}
                   href={`/${item.page}`}
                   className={`${router.pathname == `/${item.name}` ? 'current-menu-item' : undefined}`}
                   >
@@ -28,6 +37,14 @@ const Header = (prop) =>{
                 </li>
               )})}
             </ul>
+          </div>
+          <div className='nav-mobile'>
+            <blockquote>
+              <p>
+                <strong>let’s talk</strong> 
+                <a href="mailto:info@thelabnyc.com">info@thelabnyc.com</a>
+              </p>
+            </blockquote>
           </div>
         </nav>
       </div>

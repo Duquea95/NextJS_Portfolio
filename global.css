@@ -179,7 +179,9 @@ nav .nav-container a:hover:before, nav .nav-container .current-menu-item:before,
   transform: scale(0.25, 0.25);
   transform-origin: 0% 0%;
 }
-
+.nav-mobile{
+  display: none;
+}
 /********************************/
 /* Intro - Hero */
 /********************************/
@@ -1287,6 +1289,114 @@ footer{
   }
   .grids .grid-caption {
     padding: 25px 0;
+  }
+  header .btn-menu {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    display: block;
+    z-index: 899;
+    float: right;
+    margin: 9px 0;
+  }
+  .btn-menu span, .btn-menu:after, .btn-menu:before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 3px;
+    margin-top: -1px;
+    background-color: #000;
+    transition: opacity .4s,margin .4s,transform .4s,background .4s;
+  }
+  .btn-menu:before, .btn-menu:after, .btn-menu span {
+    margin-top: -1px;
+    height: 2px;
+  }
+  .btn-menu:before {
+    margin-top: -6px;
+  }
+  .btn-menu:after {
+    margin-top: 4px;
+  }
+  .btn-menu.active:after, .btn-menu.active:before{
+    background-color: #fff;
+    margin-top: -1px;
+  }
+  .btn-menu.active span{
+    opacity: 0;
+  }
+  .btn-menu.active::before{
+    transform: rotate(45deg)
+  }
+  .btn-menu.active::after{
+    transform: rotate(-45deg)
+  } 
+  nav {
+    background-color: #000;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s,visibility .4s;
+    float: right;
+  }
+  nav.show{
+    opacity: 1;
+    visibility: visible;
+  }
+  nav .nav-container {
+    display: block;
+    height: auto;
+    width: 100%;
+    padding-top: 60px;
+  }
+  nav .nav-container ul{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: block;
+    border-top: 1px solid #ffffff70;
+    border-bottom: 1px solid #ffffff70;
+  }
+  nav .nav-container li{
+    font-size: 24px;
+    padding: 12px 0;
+    line-height: 1.21;
+    display: block;
+    text-align: center;
+  }
+
+  nav .nav-container a{
+    color: #fff;
+    font-weight: bold;
+  }
+  .nav-mobile{
+    display: block;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px 0;
+    color: #fff;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,.3);
+  }
+  .nav .nav-mobile blockquote {
+    margin-bottom: 10px;
+  }
+  .current-menu-item:before{
+    width: 30px;
+    margin: 0 auto -15px;
+  }
+  .logo{
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
   }
 }
 
