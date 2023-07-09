@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router"
+import Head from 'next/head'
 import Layout from '../../components/layout';
 import Copy from '../../components/blocks/Copy'
 import Badges from '../../components/Badges'
@@ -16,6 +17,13 @@ const Work = (prop) => {
 
   return(
     <>
+    <Head>
+      <title>Work & Experiences | Anthony Duque Front-end Engineer</title>
+      <meta name='description' content='I specialize in eCommerce development, and web-application development, Some of my past clients include Oscar Stone, Jonathan Adler, CUNY BMCC, Morgan Lane, and more.' key='description'/>
+      <meta name='keywords' content='Web Developer, Front End Engineer, Web Development, Javascript, React JS, Git, HTML, CSS, Node JS.' key='keywords'/>
+      <meta name='author' content='Anthony Duque' key='author'/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    </Head>
       <section className="section-white-header active"></section>
       <section className="cards">
         <Copy title="I'm proud of my work." sub={null} copy="Here are my past experiences."/>

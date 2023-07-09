@@ -20,7 +20,7 @@ const About = () => {
         enableHeader={true} 
         headerTitle={false} 
         headerSub={'A little about me.'} 
-        headerCopy={"I have an educational background in computer programming and business, with a degree in multimedia programming. I've been building online solutions for over 5 years for Shopify, Salesforce, Wordpress, and custom CMS(s). Thanks to previous opportunities and collaborators, I've been able to learn and grow in other areas such as marketing, business management, graphic design, and SEO."}
+        headerCopy={`I have an educational background in computer programming and business, with a degree in multimedia programming. I've been building online solutions for over 5 years for Shopify, Salesforce, Wordpress, and custom CMS(s). Thanks to previous opportunities and collaborators, I've been able to learn and grow in other areas such as marketing, business management, graphic design, and SEO.`}
         enableGrid={false}
         gridCaption={false}
         reverse={false} 

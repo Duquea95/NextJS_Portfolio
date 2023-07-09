@@ -11,47 +11,46 @@ const Grids = (prop) => {
   ]
 
   let col1 =  <div className="grid-col-1">
-                <div className="grid-image">
-                  <img width="690" height="557" src={prop.gridImage1} />
-                </div>
-                <div className="grid-caption">
-                  <p>{prop.gridCaption}</p>
-                </div>
-              </div>
-  let col2 = <div className="grid-col-2">
-                <div className="grid-images">
-                {imageArr.map((item,index)=>{return(
-                  <div key={`col2-image__${index}`} className="grid-image">
-                    <img width={index == 0 ? 429 : 313} height={index == 0 ? 352 : 313} src={item.image} /> 
-                    {index == 0 &&
-                    <div class="grid-caption grid-caption-mobile">
-                    <p>{prop.gridCaption}</p>
-                    </div>
-                    }
-                  </div>
-                )})}
-                </div>
-              </div>
+    <div className="grid-image">
+      <img width="690" height="557" src={prop.gridImage1} />
+    </div>
+    <div className="grid-caption">
+      <p>{prop.gridCaption}</p>
+    </div>
+  </div>
 
-  console.log(router.pathname)
+  let col2 = <div className="grid-col-2">
+    <div className="grid-images">
+    {imageArr.map((item,index)=>{return(
+      <div key={`col2-image__${index}`} className="grid-image">
+        <img width={index == 0 ? 429 : 313} height={index == 0 ? 352 : 313} src={item.image} /> 
+        {index == 0 &&
+        <div class="grid-caption grid-caption-mobile">
+        <p>{prop.gridCaption}</p>
+        </div>
+        }
+      </div>
+    )})}
+    </div>
+  </div>
 
   let sectionClassName = `section-grids ${(router.pathname == '/case-study') && 'case-study'}`
 
   return(
     <section className={sectionClassName}>
 
-      {(router.pathname == '/case-study') && 
-        <div className='section-head'>
-          <div className='container'>
-            <blockquote>
-              <h2>{prop.headerTitle}</h2>
-              {/* <h6>{prop.headerCopy}</h6> */}
-              <h4>{prop.headerCopy}</h4>
-              <Link href='/work'>See all work</Link>
-            </blockquote>
-          </div>
+    {(router.pathname == '/case-study') && 
+      <div className='section-head'>
+        <div className='container'>
+          <blockquote>
+            <h2>{prop.headerTitle}</h2>
+            {/* <h6>{prop.headerCopy}</h6> */}
+            <h4>{prop.headerCopy}</h4>
+            <Link href='/work'>See all work</Link>
+          </blockquote>
         </div>
-      }
+      </div>
+    }
       
       {(prop.enableHeader == true && router.pathname != '/case-study')  && <Copy title={prop.headerTitle} sub={prop.headerSub} copy={prop.headerCopy}/>}
       

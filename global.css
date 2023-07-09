@@ -1405,7 +1405,7 @@ footer{
   .nav-mobile blockquote p {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
   }
   .nav-mobile blockquote p a{
     margin-left: 10px;
