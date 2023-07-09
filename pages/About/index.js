@@ -1,4 +1,5 @@
 import Layout from '../../components/layout';
+import Head from 'next/head'
 import Grids from '../../components/Grids'
 import os from '../../public/images/about/Oscar-stone-marketing.JPG'
 import os2 from '../../public/images/about/oscar-stone-marketing-2.png'
@@ -9,6 +10,13 @@ import desk from '../../public/images/about/workspace.jpeg'
 const About = () => {
   return(
     <>
+      <Head>
+        <title>About | Anthony Duque Front-end Engineer</title>
+        <meta name='description' content="Anthony Duque is a New York based Web Developer with experience in full-stack development, eCommerce development, SEO strategies, social media marketing, and more. These skills allow him to successfully create brand awareness, improve KPIs, and increase ROIs." key='description'/>
+        <meta name='keywords' content='Web Developer, Front End Engineer, Web Development, Javascript, React JS, Git, HTML, CSS, Node JS, SEO.' key='keywords'/>
+        <meta name='author' content='Anthony Duque' key='author'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+      </Head>
       <section className="section-white-header active"></section>
       <section className="section-image section-intro section-about">
         <div class="section-image section-image-dsktp" style={{backgroundImage: `url(https://thelabnyc.com/wp-content/uploads/2023/01/AboutUs_425-1900x625-cropped.jpg)`}}></div>

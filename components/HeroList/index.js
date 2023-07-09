@@ -61,8 +61,8 @@ const HeroList = (prop) => {
 export default HeroList
 
 const listData = [
-  {title: 'Creative', linkImage: oscar.src, linkName: '/oscar-stone', name: 'Oscar Stone',list: [ 'FRONT-END DEVELOPMENT', 'UI/UX DESIGN', 'BRAND, CONTENT + SOCIAL STRATEGY', 'PRODUCT  PHOTOGRAPHY', 'INTEGRATED CAMPAIGNS',]},
-  {title: 'Production', linkImage: ja.src, linkName: '/jonathan-adler', name: 'Jonathan Adler',list: ['FRONT-END DEVELOPMENT', 'UX / UI DESIGN', 'DIGITAL MARKETING']},
-  {title: 'Technology', linkImage: dada.src, linkName: '/dada-daily', name: 'Dada Daily',list: ['FRONT-END DEVELOPMENT', 'WEB-BASED WORKFLOWS + ASSET MANAGEMENT', 'CONTENT MANAGEMENT']
+  {title: 'Creative', linkImage: oscar.src, linkName: '/oscar-stone', name: 'Oscar Stone',list: [ 'UI/UX DESIGN', 'CONTENT + SOCIAL MEDIA STRATEGY', 'PRODUCT PHOTOGRAPHY', 'GRAPHIC DESIGNS / DIGITAL ASSETS',]},
+  {title: 'Production', linkImage: ja.src, linkName: '/jonathan-adler', name: 'Jonathan Adler',list: ['FRONT-END DEVELOPMENT', 'BACK-END DEVELOPMENT', 'USER FLOW CHART', 'MARKETING CAMPAIGNS']},
+  {title: 'Technology', linkImage: dada.src, linkName: '/dada-daily', name: 'Dada Daily',list: ['WEB-BASED WORKFLOWS', 'ASSET + CONTENT MANAGEMENT', 'DATABASE DEVELOPMENT', '3RD PARTY SERVICE INTEGRATIONS', 'SEO & ANALYTICS']
   },
 ]
